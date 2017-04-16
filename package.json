@@ -1,0 +1,36 @@
+{
+  "name": "btce-app-trader",
+  "version": "0.10.1",
+  "author": {
+    "name": "George",
+    "email": "steeply2010@gmail.com"
+  },
+  "description": "btc-e trader application",
+  "main": "",
+  "scripts": {
+    "start": "node ./build/server"
+  },
+  "contributors": [
+    {
+      "name": "George",
+      "email": "steeply2010@gmail.com"
+    }
+  ],
+  "engines": {
+    "node": ">=7.9.0",
+    "npm": ">=4.5.0"
+  },
+  "private": true,
+  "dependencies": {
+    "async": "^2.3.0",
+    "btce-deal": "^0.2.3",
+    "colors": "^1.1.2",
+    "lodash": "^4.17.4",
+    "moment": "^2.18.1",
+    "moment-range": "^3.0.3",
+    "ms": "^1.0.0",
+    "node-telegram-bot-api": "^0.27.0",
+    "nodemailer": "^4.0.0",
+    "ta-lib": "github:steeply/ta-lib"
+  }
+}

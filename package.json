@@ -1,6 +1,6 @@
 {
   "name": "btce-app-trader",
-  "version": "0.10.1",
+  "version": "0.11.0",
   "author": {
     "name": "George",
     "email": "steeply2010@gmail.com"
@@ -31,6 +31,7 @@
     "ms": "^1.0.0",
     "node-telegram-bot-api": "^0.27.0",
     "nodemailer": "^4.0.0",
+    "poloniex-api-node": "^1.0.2",
     "ta-lib": "github:steeply/ta-lib"
   }
 }

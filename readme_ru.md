@@ -37,12 +37,12 @@ $ npm i
 
  Option | Description
 ----------------|----------------------
-**TELEGRAM_TOKEN**                  | Ваш токен для telegram
-**TELEGRAM_ID**                     | ID вашего пользователя в telegram
-**BTCE_KEY**                        | API key
-**BTCE_SECRET**                     | API secret
-**NAME_COIN**                       | Торговая валюта (Например: ltc)
-**NAME_COIN_TWO**                   | Торговая валюта (Например: usd)
+**TELEGRAM_TOKEN**                          | Ваш токен для telegram
+**TELEGRAM_ID**                             | ID вашего пользователя в telegram
+**BTCE_KEY** or **POLONIEX_KEY**            | API key
+**BTCE_SECRET** or **POLONIEX_SECRET**      | API secret
+**NAME_COIN**                               | Торговая валюта (Например: ltc)
+**NAME_COIN_TWO**                           | Торговая валюта (Например: usd)
 
 > TELEGRAM_ID будет получен при первом запуске торгового скрипта. Для его получения напишите telegram боту любое сообщение.
 
@@ -61,6 +61,9 @@ TIME_CLOSE_ORDERS                   | Время закрытия неиспол
 TIME_CLOSE_ORDERS_INACTIVITY        | Время закрытия ордеров при бездействии (в минутах) (default: 15)
 OFFSET_MAX_ONE                      | Отступ между ордерами (default: 10)
 STEP_BREAKEVEN_PERCENT              | Процент отступа от безубытка между bid и ask (default: 50)
+EXCHANGE                            | Выбор биржи (btc-e | poloniex) (default: btc-e)
+POLONIEX_FEE                        | Комиссия на сделки биржи POLONIEX (default: 0.25)
+
 
 #### Модули автоконфигурации
 
@@ -89,8 +92,8 @@ HOST_SMTP                   | Адрес почтового сервера
 EMAIL_AUTH_USER             | Логин авторизации на почтовом сервере
 EMAIL_AUTH_PASS             | Пароль почтового сервера
 BTCE_HOST                   | Адрес биржи Btc-e
-TIME_ZONE                   | Временная зона
-LOG                         | Вывод лога расчета авто параметров
+TIME_ZONE                   | Временная зона (Например: Europe/Moscow) [Database Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+LOG                         | Вывод лога расчета авто параметров (default: false)
 
 
 ## Run

@@ -35,12 +35,12 @@ The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs
 
  Option | Description
 ----------------|----------------------
-**TELEGRAM_TOKEN**                  | Telegram token
-**TELEGRAM_ID**                     | Your User ID Telegram
-**BTCE_KEY**                        | API key
-**BTCE_SECRET**                     | API secret
-**NAME_COIN**                       | Trading currency (For example: ltc)
-**NAME_COIN_TWO**                   | Trading currency (For example: usd)
+**TELEGRAM_TOKEN**                          | Telegram token
+**TELEGRAM_ID**                             | Your User ID Telegram
+**BTCE_KEY** or **POLONIEX_KEY**            | API key
+**BTCE_SECRET** or **POLONIEX_SECRET**      | API secret
+**NAME_COIN**                               | Trading currency (For example: ltc)
+**NAME_COIN_TWO**                           | Trading currency (For example: usd)
 
 > TELEGRAM_ID will be given after the first starting of trade script. Send to bot any message to receive it.
 
@@ -59,6 +59,8 @@ TIME_CLOSE_ORDERS                   | Closing time of unused orders (min) (defau
 TIME_CLOSE_ORDERS_INACTIVITY        | Closing time of undemanded orders (min) (default: 15)
 OFFSET_MAX_ONE                      | Position difference between orders (default: 10)
 STEP_BREAKEVEN_PERCENT              | Percentage of breakeven (default: 50)
+EXCHANGE                            | The choice of the exchange (btc-e | poloniex) (default: btc-e)
+POLONIEX_FEE                        | The Commission for transactions of the exchange POLONIEX (default: 0.25)
 
 #### Modules AutoConfig
 
@@ -86,8 +88,8 @@ HOST_SMTP                   | Mail server address
 EMAIL_AUTH_USER             | Authorization login of the mail server
 EMAIL_AUTH_PASS             | Mail server password
 BTCE_HOST                   | Address exchange Btc-e
-TIME_ZONE                   | Time zone
-LOG                         | Calculating log output of auto settings
+TIME_ZONE                   | Time zone (For example: Europe/Moscow) [Database Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+LOG                         | Calculating log output of auto settings (default: false)
 
 
 ## Run

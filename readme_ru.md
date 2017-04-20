@@ -39,12 +39,27 @@ $ npm i
 ----------------|----------------------
 **TELEGRAM_TOKEN**                          | Ваш токен для telegram
 **TELEGRAM_ID**                             | ID вашего пользователя в telegram
-**BTCE_KEY** or **POLONIEX_KEY**            | API key
-**BTCE_SECRET** or **POLONIEX_SECRET**      | API secret
 **NAME_COIN**                               | Торговая валюта (Например: ltc)
 **NAME_COIN_TWO**                           | Торговая валюта (Например: usd)
 
 > TELEGRAM_ID будет получен при первом запуске торгового скрипта. Для его получения напишите telegram боту любое сообщение.
+
+###### Для биржи BTC_E
+
+ Option | Description
+----------------|----------------------
+**BTCE_KEY**         | API key
+**BTCE_SECRET**      | API secret
+EXCHANGE             | Выбор биржи **btc-e** (default: btc-e)
+
+###### Для биржи POLONIEX
+
+ Option | Description
+----------------|----------------------
+**POLONIEX_KEY**         | API key
+**POLONIEX_SECRET**      | API secret
+EXCHANGE                 | Выбор биржи **poloniex** (default: btc-e)
+POLONIEX_FEE             | Комиссия на сделки биржи POLONIEX (default: 0.25)
 
 По умолчанию бот запустится на дефолтных настройках. Вы можете их изменить используя следующие параметры.
 
@@ -61,9 +76,8 @@ TIME_CLOSE_ORDERS                   | Время закрытия неиспол
 TIME_CLOSE_ORDERS_INACTIVITY        | Время закрытия ордеров при бездействии (в минутах) (default: 15)
 OFFSET_MAX_ONE                      | Отступ между ордерами (default: 10)
 STEP_BREAKEVEN_PERCENT              | Процент отступа от безубытка между bid и ask (default: 50)
-EXCHANGE                            | Выбор биржи (btc-e | poloniex) (default: btc-e)
-POLONIEX_FEE                        | Комиссия на сделки биржи POLONIEX (default: 0.25)
 
+> Если в **NOTIFICATION_PAIR** установить значение all/all, уведомление будет распространяться **на все** пары доступные на рынке
 
 #### Модули автоконфигурации
 

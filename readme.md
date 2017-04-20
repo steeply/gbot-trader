@@ -37,12 +37,28 @@ The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs
 ----------------|----------------------
 **TELEGRAM_TOKEN**                          | Telegram token
 **TELEGRAM_ID**                             | Your User ID Telegram
-**BTCE_KEY** or **POLONIEX_KEY**            | API key
-**BTCE_SECRET** or **POLONIEX_SECRET**      | API secret
 **NAME_COIN**                               | Trading currency (For example: ltc)
 **NAME_COIN_TWO**                           | Trading currency (For example: usd)
 
 > TELEGRAM_ID will be given after the first starting of trade script. Send to bot any message to receive it.
+
+###### For exchange BTC_E
+
+ Option | Description
+----------------|----------------------
+**BTCE_KEY**         | API key
+**BTCE_SECRET**      | API secret
+EXCHANGE             | The choice of the exchange **btc-e** (default: btc-e)
+
+###### For exchange POLONIEX
+
+ Option | Description
+----------------|----------------------
+**POLONIEX_KEY**         | API key
+**POLONIEX_SECRET**      | API secret
+EXCHANGE                 | The choice of the exchange **poloniex** (default: btc-e)
+POLONIEX_FEE             | The Commission for transactions of the exchange POLONIEX (default: 0.25)
+
 
 By default, the bot will work at default settings. You can change them using the following options.
 
@@ -59,8 +75,9 @@ TIME_CLOSE_ORDERS                   | Closing time of unused orders (min) (defau
 TIME_CLOSE_ORDERS_INACTIVITY        | Closing time of undemanded orders (min) (default: 15)
 OFFSET_MAX_ONE                      | Position difference between orders (default: 10)
 STEP_BREAKEVEN_PERCENT              | Percentage of breakeven (default: 50)
-EXCHANGE                            | The choice of the exchange (btc-e | poloniex) (default: btc-e)
-POLONIEX_FEE                        | The Commission for transactions of the exchange POLONIEX (default: 0.25)
+
+> If **NOTIFICATION_PAIR** be set to all/all, notification will be distributed to **all** couples available on the market
+
 
 #### Modules AutoConfig
 

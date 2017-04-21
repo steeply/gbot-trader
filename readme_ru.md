@@ -120,3 +120,9 @@ $ npm start
 TELEGRAM_TOKEN=110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw TELEGRAM_ID=12345678 node ./build/server
 ```
 
+## Donate
+
+```
+BTC: 1GGbq5xkk9YUUy4QTqsUhNnc9T1n3sQ9Fo
+LTC: LPRESTPTNMUT8rVpdvd8cJxqrnGDW7Va8N
+```

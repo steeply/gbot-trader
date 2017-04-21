@@ -115,3 +115,9 @@ LOG                         | Calculating log output of auto settings (default: 
 $ npm start
 ```
 
+## Donate
+
+```
+BTC: 1GGbq5xkk9YUUy4QTqsUhNnc9T1n3sQ9Fo
+LTC: LPRESTPTNMUT8rVpdvd8cJxqrnGDW7Va8N
+```

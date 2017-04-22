@@ -73,9 +73,11 @@ NOTIFICATION_DEVIATION_PERCENT      | Relation of deviation percentage from curr
 COUNT_ORDERS                        | Count orders
 TIME_CLOSE_ORDERS                   | Closing time of unused orders (min) (default: 5)
 TIME_CLOSE_ORDERS_INACTIVITY        | Closing time of undemanded orders (min) (default: 15)
-OFFSET_MAX_ONE                      | Position difference between orders (default: 10)
+OFFSET_ORDERS_POINTS                | Position difference between orders in points (default: 10)
+OFFSET_ORDERS_PERCENT               | Position difference between orders in %
 STEP_BREAKEVEN_PERCENT              | Percentage of breakeven (default: 50)
 
+> If you specify **OFFSET_ORDERS_PERCENT**, then **OFFSET_ORDERS_POINTS** cancelled.
 > If **NOTIFICATION_PAIR** be set to all/all, notification will be distributed to **all** couples available on the market
 
 

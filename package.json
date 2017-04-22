@@ -1,6 +1,6 @@
 {
   "name": "btce-app-trader",
-  "version": "0.11.9",
+  "version": "0.11.10",
   "author": {
     "name": "George",
     "email": "steeply2010@gmail.com"
@@ -16,6 +16,17 @@
       "email": "steeply2010@gmail.com"
     }
   ],
+  "keywords": [
+    "btc-e",
+    "btce",
+    "poloniex",
+    "bitcoin",
+    "btc",
+    "trade",
+    "public",
+    "coin"
+  ],
+  "license": "MIT",
   "engines": {
     "node": ">=7.9.0",
     "npm": ">=4.5.0"
@@ -34,5 +45,8 @@
     "nodemailer": "^4.0.0",
     "poloniex-api-node": "^1.0.2",
     "ta-lib": "github:steeply/ta-lib"
+  },
+  "devDependencies": {
+    "uglify-js": "^2.8.22"
   }
 }

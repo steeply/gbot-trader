@@ -42,7 +42,7 @@ The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs
 
 > TELEGRAM_ID will be given after the first starting of trade script. Send to bot any message to receive it.
 
-###### For exchange BTC_E
+###### For exchange BTC-E
 
  Option | Description
 ----------------|----------------------
@@ -73,11 +73,13 @@ NOTIFICATION_DEVIATION_PERCENT      | Relation of deviation percentage from curr
 COUNT_ORDERS                        | Count orders
 TIME_CLOSE_ORDERS                   | Closing time of unused orders (min) (default: 5)
 TIME_CLOSE_ORDERS_INACTIVITY        | Closing time of undemanded orders (min) (default: 15)
-OFFSET_ORDERS_POINTS                | Position difference between orders in points (default: 10)
-OFFSET_ORDERS_PERCENT               | Position difference between orders in %
+OFFSET_ORDERS_POINTS                | Position difference between orders in points
+OFFSET_ORDERS_PERCENT               | Position difference between orders in % (default: 1)
 STEP_BREAKEVEN_PERCENT              | Percentage of breakeven (default: 50)
+SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale in % (default: false)
 
 > If you specify **OFFSET_ORDERS_PERCENT**, then **OFFSET_ORDERS_POINTS** cancelled.
+
 > If **NOTIFICATION_PAIR** be set to all/all, notification will be distributed to **all** couples available on the market
 
 
@@ -91,13 +93,30 @@ DYNAMIC_OFFSET_ORDERS               | Dynamic order allocation (default: false)
 TREND_DEFINITION                    | Trend determination (Experimentally) (default: false)
 ABRUPT_CHANGE_TREND                 | Rapid trend reversal (Experimentally) (default: false)
 OFF_MODULES_AUTO_SETTINGS           | Disabling Autotune Modules (default: false)
+
+> The option **OFF_MODULES_AUTO_SETTINGS** controls DANGER_PRICE_STOP, DYNAMIC_SETTINGS_TIME, DYNAMIC_OFFSET_ORDERS, TREND_DEFINITION, ABRUPT_CHANGE_TREND
+
+
+##### Strategy "Bollinger Bands"
+
+ Option | Description
+----------------|----------------------
 BBANDS                              | Bollinger Bands (Trend strategy!) (default: false)
 BBANDS_DEVIATION                    | Deviation (default: 20)
 BBANDS_INTERVAL                     | Time-frame (min) (default: 1)
 
-> The option ***OFF_MODULES_AUTO_SETTINGS*** controls DANGER_PRICE_STOP, DYNAMIC_SETTINGS_TIME, DYNAMIC_OFFSET_ORDERS, TREND_DEFINITION, ABRUPT_CHANGE_TREND
 
-> The modules BBANDS and TREND_DEFINITION, ABRUPT_CHANGE_TREND ***are mutually exclusive***.
+##### Strategy "One Sell a lot Buy"
+
+ Option | Description
+----------------|----------------------
+ONE_ORDERS_SELL                     | Strategy: One order to sell, lot purchase (default: false)
+ONE_ORDERS_SELL_PERCENT             | How to increase your average sales price in % (default: 1)
+ONE_ORDERS_SELL_OFFSET              | The difference between LastPrice and first BUY order in the stack of orders in % (default: 2)
+
+> **When you start the strategy of "Sell One, Buy a lot" the initial state of the balance of the base currency in the pair is ignored!**
+
+> All the strategies are mutually exclusive. If no policy is selected, use the strategy of "Scalper"
 
 #### Additional options
  Option | Description

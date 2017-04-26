@@ -111,7 +111,7 @@ BBANDS_INTERVAL                     | Time-frame (min) (default: 1)
  Option | Description
 ----------------|----------------------
 ONE_ORDERS_SELL                     | Strategy: One order to sell, lot purchase (default: false)
-ONE_ORDERS_SELL_PERCENT             | How to increase your average sales price in % (default: 1)
+ONE_ORDERS_SELL_PERCENT             | How to increase the average amount purchased coins in % (default: 1)
 ONE_ORDERS_SELL_OFFSET              | The difference between LastPrice and first BUY order in the stack of orders in % (default: 2)
 
 > **When you start the strategy of "Sell One, Buy a lot" the initial state of the balance of the base currency in the pair is ignored!**

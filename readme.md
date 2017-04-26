@@ -73,8 +73,8 @@ NOTIFICATION_DEVIATION_PERCENT      | Relation of deviation percentage from curr
 COUNT_ORDERS                        | Count orders
 TIME_CLOSE_ORDERS                   | Closing time of unused orders (min) (default: 5)
 TIME_CLOSE_ORDERS_INACTIVITY        | Closing time of undemanded orders (min) (default: 15)
-OFFSET_ORDERS_POINTS                | Position difference between orders in points
-OFFSET_ORDERS_PERCENT               | Position difference between orders in % (default: 1)
+OFFSET_ORDERS_POINTS                | Position difference between orders in points (default: 10)
+OFFSET_ORDERS_PERCENT               | Position difference between orders in % 
 STEP_BREAKEVEN_PERCENT              | Percentage of breakeven (default: 50)
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale in % (default: false)
 
@@ -128,7 +128,7 @@ EMAIL_AUTH_PASS             | Mail server password
 BTCE_HOST                   | Address exchange Btc-e
 TIME_ZONE                   | Time zone (For example: Europe/Moscow) [Database Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 LOG                         | Calculating log output of auto settings (default: false)
-RESTART_TRADER_TIME         | After how many seconds restart the worker after a fall (sec) (default: 5)
+RESTART_TRADER_TIME         | After how many seconds restart the worker after a fall (default: 5)
 
 
 ## Run

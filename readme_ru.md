@@ -129,6 +129,7 @@ EMAIL_AUTH_PASS             | Пароль почтового сервера
 BTCE_HOST                   | Адрес биржи Btc-e
 TIME_ZONE                   | Временная зона (Например: Europe/Moscow) [Database Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 LOG                         | Вывод лога расчета авто параметров (default: false)
+RESTART_TRADER_TIME         | Через сколько секунд рестартовать воркер после падения (в секундах) (default: 5)
 
 
 ## Run

@@ -128,6 +128,7 @@ EMAIL_AUTH_PASS             | Mail server password
 BTCE_HOST                   | Address exchange Btc-e
 TIME_ZONE                   | Time zone (For example: Europe/Moscow) [Database Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 LOG                         | Calculating log output of auto settings (default: false)
+RESTART_TRADER_TIME         | After how many seconds restart the worker after a fall (sec) (default: 5)
 
 
 ## Run

@@ -76,6 +76,7 @@ TIME_CLOSE_ORDERS                   | Время закрытия неиспол
 TIME_CLOSE_ORDERS_INACTIVITY        | Время закрытия ордеров при бездействии (в минутах) (default: 15)
 OFFSET_ORDERS_POINTS                | Отступ между ордерами в пунктах  (default: 10)
 OFFSET_ORDERS_PERCENT               | Отступ между ордерами в процентах 
+OFFSET_FIRST_ORDERS_PERCENT         | Отступ первого ордера в процентах (default: false)
 STEP_BREAKEVEN_PERCENT              | Процент отступа от безубытка между bid и ask (default: 50)
 SIZE_ORDERS_MARTINGALE              | Размер ордеров по Мартингейл в процентах (default: false)
 

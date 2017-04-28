@@ -75,6 +75,7 @@ TIME_CLOSE_ORDERS                   | Closing time of unused orders (min) (defau
 TIME_CLOSE_ORDERS_INACTIVITY        | Closing time of undemanded orders (min) (default: 15)
 OFFSET_ORDERS_POINTS                | Position difference between orders in points (default: 10)
 OFFSET_ORDERS_PERCENT               | Position difference between orders in % 
+OFFSET_FIRST_ORDERS_PERCENT         | Position difference of the first order in % (default: false)
 STEP_BREAKEVEN_PERCENT              | Percentage of breakeven (default: 50)
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale in % (default: false)
 

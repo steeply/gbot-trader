@@ -86,7 +86,7 @@ The possible indentation of the orders. Select one of the offered.
  Option | Description
 ----------------|----------------------
 OFFSET_ORDERS_POINTS                | Position difference between orders in points (default: 10)
-OFFSET_ORDERS_PERCENT               | Position difference between orders in % (default: false)
+OFFSET_ORDERS_PERCENT               | Specifies the percentage desired profit (default: false)
 RANGE_OFFSET                        | Range offset (default: false)
 OFFSET_FIRST_ORDERS_PERCENT         | Position difference of the first order in % (default: false)
 

@@ -118,8 +118,8 @@ BBANDS_INTERVAL                     | Таймфрейм (в минутах) (de
 
  Option | Description
 ----------------|----------------------
-ONE_ORDERS_SELL                     | Strategy: One order to sell, lot purchase (default: false)
-ONE_ORDERS_SELL_PERCENT             | Specifies the percentage desired profit (default: 1)
+ONE_ORDERS_SELL                     | Стратегия "Рыбалка" (default: false)
+ONE_ORDERS_SELL_PERCENT             | Задает процент желаемой прибыли (default: 1)
 ONE_ORDERS_SELL_OFFSET              | Разница между ценой LastPrice и первым ордером buy в стеке ордеров (в процентах) (default: 2)
 QUANTITY_ORDERS_IN_BLOCKS           | Количество ордеров в блоке (default: false)
 

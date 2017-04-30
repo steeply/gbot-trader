@@ -73,15 +73,24 @@ NOTIFICATION_DEVIATION_PERCENT      | Relation of deviation percentage from curr
 COUNT_ORDERS                        | Quantity all orders
 TIME_CLOSE_ORDERS                   | Closing time of unused orders (min) (default: 5)
 TIME_CLOSE_ORDERS_INACTIVITY        | Closing time of undemanded orders (min) (default: 15)
-OFFSET_ORDERS_POINTS                | Position difference between orders in points (default: 10)
-OFFSET_ORDERS_PERCENT               | Position difference between orders in % 
-OFFSET_FIRST_ORDERS_PERCENT         | Position difference of the first order in % (default: false)
 STEP_BREAKEVEN_PERCENT              | Percentage of breakeven (default: 50)
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale in % (default: false)
 
-> If you specify **OFFSET_ORDERS_PERCENT**, then **OFFSET_ORDERS_POINTS** cancelled.
-
 > If **NOTIFICATION_PAIR** be set to all/all, notification will be distributed to **all** couples available on the market
+
+
+##### Offset orders
+
+The possible indentation of the orders. Select one of the offered.
+
+ Option | Description
+----------------|----------------------
+OFFSET_ORDERS_POINTS                | Position difference between orders in points (default: 10)
+OFFSET_ORDERS_PERCENT               | Position difference between orders in % (default: false)
+RANGE_OFFSET                        | Range offset (default: false)
+OFFSET_FIRST_ORDERS_PERCENT         | Position difference of the first order in % (default: false)
+
+> Parameter **OFFSET_FIRST_ORDERS_PERCENT** can be used in conjunction with any of the selected options.
 
 
 #### Modules AutoConfig

@@ -113,6 +113,7 @@ BBANDS_INTERVAL                     | Таймфрейм (в минутах) (de
 ONE_ORDERS_SELL                     | Strategy: One order to sell, lot purchase (default: false)
 ONE_ORDERS_SELL_PERCENT             | Насколько увеличить среднию сумму закупленных монет (в процентах) (default: 1)
 ONE_ORDERS_SELL_OFFSET              | Разница между ценой LastPrice и первым ордером buy в стеке ордеров (в процентах) (default: 2)
+QUANTITY_ORDERS_IN_BLOCKS           | Количество ордеров в блоке (default: false)
 
 > **При запуске Стратегии "One Sell a lot Buy" начальное состояние баланса основной валюты в паре игнорируется!**
 

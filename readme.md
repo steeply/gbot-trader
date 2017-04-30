@@ -70,7 +70,7 @@ TIME_UPDATE_AUTO_SETTINGS           | Update time of auto settings (min) (defaul
 DEPOSIT_LIMIT                       | Deposit consuming procent (default: 100)
 NOTIFICATION_PAIR                   | Notification pair of rate changing (For example: btc/usd, ltc/usd)
 NOTIFICATION_DEVIATION_PERCENT      | Relation of deviation percentage from current price for notification will work (default: 600)
-COUNT_ORDERS                        | Count orders
+COUNT_ORDERS                        | Quantity all orders
 TIME_CLOSE_ORDERS                   | Closing time of unused orders (min) (default: 5)
 TIME_CLOSE_ORDERS_INACTIVITY        | Closing time of undemanded orders (min) (default: 15)
 OFFSET_ORDERS_POINTS                | Position difference between orders in points (default: 10)
@@ -114,6 +114,7 @@ BBANDS_INTERVAL                     | Time-frame (min) (default: 1)
 ONE_ORDERS_SELL                     | Strategy: One order to sell, lot purchase (default: false)
 ONE_ORDERS_SELL_PERCENT             | How to increase the average amount purchased coins in % (default: 1)
 ONE_ORDERS_SELL_OFFSET              | The difference between LastPrice and first BUY order in the stack of orders in % (default: 2)
+QUANTITY_ORDERS_IN_BLOCKS           | Quantity orders in blocks (default: false)
 
 > **When you start the strategy of "Sell One, Buy a lot" the initial state of the balance of the base currency in the pair is ignored!**
 

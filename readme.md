@@ -75,6 +75,7 @@ TIME_CLOSE_ORDERS                   | Closing time of unused orders (min) (defau
 TIME_CLOSE_ORDERS_INACTIVITY        | Closing time of undemanded orders (min) (default: 15)
 STEP_BREAKEVEN_PERCENT              | Percentage of breakeven (default: 50)
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale in % (default: false)
+MARTINGALE_TYPE                     | Type Martingale (1 - exponential, 2 - linear) (default: 1)
 
 > If **NOTIFICATION_PAIR** be set to all/all, notification will be distributed to **all** couples available on the market
 

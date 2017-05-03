@@ -69,16 +69,14 @@ POLONIEX_FEE             | Комиссия на сделки биржи POLONIE
 ----------------|----------------------
 TIME_UPDATE_AUTO_SETTINGS           | Время обновления авто параметров (в минутах) (default: 2)
 DEPOSIT_LIMIT                       | Процент использования депозита (default: 100)
-NOTIFICATION_PAIR                   | Пары для уведомления о скачках курса (Например: btc/usd, ltc/usd)
-NOTIFICATION_DEVIATION_PERCENT      | Процент отклонения от текущей цены чтобы сработало уведомление (default: 600)
+NOTIFICATION_PAIR                   | Пары для уведомления о скачках курса (Например: btc/usd, ltc/usd или **all/all** для всех пар)
+NOTIFICATION_DEVIATION_PERCENT      | Насколько процентов должен увеличиться спред чтобы сработало уведомление (default: 600)
 COUNT_ORDERS                        | Количество ордеров (default: рассчитывается на основе размера депозита)
 TIME_CLOSE_ORDERS                   | Время закрытия неиспользованных ордеров (в минутах) (default: 5)
 TIME_CLOSE_ORDERS_INACTIVITY        | Время закрытия ордеров при бездействии (в минутах) (default: 15)
 STEP_BREAKEVEN_PERCENT              | Процент отступа от безубытка между bid и ask (default: 50)
 SIZE_ORDERS_MARTINGALE              | Размер ордеров по Мартингейл в процентах (default: false)
 MARTINGALE_TYPE                     | Тип Мартингейла (1 - экспоненциальный, 2 - линейный) (default: 1)
-
-> Если в **NOTIFICATION_PAIR** установить значение all/all, уведомление будет распространяться **на все** пары доступные на рынке
 
 ##### Смещение ордеров
 
@@ -141,6 +139,7 @@ BTCE_HOST                   | Адрес биржи Btc-e
 TIME_ZONE                   | Временная зона (Например: Europe/Moscow) [Database Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 LOG                         | Вывод лога расчета авто параметров (default: false)
 RESTART_TRADER_TIME         | Через сколько секунд рестартовать воркер после падения (default: 5)
+NOTIFICATION_ERROR_COUNT    | Количество ошибок за 5 минут для уведомление (default: false)
 
 
 ## Run

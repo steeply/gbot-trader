@@ -68,7 +68,7 @@ By default, the bot will work at default settings. You can change them using the
 ----------------|----------------------
 TIME_UPDATE_AUTO_SETTINGS           | Update time of auto settings (min) (default: 2)
 DEPOSIT_LIMIT                       | Deposit consuming procent (default: 100)
-NOTIFICATION_PAIR                   | Notification pair of rate changing (For example: btc/usd, ltc/usd)
+NOTIFICATION_PAIR                   | Notification pair of rate changing (For example: btc/usd, ltc/usd or **all/all** for all pair)
 NOTIFICATION_DEVIATION_PERCENT      | Relation of deviation percentage from current price for notification will work (default: 600)
 COUNT_ORDERS                        | Quantity all orders
 TIME_CLOSE_ORDERS                   | Closing time of unused orders (min) (default: 5)
@@ -76,8 +76,6 @@ TIME_CLOSE_ORDERS_INACTIVITY        | Closing time of undemanded orders (min) (d
 STEP_BREAKEVEN_PERCENT              | Percentage of breakeven (default: 50)
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale in % (default: false)
 MARTINGALE_TYPE                     | Type Martingale (1 - exponential, 2 - linear) (default: 1)
-
-> If **NOTIFICATION_PAIR** be set to all/all, notification will be distributed to **all** couples available on the market
 
 
 ##### Offset orders
@@ -141,6 +139,7 @@ BTCE_HOST                   | Address exchange Btc-e
 TIME_ZONE                   | Time zone (For example: Europe/Moscow) [Database Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 LOG                         | Calculating log output of auto settings (default: false)
 RESTART_TRADER_TIME         | After how many seconds restart the worker after a fall (default: 5)
+NOTIFICATION_ERROR_COUNT    | The number of errors in 5 minutes for notification (default: false)
 
 
 ## Run

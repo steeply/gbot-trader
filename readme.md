@@ -39,24 +39,23 @@ The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs
 **TELEGRAM_ID**                             | Your User ID Telegram
 **NAME_COIN**                               | Trading currency (For example: ltc)
 **NAME_COIN_TWO**                           | Trading currency (For example: usd)
+EXCHANGE                                    | The choice of the exchange **btc-e** or **poloniex** (default: btc-e)
 
 > TELEGRAM_ID will be given after the first starting of trade script. Send to bot any message to receive it.
 
-###### For exchange BTC-E
+##### For exchange BTC-E
 
  Option | Description
 ----------------|----------------------
 **BTCE_KEY**         | API key
 **BTCE_SECRET**      | API secret
-EXCHANGE             | The choice of the exchange **btc-e** (default: btc-e)
 
-###### For exchange POLONIEX
+##### For exchange POLONIEX
 
  Option | Description
 ----------------|----------------------
 **POLONIEX_KEY**         | API key
 **POLONIEX_SECRET**      | API secret
-EXCHANGE                 | The choice of the exchange **poloniex** (default: btc-e)
 POLONIEX_FEE             | The Commission for transactions of the exchange POLONIEX (default: 0.25)
 
 
@@ -85,7 +84,8 @@ The possible indentation of the orders. Select one of the offered.
  Option | Description
 ----------------|----------------------
 OFFSET_ORDERS_POINTS                | Position difference between orders in points (default: 10)
-OFFSET_ORDERS_PERCENT               | Specifies the percentage desired profit (default: false)
+OFFSET_ORDERS_PERCENT               | Position difference between orders in % (default: false)
+OFFSET_ORDERS_EXPONENTIAL           | Position difference between orders is exponentially in % (default: false)
 RANGE_OFFSET                        | Range offset (default: false)
 OFFSET_FIRST_ORDERS_PERCENT         | Position difference of the first order in % (default: false)
 
@@ -120,7 +120,7 @@ BBANDS_INTERVAL                     | Time-frame (min) (default: 1)
  Option | Description
 ----------------|----------------------
 ONE_ORDERS_SELL                     | Strategy: One order to sell, lot purchase (default: false)
-ONE_ORDERS_SELL_PERCENT             | How to increase the average amount purchased coins in % (default: 1)
+ONE_ORDERS_SELL_PERCENT             | Specifies the percentage desired profit (default: 1)
 ONE_ORDERS_SELL_OFFSET              | The difference between LastPrice and first BUY order in the stack of orders in % (default: 2)
 QUANTITY_ORDERS_IN_BLOCKS           | Quantity orders in blocks (default: false)
 
@@ -138,7 +138,7 @@ EMAIL_AUTH_PASS             | Mail server password
 BTCE_HOST                   | Address exchange Btc-e
 TIME_ZONE                   | Time zone (For example: Europe/Moscow) [Database Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 LOG                         | Calculating log output of auto settings (default: false)
-RESTART_TRADER_TIME         | After how many seconds restart the worker after a fall (default: 5)
+RESTART_TRADER_TIME         | How many seconds to wait before re-querying the data after network errors (default: 5)
 NOTIFICATION_ERROR_COUNT    | The number of errors in 5 minutes for notification (default: false)
 
 

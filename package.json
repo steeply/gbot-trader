@@ -1,6 +1,6 @@
 {
   "name": "btce-app-trader",
-  "version": "0.12.9",
+  "version": "0.12.10",
   "author": {
     "name": "George",
     "email": "steeply2010@gmail.com"
@@ -28,7 +28,7 @@
   ],
   "license": "MIT",
   "engines": {
-    "node": ">=7.9.0",
+    "node": ">=7.10.0",
     "npm": ">=4.6.1"
   },
   "private": true,

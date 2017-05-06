@@ -57,6 +57,7 @@ EXCHANGE                                    | The choice of the exchange **btc-e
 **POLONIEX_KEY**         | API key
 **POLONIEX_SECRET**      | API secret
 POLONIEX_FEE             | The Commission for transactions of the exchange POLONIEX (default: 0.25)
+POLONIEX_DELAY_API       | The delay of requests to the API in milliseconds (default: 100)
 
 
 By default, the bot will work at default settings. You can change them using the following options.
@@ -73,7 +74,7 @@ COUNT_ORDERS                        | Quantity all orders
 TIME_CLOSE_ORDERS                   | Closing time of unused orders (min) (default: 5)
 TIME_CLOSE_ORDERS_INACTIVITY        | Closing time of undemanded orders (min) (default: 15)
 STEP_BREAKEVEN_PERCENT              | Percentage of breakeven (default: 50)
-SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale in % (default: false)
+SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (for Exponential - %, Linear - absolute number) (default: false)
 MARTINGALE_TYPE                     | Type Martingale (1 - exponential, 2 - linear) (default: 1)
 
 

@@ -59,6 +59,7 @@ EXCHANGE                                    | Выбор биржи **btc-e** и
 **POLONIEX_KEY**         | API key
 **POLONIEX_SECRET**      | API secret
 POLONIEX_FEE             | Комиссия на сделки биржи POLONIEX (default: 0.25)
+POLONIEX_DELAY_API       | Задержка при выполнении запросов к api в миллисекундах (default: 100)
 
 По умолчанию бот запустится на дефолтных настройках. Вы можете их изменить используя следующие параметры.
 
@@ -74,7 +75,7 @@ COUNT_ORDERS                        | Количество ордеров (defau
 TIME_CLOSE_ORDERS                   | Время закрытия неиспользованных ордеров (в минутах) (default: 5)
 TIME_CLOSE_ORDERS_INACTIVITY        | Время закрытия ордеров при бездействии (в минутах) (default: 15)
 STEP_BREAKEVEN_PERCENT              | Процент отступа от безубытка между bid и ask (default: 50)
-SIZE_ORDERS_MARTINGALE              | Размер ордеров по Мартингейл в процентах (default: false)
+SIZE_ORDERS_MARTINGALE              | Размер ордеров по Мартингейл (для Экспоненты - проценты, для Линейного - абсолютное число) (default: false)
 MARTINGALE_TYPE                     | Тип Мартингейла (1 - экспоненциальный, 2 - линейный) (default: 1)
 
 ##### Смещение ордеров

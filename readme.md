@@ -139,6 +139,8 @@ EMAIL_AUTH_PASS             | Mail server password
 BTCE_HOST                   | Address exchange Btc-e
 TIME_ZONE                   | Time zone (For example: Europe/Moscow) [Database Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 LOG                         | Calculating log output of auto settings (default: false)
+LOG_DEBUG                   | The output of the debug log (default: false)
+LOG_TRANSPORTS              | Where to write the log (0 - console, 1 - file, 2 console and file) (default: 0)
 RESTART_TRADER_TIME         | How many seconds to wait before re-querying the data after network errors (default: 5)
 NOTIFICATION_ERROR_COUNT    | The number of errors in 5 minutes for notification (default: false)
 

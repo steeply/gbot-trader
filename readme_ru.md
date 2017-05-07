@@ -139,6 +139,8 @@ EMAIL_AUTH_PASS             | Пароль почтового сервера
 BTCE_HOST                   | Адрес биржи Btc-e
 TIME_ZONE                   | Временная зона (Например: Europe/Moscow) [Database Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 LOG                         | Вывод лога расчета авто параметров (default: false)
+LOG_DEBUG                   | Вывод дебаг лога (default: false)
+LOG_TRANSPORTS              | Куда писать лог (0 - консоль, 1 - файл, 2 - консоль и файл) (default: 0)
 RESTART_TRADER_TIME         | Через сколько секунд перезапрашивать данные после сетевых ошибок (default: 5)
 NOTIFICATION_ERROR_COUNT    | Количество ошибок за 5 минут для уведомления через telegram (default: false)
 

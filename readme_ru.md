@@ -68,7 +68,8 @@ POLONIEX_DELAY_API       | Задержка при выполнении запр
  Option | Description
 ----------------|----------------------
 TIME_UPDATE_AUTO_SETTINGS           | Время обновления авто параметров (в минутах) (default: 2)
-DEPOSIT_LIMIT                       | Процент использования депозита (default: 100)
+DEPOSIT_LIMIT_PERCENT               | Процент использования депозита (default: 100)
+DEPOSIT_LIMIT_CURRENCY              | Размер использования депозита в валюте (default: false)
 NOTIFICATION_PAIR                   | Пары для уведомления о скачках курса (Например: btc/usd, ltc/usd или **all/all** для всех пар)
 NOTIFICATION_DEVIATION_PERCENT      | Насколько процентов должен увеличиться спред чтобы сработало уведомление (default: 600)
 COUNT_ORDERS                        | Количество ордеров (default: рассчитывается на основе размера депозита)

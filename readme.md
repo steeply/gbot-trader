@@ -67,7 +67,8 @@ By default, the bot will work at default settings. You can change them using the
  Option | Description
 ----------------|----------------------
 TIME_UPDATE_AUTO_SETTINGS           | Update time of auto settings (min) (default: 2)
-DEPOSIT_LIMIT                       | Deposit consuming procent (default: 100)
+DEPOSIT_LIMIT_PERCENT               | Deposit consuming percent (default: 100)
+DEPOSIT_LIMIT_CURRENCY              | The size of the used part of the Deposit in the currency (default: false)
 NOTIFICATION_PAIR                   | Notification pair of rate changing (For example: btc/usd, ltc/usd or **all/all** for all pair)
 NOTIFICATION_DEVIATION_PERCENT      | Relation of deviation percentage from current price for notification will work (default: 600)
 COUNT_ORDERS                        | Quantity all orders

@@ -36,8 +36,6 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-logs
-*.log
 npm-debug.log*
 pids
 *.pid

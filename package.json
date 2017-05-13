@@ -1,6 +1,6 @@
 {
   "name": "btce-app-trader",
-  "version": "0.12.18",
+  "version": "0.12.20",
   "author": {
     "name": "George",
     "email": "steeply2010@gmail.com"
@@ -45,9 +45,10 @@
     "nodemailer": "^4.0.0",
     "poloniex-api-node": "^1.1.1",
     "ta-lib": "github:steeply/ta-lib",
-    "winston": "^2.3.1"
+    "winston": "^2.3.1",
+    "winston-daily-rotate-file": "^1.4.6"
   },
   "devDependencies": {
-    "uglify-js": "^3.0.3"
+    "uglify-js": "^3.0.4"
   }
 }

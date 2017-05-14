@@ -1,6 +1,6 @@
 {
   "name": "btce-app-trader",
-  "version": "0.13.0",
+  "version": "0.13.1",
   "author": {
     "name": "George",
     "email": "steeply2010@gmail.com"
@@ -40,6 +40,7 @@
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "moment-range": "^3.0.3",
+    "moment-timezone": "^0.5.13",
     "ms": "^1.0.0",
     "node-telegram-bot-api": "^0.27.0",
     "nodemailer": "^4.0.0",

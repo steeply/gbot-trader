@@ -15,7 +15,7 @@ This app is working with server maintenance. It is created with applying:
 2. Copy the repository and install the dependency packages:
 ```
 $ git clone git@github.com:steeply/btce-app-trader.git
-$ cd btc-e
+$ cd btce-app-trader
 $ npm i
 ```
 
@@ -49,6 +49,7 @@ EXCHANGE                                    | The choice of the exchange **btc-e
 ----------------|----------------------
 **BTCE_KEY**         | API key
 **BTCE_SECRET**      | API secret
+BTCE_HOST            | Address exchange Btc-e
 
 ##### For exchange POLONIEX
 
@@ -138,13 +139,13 @@ EMAIL_BUG_REPORT_ADDRESS    | Email for notifications of network incidences and 
 HOST_SMTP                   | Mail server address
 EMAIL_AUTH_USER             | Authorization login of the mail server
 EMAIL_AUTH_PASS             | Mail server password
-BTCE_HOST                   | Address exchange Btc-e
 TIME_ZONE                   | Time zone (For example: Europe/Moscow) [Database Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 LOG                         | Calculating log output of auto settings (default: false)
 LOG_DEBUG                   | The output of the debug log (default: false)
 LOG_TRANSPORTS              | Where to write the log (0 - console, 1 - file, 2 console and file) (default: 0)
 RESTART_TRADER_TIME         | How many seconds to wait before re-querying the data after network errors (default: 5)
 NOTIFICATION_ERROR_COUNT    | The number of errors in 5 minutes for notification (default: false)
+TELEGRAM_OFF                | Disable Telegram (default: false)
 
 
 ## Run

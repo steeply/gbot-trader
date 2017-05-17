@@ -22,6 +22,9 @@ $ npm i
 ## Setting
 
 ### Telegram. Creating a new bot
+
+If you use the option **TELEGRAM_OFF**, then this paragraph is not necessary.
+
 [@BotFather](https://core.telegram.org/bots#6-botfather)
 
 Use the **/newbot** command to create a new bot. The BotFather will ask you for a name and username, then generate an authorization token for your new bot.
@@ -99,12 +102,12 @@ OFFSET_FIRST_ORDERS_PERCENT         | Position difference of the first order in 
 
  Option | Description
 ----------------|----------------------
-DANGER_PRICE_STOP                   | Bot stopping according to the price spike (default: true)
+DANGER_PRICE_STOP                   | Bot stopping according to the price spike (default: false)
 DYNAMIC_SETTINGS_TIME               | Dynamic time updating for auto options (default: false)
 DYNAMIC_OFFSET_ORDERS               | Dynamic order allocation (default: false)
 TREND_DEFINITION                    | Trend determination (Experimentally) (default: false)
 ABRUPT_CHANGE_TREND                 | Rapid trend reversal (Experimentally) (default: false)
-OFF_MODULES_AUTO_SETTINGS           | Disabling Autotune Modules (default: false)
+OFF_MODULES_AUTO_SETTINGS           | Disabling all Autotune Modules (default: false)
 
 > The option **OFF_MODULES_AUTO_SETTINGS** controls DANGER_PRICE_STOP, DYNAMIC_SETTINGS_TIME, DYNAMIC_OFFSET_ORDERS, TREND_DEFINITION, ABRUPT_CHANGE_TREND
 

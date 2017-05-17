@@ -173,6 +173,7 @@ TIME_ZONE                   | Временная зона (Например: Eur
 LOG                         | Вывод лога расчета авто параметров (default: false)
 LOG_DEBUG                   | Вывод дебаг лога (default: false)
 LOG_TRANSPORTS              | Куда писать лог (0 - консоль, 1 - файл, 2 - консоль и файл) (default: 0)
+LOG_PATH                    | Пользовательский путь до директории с логом (default: false)
 RESTART_TRADER_TIME         | Через сколько секунд перезапрашивать данные после сетевых ошибок (default: 5)
 NOTIFICATION_ERROR_COUNT    | Количество ошибок за 5 минут для уведомления через telegram (default: false)
 TELEGRAM_OFF                | Отключить Telegram. (default: false)

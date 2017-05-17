@@ -146,6 +146,7 @@ TIME_ZONE                   | Time zone (For example: Europe/Moscow) [Database T
 LOG                         | Calculating log output of auto settings (default: false)
 LOG_DEBUG                   | The output of the debug log (default: false)
 LOG_TRANSPORTS              | Where to write the log (0 - console, 1 - file, 2 console and file) (default: 0)
+LOG_PATH                    | A custom path to the directory with the log (default: false)
 RESTART_TRADER_TIME         | How many seconds to wait before re-querying the data after network errors (default: 5)
 NOTIFICATION_ERROR_COUNT    | The number of errors in 5 minutes for notification (default: false)
 TELEGRAM_OFF                | Disable Telegram (default: false)

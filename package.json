@@ -1,11 +1,11 @@
 {
   "name": "btce-app-trader",
-  "version": "0.13.4",
+  "version": "0.14.0",
   "author": {
     "name": "George",
     "email": "steeply2010@gmail.com"
   },
-  "description": "btc-e trader application",
+  "description": "btc-e, poloniex trader application",
   "main": "./build/server.js",
   "scripts": {
     "start": "node ./build/server"
@@ -33,7 +33,7 @@
   },
   "private": true,
   "dependencies": {
-    "async": "^2.4.0",
+    "async": "^2.4.1",
     "bluebird": "^3.5.0",
     "btce-deal": "^0.2.3",
     "colors": "^1.1.2",
@@ -45,11 +45,11 @@
     "node-telegram-bot-api": "^0.27.0",
     "nodemailer": "^4.0.0",
     "poloniex-api-node": "^1.1.1",
-    "ta-lib": "github:steeply/ta-lib",
+    "ta-lib": "^0.10.0",
     "winston": "^2.3.1",
     "winston-daily-rotate-file": "^1.4.6"
   },
   "devDependencies": {
-    "uglify-js": "^3.0.7"
+    "uglify-js": "^3.0.11"
   }
 }

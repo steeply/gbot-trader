@@ -158,6 +158,11 @@ TELEGRAM_OFF                | Disable Telegram (default: false)
 $ npm start
 ```
 
+To launch the control panel in a Telegram, send a message to:
+```
+/start
+```
+
 ## Donate
 
 ```

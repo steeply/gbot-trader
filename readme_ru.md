@@ -38,14 +38,40 @@ $ npm i
 ```
 $ git init
 $ git add . 
-$ git commit -a -m "first commit"
+$ git commit -m "first commit"
 $ heroku create
+$ git push heroku master
+$ heroku ps:scale web=0
+```
+
+5.1. В приложении на heroku зайдите в Settings -> Reveal Config Vars (вводим параметры приложения из документации (ключи от биржи и телеграма, настройки и стратегию)).
+Или можно сделать через консоль:
+
+```
+$ heroku config:set PARAM=VALUE  - установить параметр
+$ heroku config:unset PARAM      - удалить параметр
+$ heroku config                  - показать все установленные параметры
+```
+
+5.2. Чтобы включить бота, в разделе Resources -> **WORKER** - Включить. 
+Или консольная команда:
+```
+heroku ps:scale worker=1        - включить
+heroku ps:scale worker=0        - выключить
+```
+
+5.3. Чтобы **обновить бота** на heroku на новую версию, скачайте новое приложение с текущего репозитория в свою папку, **где распологается прошлая версия бота** и замените в ней файлы.
+
+Дальше выполните команды:
+```
+$ git add . 
+$ git commit -m "update bot"
 $ git push heroku master
 ```
 
-4.1. В приложении на heroku зайдите в Settings -> Reveal Config Vars (вводим параметры приложения из документации (ключи от биржи и телеграма, настройки и стратегию))
+При необходимости обновите параметры конфигурации (см. п. 5.1)
 
-4.2. Resources -> Web - Выключить, **WORKER** - Включить
+
 
 ## Setting
 
@@ -189,6 +215,20 @@ $ npm start
 или
 ```
 TELEGRAM_TOKEN=110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw TELEGRAM_ID=12345678 node ./build/server
+```
+
+Для windows
+
+```
+SET TELEGRAM_TOKEN=110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw 
+SET TELEGRAM_ID=12345678
+npm start
+```
+
+
+Для запуска панели управления в Telegram, отправьте сообщение:
+```
+/start
 ```
 
 ## Donate

@@ -163,6 +163,11 @@ To launch the control panel in a Telegram, send a message to:
 /start
 ```
 
+Additional commands:
+```
+/info - list of all commands
+```
+
 ## Donate
 
 ```

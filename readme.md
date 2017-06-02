@@ -76,6 +76,7 @@ DEPOSIT_LIMIT_CURRENCY              | The size of the used part of the Deposit i
 NOTIFICATION_PAIR                   | Notification pair of rate changing (For example: btc/usd, ltc/usd or **all/all** for all pair)
 NOTIFICATION_DEVIATION_PERCENT      | Relation of deviation percentage from current price for notification will work (default: 600)
 COUNT_ORDERS                        | Quantity all orders
+QUANTITY_ORDERS_IN_BLOCKS           | Quantity orders in blocks (default: false)
 TIME_CLOSE_ORDERS                   | Closing time of unused orders (min) (default: 5)
 TIME_CLOSE_ORDERS_INACTIVITY        | Closing time of undemanded orders (min) (default: 15)
 STEP_BREAKEVEN_PERCENT              | Percentage of breakeven (default: 50)
@@ -128,7 +129,6 @@ BBANDS_INTERVAL                     | Time-frame (min) (default: 1)
 ONE_ORDERS_SELL                     | Strategy: One order to sell, lot purchase (default: false)
 ONE_ORDERS_SELL_PERCENT             | Specifies the percentage desired profit (default: 1)
 ONE_ORDERS_SELL_OFFSET              | The difference between LastPrice and first BUY order in the stack of orders in % (default: 2)
-QUANTITY_ORDERS_IN_BLOCKS           | Quantity orders in blocks (default: false)
 INTEGRITY_CONTROL_ORDERS            | Integrity control orders (**soft** or **hard**) (default: soft)
 
 > **When you start the strategy of "Sell One, Buy a lot" the initial state of the balance of the base currency in the pair is ignored!**

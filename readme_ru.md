@@ -129,6 +129,7 @@ DEPOSIT_LIMIT_CURRENCY              | Размер использования д
 NOTIFICATION_PAIR                   | Пары для уведомления о скачках курса (Например: btc/usd, ltc/usd или **all/all** для всех пар)
 NOTIFICATION_DEVIATION_PERCENT      | Насколько процентов должен увеличиться спред чтобы сработало уведомление (default: 600)
 COUNT_ORDERS                        | Количество ордеров (default: рассчитывается на основе размера депозита)
+QUANTITY_ORDERS_IN_BLOCKS           | Количество ордеров в блоке (default: false)
 TIME_CLOSE_ORDERS                   | Время закрытия неиспользованных ордеров (в минутах) (default: 5)
 TIME_CLOSE_ORDERS_INACTIVITY        | Время закрытия ордеров при бездействии (в минутах) (default: 15)
 STEP_BREAKEVEN_PERCENT              | Процент отступа от безубытка между bid и ask (default: 50)
@@ -178,7 +179,6 @@ BBANDS_INTERVAL                     | Таймфрейм (в минутах) (de
 ONE_ORDERS_SELL                     | Стратегия "Рыбалка" (default: false)
 ONE_ORDERS_SELL_PERCENT             | Задает процент желаемой прибыли (default: 1)
 ONE_ORDERS_SELL_OFFSET              | Разница между ценой LastPrice и первым ордером buy в стеке ордеров в % (default: 2)
-QUANTITY_ORDERS_IN_BLOCKS           | Количество ордеров в блоке (default: false)
 INTEGRITY_CONTROL_ORDERS            | Контроль целостности ордеров (soft - мягкий, hard - жесткий) (default: soft)
 
 > Если параметр **INTEGRITY_CONTROL_ORDERS** в режиме `hard`, то sell ордер будет установлен только если объемы установленных и исполненных  buy ордеров будут совпадать (если ни один ордер не потеряется).

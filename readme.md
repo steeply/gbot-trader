@@ -1,9 +1,12 @@
-# BTC-E Bot Trader
+# BTC-E | Poloniex Bot Trader
+
+[![Dependency Status](https://david-dm.org/steeply/btce-app-trader.svg)](https://david-dm.org/steeply/btce-app-trader)
 
 This app is working with server maintenance. It is created with applying:
 
 * _JavaScript_;
 * _Btce-deal_;
+* _poloniex-api-node_;
 * _Telegram_;
 * _Ta-lib_;
 * _nodejs_.
@@ -14,7 +17,7 @@ This app is working with server maintenance. It is created with applying:
 
 2. Copy the repository and install the dependency packages:
 ```
-$ git clone git@github.com:steeply/btce-app-trader.git
+$ git clone https://github.com/steeply/btce-app-trader.git
 $ cd btce-app-trader
 $ npm i
 ```
@@ -36,16 +39,6 @@ The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs
 
 #### Required parameters
 
- Option | Description
-----------------|----------------------
-**TELEGRAM_TOKEN**                          | Telegram token
-**TELEGRAM_ID**                             | Your User ID Telegram
-**NAME_COIN**                               | Trading currency (For example: ltc)
-**NAME_COIN_TWO**                           | Trading currency (For example: usd)
-EXCHANGE                                    | The choice of the exchange **btc-e** or **poloniex** (default: btc-e)
-
-> TELEGRAM_ID will be given after the first starting of trade script. Send to bot any message to receive it.
-
 ##### For exchange BTC-E
 
  Option | Description
@@ -62,6 +55,16 @@ BTCE_HOST            | Address exchange Btc-e
 **POLONIEX_SECRET**      | API secret
 POLONIEX_FEE             | The Commission for transactions of the exchange POLONIEX (default: 0.25)
 POLONIEX_DELAY_API       | The delay of requests to the API in milliseconds (default: 100)
+
+ Option | Description
+----------------|----------------------
+**NAME_COIN**             | Trading currency (For example: ltc)
+**NAME_COIN_TWO**         | Trading currency (For example: usd)
+EXCHANGE                  | The choice of the exchange **btc-e** or **poloniex** (default: btc-e)
+TELEGRAM_TOKEN            | Telegram token
+TELEGRAM_ID               | Your User ID Telegram
+TELEGRAM_OFF              | Disable Telegram (default: false)
+> TELEGRAM_ID will be given after the first starting of trade script. Send to bot any message to receive it.
 
 
 By default, the bot will work at default settings. You can change them using the following options.
@@ -149,8 +152,11 @@ LOG_TRANSPORTS              | Where to write the log (0 - console, 1 - file, 2 c
 LOG_PATH                    | A custom path to the directory with the log (default: false)
 RESTART_TRADER_TIME         | How many seconds to wait before re-querying the data after network errors (default: 5)
 NOTIFICATION_ERROR_COUNT    | The number of errors in 5 minutes for notification (default: false)
-TELEGRAM_OFF                | Disable Telegram (default: false)
 
+> Option **NODE_ENV=production** includes:
+  1. notification about the start of a Telegram bot.
+  2. error notifications by E-mail.
+  3. prohibits the use of conf-dev.js.
 
 ## Run
 

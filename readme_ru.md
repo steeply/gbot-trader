@@ -133,7 +133,7 @@ TELEGRAM_OFF              | Отключить Telegram. (default: false)
 ----------------|----------------------
 TIME_UPDATE_AUTO_SETTINGS           | Время обновления авто параметров (в минутах) (default: 2)
 DEPOSIT_LIMIT_PERCENT               | Процент использования депозита (default: 100)
-DEPOSIT_LIMIT_CURRENCY              | Размер использования депозита в валюте (default: false)
+DEPOSIT_LIMIT_CURRENCY              | Размер использования депозита в валюте параметра **NAME_COIN_TWO** (default: false)
 NOTIFICATION_PAIR                   | Пары для уведомления о скачках курса (Например: btc/usd, ltc/usd или **all/all** для всех пар)
 NOTIFICATION_DEVIATION_PERCENT      | Насколько процентов должен увеличиться спред чтобы сработало уведомление (default: 600)
 COUNT_ORDERS                        | Количество ордеров. Сколько всего будет установлено. (default: рассчитывается на основе размера депозита)
@@ -251,6 +251,9 @@ npm start
 ```
 /info - список всех команд
 ```
+
+## FAQ
+[ЧаВо](https://github.com/steeply/btce-app-trader/blob/master/faq.md)
 
 ## Donate
 

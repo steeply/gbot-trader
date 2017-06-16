@@ -1,11 +1,11 @@
 {
   "name": "btce-app-trader",
-  "version": "0.14.9",
+  "version": "0.15.0",
   "author": {
     "name": "George",
     "email": "steeply2010@gmail.com"
   },
-  "description": "btc-e, poloniex trader application",
+  "description": "btc-e, poloniex, bittrex trader application",
   "main": "./build/server.js",
   "scripts": {
     "start": "node ./build/server"
@@ -20,6 +20,7 @@
     "btc-e",
     "btce",
     "poloniex",
+    "bittrex",
     "bitcoin",
     "btc",
     "trade",
@@ -33,6 +34,7 @@
   },
   "private": true,
   "dependencies": {
+    "@you21979/bittrex.com": "0.0.4",
     "async": "^2.4.1",
     "bluebird": "^3.5.0",
     "btce-deal": "^0.2.3",

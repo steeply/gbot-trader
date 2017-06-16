@@ -1,4 +1,4 @@
-# BTC-E | Poloniex Bot Trader
+# BTC-E | Poloniex | Bittrex Bot Trader
 
 [![Dependency Status](https://david-dm.org/steeply/btce-app-trader.svg)](https://david-dm.org/steeply/btce-app-trader)
 
@@ -39,37 +39,30 @@ The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs
 
 #### Required parameters
 
+ Option | Description
+----------------|----------------------
+**KEY**             | API key
+**SECRET**          | API secret
+**NAME_COIN**       | Trading currency (For example: ltc)
+**NAME_COIN_TWO**   | Trading currency (For example: usd)
+EXCHANGE            | The choice of the exchange **btc-e**, **poloniex** or **bittrex** (default: btc-e)
+TELEGRAM_TOKEN      | Telegram token
+TELEGRAM_ID         | Your User ID Telegram
+TELEGRAM_OFF        | Disable Telegram (default: false)
+
+> TELEGRAM_ID will be given after the first starting of trade script. Send to bot any message to receive it.
+
+
 ##### For exchange BTC-E
 
  Option | Description
 ----------------|----------------------
-**BTCE_KEY**         | API key
-**BTCE_SECRET**      | API secret
 BTCE_HOST            | Address exchange Btc-e
-
-##### For exchange POLONIEX
-
- Option | Description
-----------------|----------------------
-**POLONIEX_KEY**         | API key
-**POLONIEX_SECRET**      | API secret
-POLONIEX_FEE             | The Commission for transactions of the exchange POLONIEX (default: 0.25)
-POLONIEX_DELAY_API       | The delay of requests to the API in milliseconds (default: 100)
-
- Option | Description
-----------------|----------------------
-**NAME_COIN**             | Trading currency (For example: ltc)
-**NAME_COIN_TWO**         | Trading currency (For example: usd)
-EXCHANGE                  | The choice of the exchange **btc-e** or **poloniex** (default: btc-e)
-TELEGRAM_TOKEN            | Telegram token
-TELEGRAM_ID               | Your User ID Telegram
-TELEGRAM_OFF              | Disable Telegram (default: false)
-> TELEGRAM_ID will be given after the first starting of trade script. Send to bot any message to receive it.
 
 
 By default, the bot will work at default settings. You can change them using the following options.
 
-#### Possible settings
+#### Used trade options
 
  Option | Description
 ----------------|----------------------
@@ -87,7 +80,7 @@ SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (fo
 MARTINGALE_TYPE                     | Type Martingale (1 - exponential, 2 - linear) (default: 1)
 
 
-##### Offset orders
+#### Offset orders
 
 The possible indentation of the orders. Select one of the offered.
 
@@ -152,6 +145,9 @@ LOG_TRANSPORTS              | Where to write the log (0 - console, 1 - file, 2 c
 LOG_PATH                    | A custom path to the directory with the log (default: false)
 RESTART_TRADER_TIME         | How many seconds to wait before re-querying the data after network errors (default: 5)
 NOTIFICATION_ERROR_COUNT    | The number of errors in 5 minutes for notification (default: false)
+EXCHANGE_FEE                | The Commission for transactions of the exchange (default: 0.25)
+DELAY_REQUEST_API           | The delay of requests to the API in milliseconds (default: 500)
+
 
 > Option **NODE_ENV=production** includes:
   1. notification about the start of a Telegram bot.

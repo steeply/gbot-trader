@@ -119,6 +119,8 @@ BBANDS_INTERVAL                     | Time-frame (min) (default: 1)
 
 
 ##### Strategy "One Sell a lot Buy"
+**When you start the strategy of "Sell One, Buy a lot" the initial state of the balance of the base currency in the pair is ignored!**
+
 
  Option | Description
 ----------------|----------------------
@@ -126,10 +128,9 @@ ONE_ORDERS_SELL                     | Strategy: One order to sell, lot purchase 
 ONE_ORDERS_SELL_PERCENT             | Specifies the percentage desired profit (default: 1)
 ONE_ORDERS_SELL_OFFSET              | The difference between LastPrice and first BUY order in the stack of orders in % (default: 2)
 INTEGRITY_CONTROL_ORDERS            | Integrity control orders (**soft** or **hard**) (default: soft)
+FIRST_LOADING_HISTORY               | Download the history when you start the bot (default: false)
 
-> **When you start the strategy of "Sell One, Buy a lot" the initial state of the balance of the base currency in the pair is ignored!**
-
-> All the strategies are mutually exclusive. If no policy is selected, use the strategy of "Scalper"
+**All the strategies are mutually exclusive. If no policy is selected, use the strategy of "Scalper"**.
 
 #### Additional options
  Option | Description

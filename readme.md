@@ -2,14 +2,13 @@
 
 [![Dependency Status](https://david-dm.org/steeply/btce-app-trader.svg)](https://david-dm.org/steeply/btce-app-trader)
 
-This app is working with server maintenance. It is created with applying:
+This app is working with server maintenance.
 
-* _JavaScript_;
-* _Btce-deal_;
-* _poloniex-api-node_;
-* _Telegram_;
-* _Ta-lib_;
-* _nodejs_.
+## Exchange
+
+* BTC-E
+* Poloniex
+* Bittrex
 
 ## Install
 

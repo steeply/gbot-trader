@@ -163,6 +163,8 @@ OFF_MODULES_AUTO_SETTINGS           | Отключение всех модуле
 
 > Опции **TREND_DEFINITION** и **ABRUPT_CHANGE_TREND** только для стратегии Scalper.
 
+> Опция **DYNAMIC_OFFSET_ORDERS** работает только при активной опции **OFFSET_ORDERS_POINTS**.
+
 > Опция **OFF_MODULES_AUTO_SETTINGS** контролирует DANGER_PRICE_STOP, DYNAMIC_SETTINGS_TIME, DYNAMIC_OFFSET_ORDERS, TREND_DEFINITION, ABRUPT_CHANGE_TREND
 
 

@@ -4,73 +4,101 @@
 
 Это приложение работает на стороне сервера и управляется через Telegram.
 
-## Поддерживаемые биржи
+## Интегрированные биржи
 
 * BTC-E
 * Poloniex
 * Bittrex
 
+## FAQ
+Перед тем как задавать вопросы, прочитайте [FAQ](https://github.com/steeply/btce-app-trader/blob/master/faq.md). Большинство ответов вы найдете в нем.
+
 ## Установка
 
-1. Установите [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) если у вас он не установлен. Откройте консоль и введите ваш e-mail и никнейм:
+#### Установка на локальный компьютер
+
+1. Установите [git](https://git-scm.com/downloads) если у вас он не установлен. Откройте консоль и введите ваш e-mail и никнейм:
 ```
-$ git config --global user.name "Your Name"
-$ git config --global user.email "yourname@example.com"
+git config --global user.name "Your Name"
+git config --global user.email "yourname@example.com"
 ```
  
-2. Установите [node.js](https://nodejs.org/en/) или используйте хостинг ([heroku](https://signup.heroku.com/login), [pivotal](https://account.run.pivotal.io/z/uaa/sign-up), etc.).
+2. Установите [node.js](https://nodejs.org/en/download/current).
 3. На своем компьютере создайте любую папку (например `traders`) и сохраните туда данный репозиторий.
-4. Перейдите в папку и установите пакеты зависимостей командой `npm i` (только если будите запускать на локальном компьютере).
+4. Перейдите в папку и установите пакеты зависимостей командой `npm i`.
 ```
-$ cd D:\traders   (Если папка находится в корне диска D)
-$ git clone https://github.com/steeply/btce-app-trader.git
-$ cd btce-app-trader
-$ npm i
+cd D:\traders   (Если папка находится в корне диска D)
+git clone https://github.com/steeply/btce-app-trader.git
+cd btce-app-trader
+npm i
 ```
 
-5. Далее описание только если вы решили использовать хостинг [heroku](https://signup.heroku.com/login) и скачали репозиторий через `Download zip`.
+5. Дальше приступайте к настройке конфигурации и запускайте бота.
+
+#### Установка на Heroku
+
+1. На своем компьютере создайте любую папку (например `traders`) и сохраните туда данный репозиторий.
+    ```
+    cd D:\traders   (Если папка находится в корне диска D)
+    git clone https://github.com/steeply/btce-app-trader.git
+    cd btce-app-trader
+    ```
+
+2. Зарегистрируйтесь на сайте [heroku](https://signup.heroku.com/login).
 
     Скачайте [heroku CLI](https://devcenter.heroku.com/articles/getting-started-with-nodejs#set-up) и установите его.
-
+    
     Откройте консоль и **перейдите в ней в папку с ботом** и выполняйте следующие команды:
-
+    
     Выполните команду: **_heroku login_** и введите свой e-mail и пароль под которым вы зарегистрировались на Heroku (_Во время ввода пароля символы не отображаются_).
-
-    Дальше:
+    
+    Если если сохранили репозиторий через кнопку `Download ZIP` выполните следующие действия (если через git clone пропустите это):
     ```
-    $ git init
-    $ git add . 
-    $ git commit -m "first commit"
-    $ heroku create
-    $ git push heroku master
-    $ heroku ps:scale web=0
+    git init
+    git add . 
+    git commit -m "first commit"
+    ```
+    
+    Затем создайте новое приложение на heroku:
+    ```
+    heroku create
+    git push heroku master
+    heroku ps:scale web=0
     ```
 
-    5.1. В приложении на heroku зайдите в Settings -> Reveal Config Vars (вводим параметры приложения из документации (ключи от биржи и телеграма, настройки и стратегию)).
+3. В приложении на [heroku](https://dashboard.heroku.com/apps) зайдите в Settings -> Reveal Config Vars (вводим параметры приложения из документации (ключи от биржи и телеграма, настройки и стратегию)).
     Или можно сделать через консоль:
     ```
-    $ heroku config:set PARAM=VALUE  - установить параметр
-    $ heroku config:unset PARAM      - удалить параметр
-    $ heroku config                  - показать все установленные параметры
+    heroku config:set PARAM=VALUE  - установить параметр
+    heroku config:unset PARAM      - удалить параметр
+    heroku config                  - показать все установленные параметры
     ```
 
-    5.2. Чтобы включить бота, в разделе Resources -> **WORKER** - Включить. 
+4. Чтобы включить бота, в разделе Resources -> **WORKER** - Включить. 
     Или консольная команда:
     ```
     heroku ps:scale worker=1        - включить
     heroku ps:scale worker=0        - выключить
     ```
 
-    5.3. Чтобы **обновить бота** на heroku на новую версию, скачайте новое приложение с текущего репозитория в свою папку, **где распологается прошлая версия бота** и замените в ней файлы.
-
+5. Чтобы **обновить бота** на heroku на новую версию:
+    
+    a) Если устанавливали через `Download ZIP` скачайте новое приложение с текущего репозитория в свою папку, **где распологается прошлая версия бота** и замените в ней файлы.
+    
     Дальше выполните команды:
     ```
-    $ git add . 
-    $ git commit -m "update bot"
-    $ git push heroku master
+    git add . 
+    git commit -m "update bot"
+    git push heroku master
     ```
-
-    При необходимости обновите параметры конфигурации (см. п. 5.1)
+    
+    б) Если устанавливали через git clone выполните команды:
+    ```
+    git pull origin master
+    git push heroku master
+    ```
+    
+    При необходимости обновите параметры конфигурации (см. п. 3)
 
 
 
@@ -80,7 +108,7 @@ $ npm i
 
 Если используете опцию **TELEGRAM_OFF**, тогда в этом пункте нет необходимости.
 
-[@BotFather](https://core.telegram.org/bots#6-botfather)
+[@BotFather](https://core.telegram.org/bots#6-botfather) - это бот для управления ботами в Telegram
 
 Напишите команду **/newbot**, чтобы создать нового робота. BotFather спросит у вас имя нового бота и предложит придумать username.
 Имя (name) будет отображаться в контактах и чатах.
@@ -102,7 +130,7 @@ TELEGRAM_TOKEN          | Ваш токен для Telegram
 TELEGRAM_ID             | ID вашего пользователя в Telegram
 TELEGRAM_OFF            | Отключить Telegram. (default: false)
 
-> **TELEGRAM_ID** будет получен при первом **запуске торгового скрипта.** Для его получения напишите Telegram боту любое сообщение.
+> Чтобы получить **TELEGRAM_ID** запустите торгового бота и напишите вашему Telegram боту (которого вы создали ранее через [@BotFather](https://core.telegram.org/bots#6-botfather)) любое сообщение, в ответе получите ваш id номер.
 
 > Опция **TELEGRAM_OFF** отключает возможность использовать Telegram в боте. Всё управление и все уведомления посылаемые через Telegram будут так же отключены!
 
@@ -235,7 +263,7 @@ MIN_ORDER_SIZE_EXCHANGE     | Минимально допустимый разм
 #### На локальном компьютере
 
 ```
-$ npm start
+npm start
 ```
 или
 ```
@@ -259,10 +287,13 @@ npm start
 Дополнительные команды:
 ```
 /info - список всех команд
-```
 
-## FAQ
-[ЧаВо](https://github.com/steeply/btce-app-trader/blob/master/faq.md)
+/version - версия бота
+/params - параметры которые можно менять через Telegram
+/config - возможные параметры конфигурации через конфигурационный файл
+/martin - теоретический расчет ордеров Мартингейла (параметры берутся из конфига)
+/ticker coin_name - показывает котировку пары coin_name
+```
 
 ## Donate
 

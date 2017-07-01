@@ -215,6 +215,7 @@ ONE_ORDERS_SELL_PERCENT             | Задает процент желаемо
 ONE_ORDERS_SELL_OFFSET              | Разница между ценой LastPrice и первым ордером buy в стеке ордеров в %. Будет подтягивать ордера вверх, если это значение будет превышено. (default: 2)
 INTEGRITY_CONTROL_ORDERS            | Контроль целостности ордеров (soft - мягкий, hard - жесткий) (default: soft)
 FIRST_LOADING_HISTORY               | Загрузка истории при старте бота (default: false)
+CYCLES_AUTO_EXIT                    | Через сколько циклов совершить автовыход (default: false)
 
 > Если параметр **INTEGRITY_CONTROL_ORDERS** в режиме `hard`, то sell ордер будет установлен только если объемы установленных и исполненных  buy ордеров будут совпадать (если ни один ордер не потеряется).
 

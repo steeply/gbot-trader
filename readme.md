@@ -132,6 +132,7 @@ ONE_ORDERS_SELL_PERCENT             | Specifies the percentage desired profit (d
 ONE_ORDERS_SELL_OFFSET              | The difference between LastPrice and first BUY order in the stack of orders in % (default: 2)
 INTEGRITY_CONTROL_ORDERS            | Integrity control orders (**soft** or **hard**) (default: soft)
 FIRST_LOADING_HISTORY               | Download the history when you start the bot (default: false)
+CYCLES_AUTO_EXIT                    | How many cycles to make the exit (default: false)
 
 **All the strategies are mutually exclusive. If no policy is selected, use the strategy of "Scalper"**.
 

@@ -1,6 +1,6 @@
-# BTC-E | Poloniex | Bittrex Bot Trader
+# GBot Trader
 
-[![Dependency Status](https://david-dm.org/steeply/btce-app-trader.svg)](https://david-dm.org/steeply/btce-app-trader)
+[![Dependency Status](https://david-dm.org/steeply/gbot-trader.svg)](https://david-dm.org/steeply/gbot-trader)
 
 Это приложение работает на стороне сервера и управляется через Telegram.
 
@@ -11,7 +11,7 @@
 * Bittrex
 
 ## FAQ
-Перед тем как задавать вопросы, прочитайте [FAQ](https://github.com/steeply/btce-app-trader/blob/master/faq.md). Большинство ответов вы найдете в нем.
+Перед тем как задавать вопросы, прочитайте [FAQ](faq.md). Большинство ответов вы найдете в нем.
 
 ## Установка
 
@@ -28,8 +28,8 @@
 4. Перейдите в папку и установите пакеты зависимостей командой `npm i`.
     ```
     cd D:\traders   (Если папка находится в корне диска D)
-    git clone https://github.com/steeply/btce-app-trader.git
-    cd btce-app-trader
+    git clone https://github.com/steeply/gbot-trader.git
+    cd gbot-trader
     npm i
     ```
 
@@ -40,8 +40,8 @@
 1. На своем компьютере создайте любую папку (например `traders`) и сохраните туда данный репозиторий.
     ```
     cd D:\traders   (Если папка находится в корне диска D)
-    git clone https://github.com/steeply/btce-app-trader.git
-    cd btce-app-trader
+    git clone https://github.com/steeply/gbot-trader.git
+    cd gbot-trader
     ```
 
 2. Зарегистрируйтесь на сайте [heroku](https://signup.heroku.com/login).
@@ -245,10 +245,11 @@ DELAY_REQUEST_API           | Задержка при выполнении за�
  1. уведомление о старте бота в Telegram.
  2. уведомления об ошибках на E-mail.
  3. запрещает использовать conf-dev.js.
+ 4. отключает цвета в логе
 
 
 #### Опции для разработчиков. Данные параметры зависят от биржи.
-Эти опции необходимы для создания [middleware exchange api](https://github.com/steeply/btce-app-trader/blob/master/middleware_exchange_api.md)
+Эти опции необходимы для создания [middleware exchange api](middleware_exchange_api.md)
 
  Option | Description
 ----------------|----------------------

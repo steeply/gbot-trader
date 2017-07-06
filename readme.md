@@ -1,6 +1,6 @@
-# BTC-E | Poloniex | Bittrex Bot Trader
+# GBot Trader
 
-[![Dependency Status](https://david-dm.org/steeply/btce-app-trader.svg)](https://david-dm.org/steeply/btce-app-trader)
+[![Dependency Status](https://david-dm.org/steeply/gbot-trader.svg)](https://david-dm.org/steeply/gbot-trader)
 
 This app is working with server maintenance.
 
@@ -16,8 +16,8 @@ This app is working with server maintenance.
 
 2. Copy the repository and install the dependency packages:
 ```
-$ git clone https://github.com/steeply/btce-app-trader.git
-$ cd btce-app-trader
+$ git clone https://github.com/steeply/gbot-trader.git
+$ cd gbot-trader
 $ npm i
 ```
 

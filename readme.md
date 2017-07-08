@@ -68,16 +68,12 @@ By default, the bot will work at default settings. You can change them using the
 TIME_UPDATE_AUTO_SETTINGS           | Update time of auto settings (min) (default: 2)
 DEPOSIT_LIMIT_PERCENT               | Deposit consuming percent (default: 100)
 DEPOSIT_LIMIT_CURRENCY              | The size of the used part of the Deposit in the currency (default: false)
-NOTIFICATION_PAIR                   | Notification pair of rate changing (For example: btc/usd, ltc/usd or **all/all** for all pair)
-NOTIFICATION_DEVIATION_PERCENT      | Relation of deviation percentage from current price for notification will work (default: 600)
 COUNT_ORDERS                        | Quantity all orders
 QUANTITY_ORDERS_IN_BLOCKS           | Quantity orders in blocks (default: false)
-TIME_CLOSE_ORDERS                   | Closing time of unused orders (min) (default: 5)
-TIME_CLOSE_ORDERS_INACTIVITY        | Closing time of undemanded orders (min) (default: 15)
-STEP_BREAKEVEN_PERCENT              | Percentage of breakeven (default: 50)
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (for Exponential - %, Linear - absolute number) (default: false)
 MARTINGALE_TYPE                     | Type Martingale (1 - exponential, 2 - linear) (default: 1)
-
+NOTIFICATION_PAIR                   | Notification pair of rate changing (For example: btc/usd, ltc/usd or **all/all** for all pair)
+NOTIFICATION_DEVIATION_PERCENT      | Relation of deviation percentage from current price for notification will work (default: 600)
 
 #### Offset orders
 
@@ -112,7 +108,16 @@ OFF_MODULES_AUTO_SETTINGS           | Disabling all Autotune Modules (default: f
 > The option **OFF_MODULES_AUTO_SETTINGS** controls DANGER_PRICE_STOP, DYNAMIC_SETTINGS_TIME, DYNAMIC_OFFSET_ORDERS, TREND_DEFINITION, ABRUPT_CHANGE_TREND
 
 
-##### Strategy "Bollinger Bands"
+#### Strategy "Scalper" and "Bollinger Bands"
+
+ Option | Description
+----------------|----------------------
+TIME_CLOSE_ORDERS                   | Closing time of unused orders (min) (default: 5)
+TIME_CLOSE_ORDERS_INACTIVITY        | Closing time of undemanded orders (min) (default: 15)
+STEP_BREAKEVEN_PERCENT              | Percentage of breakeven (default: 50)
+
+
+#### Strategy "Bollinger Bands"
 
  Option | Description
 ----------------|----------------------
@@ -121,7 +126,7 @@ BBANDS_DEVIATION                    | Deviation (default: 20)
 BBANDS_INTERVAL                     | Time-frame (min) (default: 1)
 
 
-##### Strategy "One Sell a lot Buy"
+#### Strategy "One Sell a lot Buy"
 **When you start the strategy of "Sell One, Buy a lot" the initial state of the balance of the base currency in the pair is ignored!**
 
 

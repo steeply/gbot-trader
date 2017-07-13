@@ -10,6 +10,9 @@ This app is working with server maintenance.
 * Poloniex
 * Bittrex
 
+## FAQ
+Before asking questions, please read the [FAQ](faq.md). Most of the answers you will find in it.
+
 ## Install
 
 1. Install [node.js](https://nodejs.org/en/) or use hosting ([heroku](https://signup.heroku.com/login), [pivotal](https://account.run.pivotal.io/z/uaa/sign-up), etc.)
@@ -29,9 +32,9 @@ If you use the option **TELEGRAM_OFF**, then this paragraph is not necessary.
 
 [@BotFather](https://core.telegram.org/bots#6-botfather)
 
-Use the **/newbot** command to create a new bot. The BotFather will ask you for a name and username, then generate an authorization token for your new bot.
-The name of your bot is displayed in contact details and elsewhere.
-The **Username** is a short name, to be used in mentions and telegram.me links. Usernames are 5-32 characters long and are case insensitive, but may only include Latin characters, numbers, and underscores. Your bot's username must end in ‘bot’, e.g. ‘trade_bot’ or ‘TradeBot’.
+Use the **/newbot** command to create a new bot. The BotFather will ask you for a name and username, then generate an authorization token for your new bot.<br />
+The name of your bot is displayed in contact details and elsewhere.<br>
+The **Username** is a short name, to be used in mentions and telegram.me links. Usernames are 5-32 characters long and are case insensitive, but may only include Latin characters, numbers, and underscores. Your bot's username must end in ‘bot’, e.g. ‘trade_bot’ or ‘TradeBot’.<br />
 The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw` that is required to authorize the bot and send requests to the Bot API.
 
 ### Parameters variable environment:
@@ -44,12 +47,14 @@ The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs
 **SECRET**          | API secret
 **NAME_COIN**       | Trading currency (For example: ltc)
 **NAME_COIN_TWO**   | Trading currency (For example: usd)
-EXCHANGE            | The choice of the exchange **btc-e**, **poloniex** or **bittrex** (default: btc-e)
+EXCHANGE            | The choice of the exchange (default: btc-e)<br> **btc-e**<br> **poloniex**<br> **bittrex** 
 TELEGRAM_TOKEN      | Telegram token
 TELEGRAM_ID         | Your User ID Telegram
 TELEGRAM_OFF        | Disable Telegram (default: false)
 
-> TELEGRAM_ID will be given after the first starting of trade script. Send to bot any message to receive it.
+> To get **TELEGRAM_ID** start trading bot and write your Telegram bot (which you created earlier via [@BotFather](https://core.telegram.org/bots#6-botfather)) any message, you will receive your id number.
+
+> Option **TELEGRAM_OFF** disables the ability to use Telegram in the bot. All management and all notifications sent via Telegram are the same are disabled!
 
 
 ##### For exchange BTC-E
@@ -67,9 +72,9 @@ By default, the bot will work at default settings. You can change them using the
 ----------------|----------------------
 TIME_UPDATE_AUTO_SETTINGS           | Update time of auto settings (min) (default: 2)
 DEPOSIT_LIMIT_PERCENT               | Deposit consuming percent (default: 100)
-DEPOSIT_LIMIT_CURRENCY              | The size of the used part of the Deposit in the currency (default: false)
-COUNT_ORDERS                        | Quantity all orders
-QUANTITY_ORDERS_IN_BLOCKS           | Quantity orders in blocks (default: false)
+DEPOSIT_LIMIT_CURRENCY              | The size of the used part of the Deposit in the currency **NAME_COIN_TWO** (default: false)
+COUNT_ORDERS                        | Quantity all orders.<br> How many will be installed. (default: calculated based on Deposit amount).
+QUANTITY_ORDERS_IN_BLOCKS           | Quantity orders in blocks<br>How many orders will be simultaneously on the market. (default: false)
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (for Exponential - %, Linear - absolute number) (default: false)
 MARTINGALE_TYPE                     | Type Martingale (1 - exponential, 2 - linear) (default: 1)
 NOTIFICATION_PAIR                   | Notification pair of rate changing (For example: btc/usd, ltc/usd or **all/all** for all pair)
@@ -89,6 +94,8 @@ OFFSET_FIRST_ORDERS_PERCENT         | Position difference of the first order in 
 
 > Parameter **OFFSET_FIRST_ORDERS_PERCENT** can be used in conjunction with any of the selected options.
 
+> To set the first order in the market, use `OFFSET_FIRST_ORDERS_PERCENT=0.00001`
+
 
 #### Modules AutoConfig
 
@@ -107,6 +114,8 @@ OFF_MODULES_AUTO_SETTINGS           | Disabling all Autotune Modules (default: f
 
 > The option **OFF_MODULES_AUTO_SETTINGS** controls DANGER_PRICE_STOP, DYNAMIC_SETTINGS_TIME, DYNAMIC_OFFSET_ORDERS, TREND_DEFINITION, ABRUPT_CHANGE_TREND
 
+
+## Individual parameters strategies
 
 #### Strategy "Scalper" and "Bollinger Bands"
 
@@ -134,10 +143,14 @@ BBANDS_INTERVAL                     | Time-frame (min) (default: 1)
 ----------------|----------------------
 ONE_ORDERS_SELL                     | Strategy: One order to sell, lot purchase (default: false)
 ONE_ORDERS_SELL_PERCENT             | Specifies the percentage desired profit (default: 1)
-ONE_ORDERS_SELL_OFFSET              | The difference between LastPrice and first BUY order in the stack of orders in % (default: 2)
+ONE_ORDERS_SELL_OFFSET              | The difference between LastPrice and first BUY order in the stack of orders in %. <br> Will pull the order up, if this value is exceeded. (default: 2)
 INTEGRITY_CONTROL_ORDERS            | Integrity control orders (**soft** or **hard**) (default: soft)
 FIRST_LOADING_HISTORY               | Download the history when you start the bot (default: false)
 CYCLES_AUTO_EXIT                    | How many cycles to make the exit (default: false)
+
+> If the parameter **INTEGRITY_CONTROL_ORDERS** in `hard` mode, then a sell order will be installed only if the volume installed and executed buy orders will be the same.
+
+> If the parameter **FIRST_LOADING_HISTORY** included, will be loaded into the cache the first 100 BUY orders before the first SELL order for the selected pair and put a SELL order on the basis of these data.
 
 **All the strategies are mutually exclusive. If no policy is selected, use the strategy of "Scalper"**.
 
@@ -157,18 +170,23 @@ RESTART_TRADER_TIME         | How many seconds to wait before re-querying the da
 NOTIFICATION_ERROR_COUNT    | The number of errors in 5 minutes for notification (default: false)
 EXCHANGE_FEE                | The Commission for transactions of the exchange (default: 0.25)
 DELAY_REQUEST_API           | The delay of requests to the API in milliseconds (default: 500)
-
-
-> Option **NODE_ENV=production** includes:
-  1. notification about the start of a Telegram bot.
-  2. error notifications by E-mail.
-  3. prohibits the use of conf-dev.js.
+NODE_ENV                    | Value **production** activate:<br>  1. notification about the start of a Telegram bot.<br> 2. error notifications by E-mail.<br> 3. prohibits the use of conf-dev.js.<br> 4. disabling colors in logs
 
 ## Run
 
 ```
 $ npm start
 ```
+
+For Windows
+
+```
+SET TELEGRAM_TOKEN=110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw 
+SET TELEGRAM_ID=12345678
+....
+npm start
+```
+
 
 To launch the control panel in a Telegram, send a message to:
 ```
@@ -178,6 +196,12 @@ To launch the control panel in a Telegram, send a message to:
 Additional commands:
 ```
 /info - list of all commands
+
+/version - the version of the bot
+/params - parameters which can be changed via Telegram
+/config - is a possible configuration parameters via a configuration file
+/martin - a theoretical calculation of the orders of the martingale (parameters are taken from config)
+/ticker coin_name - shows a quote of a pair coin_name
 ```
 
 ## Donate

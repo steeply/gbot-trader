@@ -385,6 +385,3 @@ Total: 0.47512 $ | 0.9%  по цене: 2.458
 BTC: 1GGbq5xkk9YUUy4QTqsUhNnc9T1n3sQ9Fo <br>
 LTC: LPRESTPTNMUT8rVpdvd8cJxqrnGDW7Va8N
  
- 
- 
- 

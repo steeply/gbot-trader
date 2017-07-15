@@ -1,9 +1,9 @@
 {
   "name": "gbot-trader",
-  "version": "0.15.15",
+  "version": "0.16.0",
   "author": {
     "name": "George",
-    "email": "steeply2010@gmail.com"
+    "email": "gbot-trader@mail.ru"
   },
   "description": "btc-e, poloniex, bittrex gbot trader",
   "main": "./build/server.js",
@@ -13,7 +13,7 @@
   "contributors": [
     {
       "name": "George",
-      "email": "steeply2010@gmail.com"
+      "email": "gbot-trader@mail.ru"
     }
   ],
   "keywords": [
@@ -29,10 +29,10 @@
     "trade",
     "coin"
   ],
-  "license": "MIT",
+  "license": "Shareware",
   "engines": {
     "node": ">=8.1.4",
-    "npm": ">=5.2.0"
+    "npm": ">=5.3.0"
   },
   "private": true,
   "dependencies": {
@@ -55,7 +55,5 @@
     "winston": "^2.3.1",
     "winston-daily-rotate-file": "^1.4.6"
   },
-  "devDependencies": {
-    "uglify-js": "^3.0.24"
-  }
+  "devDependencies": {}
 }

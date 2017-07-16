@@ -179,7 +179,7 @@ NODE_ENV                    | Value **production** activate:<br>  1. notificatio
 $ npm start
 ```
 
-For Windows
+For **Windows**
 
 ```
 SET TELEGRAM_TOKEN=110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw 
@@ -188,6 +188,12 @@ SET TELEGRAM_ID=12345678
 npm start
 ```
 
+For **Heroku**
+
+```
+heroku ps:scale web=0
+heroku ps:scale worker=1
+```
 
 To launch the control panel in a Telegram, send a message to:
 ```

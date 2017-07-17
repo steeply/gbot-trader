@@ -15,7 +15,7 @@ Before asking questions, please read the [FAQ](faq.md). Most of the answers you 
 
 ## Install
 
-1. Install [node.js](https://nodejs.org/en/) or use hosting ([heroku](https://signup.heroku.com/login), [pivotal](https://account.run.pivotal.io/z/uaa/sign-up), etc.)
+1. Install [node.js](https://nodejs.org/en/) or use hosting ([heroku](https://signup.heroku.com/login), [pivotal](https://account.run.pivotal.io/z/uaa/sign-up), [UltraVDS](https://ultravds.com), etc.)
 
 2. Copy the repository and install the dependency packages:
 ```

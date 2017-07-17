@@ -111,8 +111,6 @@ OFF_MODULES_AUTO_SETTINGS           | Disabling all Autotune Modules (default: f
 
 > Options **TREND_DEFINITION** **ABRUPT_CHANGE_TREND** only for strategy Scalper.
 
-> Option **DYNAMIC_OFFSET_ORDERS** works only if active options **OFFSET_ORDERS_POINTS**.
-
 > The option **OFF_MODULES_AUTO_SETTINGS** controls DANGER_PRICE_STOP, DYNAMIC_SETTINGS_TIME, DYNAMIC_OFFSET_ORDERS, TREND_DEFINITION, ABRUPT_CHANGE_TREND
 
 

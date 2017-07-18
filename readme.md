@@ -37,6 +37,15 @@ The name of your bot is displayed in contact details and elsewhere.<br>
 The **Username** is a short name, to be used in mentions and telegram.me links. Usernames are 5-32 characters long and are case insensitive, but may only include Latin characters, numbers, and underscores. Your bot's username must end in ‘bot’, e.g. ‘trade_bot’ or ‘TradeBot’.<br />
 The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw` that is required to authorize the bot and send requests to the Bot API.
 
+#### The receipt of Telegram ID
+
+1. Set the parameters `KEY`, `SECRET` и `TELEGRAM_TOKEN`.
+2. Run Gbot Trader.
+3. Write your Telegram bot (which you created earlier using [@BotFather](https://core.telegram.org/bots#6-botfather)) any message, you will receive your id number.
+4. Turn Off Gbot Trader.
+5. Set the parameters `TELEGRAM_ID`.
+
+
 ### Parameters variable environment:
 
 #### Required parameters
@@ -51,8 +60,6 @@ EXCHANGE            | The choice of the exchange (default: btc-e)<br> **btc-e**<
 TELEGRAM_TOKEN      | Telegram token
 TELEGRAM_ID         | Your User ID Telegram
 TELEGRAM_OFF        | Disable Telegram (default: false)
-
-> To get **TELEGRAM_ID** start trading bot and write your Telegram bot (which you created earlier via [@BotFather](https://core.telegram.org/bots#6-botfather)) any message, you will receive your id number.
 
 > Option **TELEGRAM_OFF** disables the ability to use Telegram in the bot. All management and all notifications sent via Telegram are the same are disabled!
 

@@ -122,7 +122,7 @@
 2. Запустите Gbot Trader.
 3. Напишите вашему Telegram боту (которого вы создали ранее через [@BotFather](https://core.telegram.org/bots#6-botfather)) любое сообщение, в ответе получите ваш id номер.
 4. Выключите Gbot Trader.
-5. Установите `TELEGRAM_ID`
+5. Установите `TELEGRAM_ID`.
 
 
 ### Параметры переменного окружения:

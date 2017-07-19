@@ -214,6 +214,7 @@ Additional commands:
 /config - is a possible configuration parameters via a configuration file
 /martin - a theoretical calculation of the orders of the martingale (parameters are taken from config)
 /ticker coin_name - shows a quote of a pair coin_name
+/stop [codeExit] - The application shutsdown. codeExit - an optional exit code.
 ```
 
 ## Donate

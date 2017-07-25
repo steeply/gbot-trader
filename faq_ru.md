@@ -189,7 +189,6 @@ EMAIL_AUTH_PASS
 echo on
 cd C:
 cd директория_с_ботом
-title Gbot Trader
 
 SET ПАРАМЕТР1=ЗНАЧЕНИЕ1
 SET ПАРАМЕТР2=ЗНАЧЕНИЕ2

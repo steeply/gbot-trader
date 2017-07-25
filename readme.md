@@ -39,10 +39,10 @@ The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs
 
 #### The receipt of Telegram ID
 
-1. Set the parameters `KEY`, `SECRET` и `TELEGRAM_TOKEN`.
-2. Run Gbot Trader.
+1. Set the parameters API Exchange: `KEY`, `SECRET` and `TELEGRAM_TOKEN`.
+2. Run GBot Trader.
 3. Write your Telegram bot (which you created earlier using [@BotFather](https://core.telegram.org/bots#6-botfather)) any message, you will receive your id number.
-4. Turn Off Gbot Trader.
+4. Turn Off GBot Trader.
 5. Set the parameters `TELEGRAM_ID`.
 
 
@@ -122,6 +122,7 @@ OFF_MODULES_AUTO_SETTINGS           | Disabling all Autotune Modules (default: f
 
 
 ## Individual parameters strategies
+**All the strategies are mutually exclusive. If no strategy is selected, use the strategy of "Scalper"**.
 
 #### Strategy "Scalper" and "Bollinger Bands"
 
@@ -158,7 +159,6 @@ CYCLES_AUTO_EXIT                    | How many cycles to make the exit (default:
 
 > If the parameter **FIRST_LOADING_HISTORY** included, will be loaded into the cache the first 100 BUY orders before the first SELL order for the selected pair and put a SELL order on the basis of these data.
 
-**All the strategies are mutually exclusive. If no policy is selected, use the strategy of "Scalper"**.
 
 #### Additional options
  Option | Description
@@ -176,7 +176,7 @@ RESTART_TRADER_TIME         | How many seconds to wait before re-querying the da
 NOTIFICATION_ERROR_COUNT    | The number of errors in 5 minutes for notification (default: false)
 EXCHANGE_FEE                | The Commission for transactions of the exchange (default: 0.25)
 DELAY_REQUEST_API           | The delay of requests to the API in milliseconds (default: 500)
-TITLE                       | The title of the console window
+TITLE                       | The title of the console window. (Does not work on all systems).
 NODE_ENV                    | Value **production** activate:<br>  1. notification about the start of a Telegram bot.<br> 2. error notifications by E-mail.<br> 3. prohibits the use of conf-dev.js.<br> 4. disabling colors in logs.<br>5. disables TITLE
 
 ## Run

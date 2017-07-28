@@ -9,6 +9,7 @@ This app is working with server maintenance.
 * BTC-E
 * Poloniex
 * Bittrex
+* Exmo
 
 ## FAQ
 Before asking questions, please read the [FAQ](faq.md). Most of the answers you will find in it.
@@ -56,19 +57,13 @@ The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs
 **SECRET**          | API secret
 **NAME_COIN**       | Trading currency (For example: ltc)
 **NAME_COIN_TWO**   | Trading currency (For example: usd)
-EXCHANGE            | The choice of the exchange (default: btc-e)<br> **btc-e**<br> **poloniex**<br> **bittrex** 
+EXCHANGE            | The choice of the exchange (default: btc-e)<br> **btc-e**<br> **poloniex**<br> **bittrex** <br> **exmo**
+EXCHANGE_HOST       | Host exchange API. If the primary host is not available.
 TELEGRAM_TOKEN      | Telegram token
 TELEGRAM_ID         | Your User ID Telegram
 TELEGRAM_OFF        | Disable Telegram (default: false)
 
 > Option **TELEGRAM_OFF** disables the ability to use Telegram in the bot. All management and all notifications sent via Telegram are the same are disabled!
-
-
-##### For exchange BTC-E
-
- Option | Description
-----------------|----------------------
-BTCE_HOST            | Address exchange Btc-e
 
 
 By default, the bot will work at default settings. You can change them using the following options.
@@ -163,7 +158,7 @@ CYCLES_AUTO_EXIT                    | How many cycles to make the exit (default:
 #### Additional options
  Option | Description
 ----------------|----------------------
-EMAIL_BUG_REPORT_ADDRESS    | Email for notifications of network incidences and errors
+EMAIL_REPORT_ADDRESS        | Email for notifications of network incidences and errors
 HOST_SMTP                   | Mail server address
 EMAIL_AUTH_USER             | Authorization login of the mail server
 EMAIL_AUTH_PASS             | Mail server password
@@ -218,9 +213,9 @@ Additional commands:
 /stop [codeExit] - The application shutsdown. codeExit - an optional exit code.
 ```
 
+
 ## Donate
 
 ```
-BTC: 1GGbq5xkk9YUUy4QTqsUhNnc9T1n3sQ9Fo
-LTC: LPRESTPTNMUT8rVpdvd8cJxqrnGDW7Va8N
+BTC: 1AMmeM2ERD6nd1K1y5Zta2BvfugHt5UjPo
 ```

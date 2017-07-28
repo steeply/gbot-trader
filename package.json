@@ -1,11 +1,11 @@
 {
   "name": "gbot-trader",
-  "version": "0.16.8",
+  "version": "0.17.0",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
   },
-  "description": "btc-e, poloniex, bittrex gbot trader",
+  "description": "btc-e, poloniex, bittrex, exmo gbot trader",
   "main": "./build/server.js",
   "scripts": {
     "start": "node ./build/server"
@@ -21,6 +21,7 @@
     "btce",
     "poloniex",
     "bittrex",
+    "exmo",
     "bitcoin",
     "btc",
     "eth",
@@ -49,7 +50,6 @@
     "node-telegram-bot-api": "^0.27.0",
     "nodemailer": "^4.0.0",
     "poloniex-api-node": "^1.3.1",
-    "query-string": "^5.0.0",
     "request": "^2.81.0",
     "ta-lib": "^0.11.0",
     "winston": "^2.3.1",

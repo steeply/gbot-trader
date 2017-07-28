@@ -165,7 +165,7 @@ Telegram это сторонний сервис со своим оборудов
 Вы можете настроить уведомления об ошибках на вашу электронную почту.
 Для этого необходимо указать следующие параметры:
 ```
-EMAIL_BUG_REPORT_ADDRESS 
+EMAIL_REPORT_ADDRESS 
 HOST_SMTP
 EMAIL_AUTH_USER
 EMAIL_AUTH_PASS

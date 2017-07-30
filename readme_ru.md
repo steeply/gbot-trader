@@ -144,7 +144,7 @@
 **NAME_COIN**           | Торговая валюта (Например: ltc)
 **NAME_COIN_TWO**       | Торговая валюта (Например: usd)
 EXCHANGE                | Выбор биржи: (default: btc-e)<br> **btc-e** <br> **poloniex**<br> **bittrex**<br> **exmo**<br>
-EXCHANGE_HOST           | Адрес API биржи. Если основной адрес не доступен.
+EXCHANGE_HOST           | Адрес API биржи. Если основной адрес недоступен.
 TELEGRAM_TOKEN          | Ваш токен для Telegram
 TELEGRAM_ID             | ID вашего пользователя в Telegram
 TELEGRAM_OFF            | Отключить Telegram. (default: false)

@@ -172,7 +172,12 @@ NOTIFICATION_ERROR_COUNT    | The number of errors in 5 minutes for notification
 EXCHANGE_FEE                | The Commission for transactions of the exchange (default: 0.25)
 DELAY_REQUEST_API           | The delay of requests to the API in milliseconds (default: 500)
 TITLE                       | The title of the console window. (Does not work on all systems).
+LANGUAGE                    | The language of the interface (`ru` or `en`) (default: ru)
 NODE_ENV                    | Value **production** activate:<br>  1. notification about the start of a Telegram bot.<br> 2. error notifications by E-mail.<br> 3. prohibits the use of conf-dev.js.<br> 4. disabling colors in logs.<br>5. disables TITLE
+
+**Important:**
+
+* If you've changed LANGUAGE send a command `/start` in Telegram bot for a new language initialization in Telegram
 
 ## Run
 

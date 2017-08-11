@@ -97,7 +97,7 @@ OFFSET_FIRST_ORDERS_PERCENT         | Position difference of the first order in 
 
 > Parameter **OFFSET_FIRST_ORDERS_PERCENT** can be used in conjunction with any of the selected options.
 
-> To set the first order in the market, use `OFFSET_FIRST_ORDERS_PERCENT=0.00001`
+> To set the first order in the market, use `OFFSET_FIRST_ORDERS_PERCENT=-1`
 
 
 #### Modules AutoConfig
@@ -137,15 +137,16 @@ BBANDS_DEVIATION                    | Deviation (default: 20)
 BBANDS_INTERVAL                     | Time-frame (min) (default: 1)
 
 
-#### Strategy "One Sell a lot Buy"
+#### Strategy "One Orders"
 **When you start the strategy of "Sell One, Buy a lot" the initial state of the balance of the base currency in the pair is ignored!**
 
 
  Option | Description
 ----------------|----------------------
-ONE_ORDERS_SELL                     | Strategy: One order to sell, lot purchase (default: false)
-ONE_ORDERS_SELL_PERCENT             | Specifies the percentage desired profit (default: 1)
-ONE_ORDERS_SELL_OFFSET              | The difference between LastPrice and first BUY order in the stack of orders in %. <br> Will pull the order up, if this value is exceeded. (default: 2)
+ONE_ORDERS_SELL                     | Strategy: "One Sell a lot Buy" (default: false)
+ONE_ORDERS_BUY                      | Strategy: "One Buy a lot Sell" (default: false)
+ONE_ORDERS_OFFSET                   | The difference between LastPrice and first order in the stack of orders in %. <br> Will pull the order, if this value is exceeded. (default: 2)
+ONE_ORDERS_PROFIT_PERCENT           | Specifies the percentage desired profit (default: 1)
 INTEGRITY_CONTROL_ORDERS            | Integrity control orders (**soft** or **hard**) (default: soft)
 FIRST_LOADING_HISTORY               | Download the history when you start the bot (default: false)
 CYCLES_AUTO_EXIT                    | How many cycles to make the exit (default: false)
@@ -171,6 +172,7 @@ RESTART_TRADER_TIME         | How many seconds to wait before re-querying the da
 NOTIFICATION_ERROR_COUNT    | The number of errors in 5 minutes for notification (default: false)
 EXCHANGE_FEE                | The Commission for transactions of the exchange (default: 0.25)
 DELAY_REQUEST_API           | The delay of requests to the API in milliseconds (default: 500)
+DELAY_BETWEEN_MODULES       | Then delay in seconds between execution of consecutive modules. (default: 3)
 TITLE                       | The title of the console window. (Does not work on all systems).
 LANGUAGE                    | The language of the interface (`ru` or `en`) (default: ru)
 NODE_ENV                    | Value **production** activate:<br>  1. notification about the start of a Telegram bot.<br> 2. error notifications by E-mail.<br> 3. prohibits the use of conf-dev.js.<br> 4. disabling colors in logs.<br>5. disables TITLE
@@ -210,12 +212,13 @@ Additional commands:
 ```
 /info - list of all commands
 
-/version - the version of the bot
-/params - parameters which can be changed via Telegram
-/config - is a possible configuration parameters via a configuration file
-/martin - a theoretical calculation of the orders of the martingale (parameters are taken from config)
-/ticker coin_name - shows a quote of a pair coin_name
+/version - The version of the bot
+/params - Parameters which can be changed via Telegram
+/config - Is a possible configuration parameters via a configuration file
+/martin [cache] - A theoretical calculation of the orders of the martingale (parameters are taken from config)
+/ticker coin_name - Shows a quote of a pair coin_name
 /stop [codeExit] - The application shutsdown. codeExit - an optional exit code.
+/sell_all - Sell on the market immediately. (Attention: The sale will be made without confirmation!)
 ```
 
 

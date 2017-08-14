@@ -148,6 +148,7 @@ ONE_ORDERS_BUY                      | Strategy: "One Buy a lot Sell" (default: f
 ONE_ORDERS_OFFSET                   | The difference between LastPrice and first order in the stack of orders in %. <br> Will pull the order, if this value is exceeded. (default: 2)
 ONE_ORDERS_PROFIT_PERCENT           | Specifies the percentage desired profit (default: 1)
 INTEGRITY_CONTROL_ORDERS            | Integrity control orders (**soft** or **hard**) (default: soft)
+TYPE_DATA_USED                      | Where to get information about the used orders (**active** - active orders,  **history** - trading history) (default: active)
 FIRST_LOADING_HISTORY               | Download the history when you start the bot (default: false)
 CYCLES_AUTO_EXIT                    | How many cycles to make the exit (default: false)
 
@@ -166,14 +167,14 @@ EMAIL_AUTH_PASS             | Mail server password
 TIME_ZONE                   | Time zone (For example: Europe/Moscow) [Database Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 LOG                         | Calculating log output of auto settings (default: false)
 LOG_DEBUG                   | The output of the debug log (default: false)
-LOG_TRANSPORTS              | Where to write the log (0 - console, 1 - file, 2 console and file) (default: 0)
-LOG_PATH                    | A custom path to the directory with the log (default: false)
+LOG_TRANSPORTS              | Where to write the log (0 - console, 1 - file, 2 - console and file) (default: 0)
+LOG_PATH                    | A custom path to the directory with the log (default: Folder with bot)
 RESTART_TRADER_TIME         | How many seconds to wait before re-querying the data after network errors (default: 5)
 NOTIFICATION_ERROR_COUNT    | The number of errors in 5 minutes for notification (default: false)
 EXCHANGE_FEE                | The Commission for transactions of the exchange (default: 0.25)
 DELAY_REQUEST_API           | The delay of requests to the API in milliseconds (default: 500)
 DELAY_BETWEEN_MODULES       | Then delay in seconds between execution of consecutive modules. (default: 3)
-TITLE                       | The title of the console window. (Does not work on all systems).
+TITLE                       | The title of the console window.
 LANGUAGE                    | The language of the interface (`ru` or `en`) (default: ru)
 NODE_ENV                    | Value **production** activate:<br>  1. notification about the start of a Telegram bot.<br> 2. error notifications by E-mail.<br> 3. prohibits the use of conf-dev.js.<br> 4. disabling colors in logs.<br>5. disables TITLE
 

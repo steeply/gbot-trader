@@ -77,6 +77,7 @@ DEPOSIT_LIMIT_PERCENT               | Deposit consuming percent (default: 100)
 DEPOSIT_LIMIT_CURRENCY              | The size of the used part of the Deposit in the currency **NAME_COIN_TWO** (default: false)
 COUNT_ORDERS                        | Quantity all orders.<br> How many will be installed. (default: calculated based on Deposit amount).
 QUANTITY_ORDERS_IN_BLOCKS           | Quantity orders in blocks<br>How many orders will be simultaneously on the market. (default: false)
+SIZE_FIRST_ORDERS                   | The size of the first order (default: false)
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (for Exponential - %, Linear - absolute number) (default: false)
 MARTINGALE_TYPE                     | Type Martingale (1 - exponential, 2 - linear) (default: 1)
 CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you restart the bot (default: false)
@@ -220,6 +221,7 @@ Additional commands:
 /ticker coin_name - Shows a quote of a pair coin_name
 /stop [codeExit] - The application shutsdown. codeExit - an optional exit code.
 /sell_all - Sell on the market immediately. (Attention: The sale will be made without confirmation!)
+/restart - Restart GBot Trader
 ```
 
 

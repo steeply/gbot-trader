@@ -214,14 +214,15 @@ Additional commands:
 ```
 /info - list of all commands
 
-/version - The version of the bot
-/params - Parameters which can be changed via Telegram
-/config - Is a possible configuration parameters via a configuration file
-/martin [cache] - A theoretical calculation of the orders of the martingale (parameters are taken from config)
-/ticker coin_name - Shows a quote of a pair coin_name
-/stop [codeExit] - The application shutsdown. codeExit - an optional exit code.
-/sell_all - Sell on the market immediately. (Attention: The sale will be made without confirmation!)
-/restart - Restart GBot Trader
+/version            - The version of the bot
+/params             - Parameters which can be changed via Telegram
+/config             - Is a possible configuration parameters via a configuration file
+/martin [cache]     - A theoretical calculation of the orders of the martingale (parameters are taken from config)
+/ticker coin_name   - Shows a quote of a pair coin_name
+/stop [codeExit]    - The application shutsdown. codeExit - an optional exit code.
+/sell_all           - Sell on the market immediately. (Attention: The sale will be made without confirmation!)
+/restart            - Restart GBot Trader
+/stats              - Trading statistics
 ```
 
 

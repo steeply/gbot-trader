@@ -1,11 +1,11 @@
 {
   "name": "gbot-trader",
-  "version": "0.19.6",
+  "version": "0.20.0",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
   },
-  "description": "btc-e, poloniex, bittrex, exmo gbot trader",
+  "description": "btc-e, poloniex, bittrex, exmo, bitfinex gbot trader",
   "main": "./build/server.js",
   "scripts": {
     "start": "node ./build/server"
@@ -22,6 +22,7 @@
     "poloniex",
     "bittrex",
     "exmo",
+    "bitfinex",
     "bitcoin",
     "btc",
     "eth",
@@ -39,6 +40,7 @@
   "dependencies": {
     "@you21979/bittrex.com": "0.0.4",
     "async": "^2.5.0",
+    "bitfinex-api-node": "^1.0.4",
     "btce-deal": "^0.2.3",
     "colors": "^1.1.2",
     "crypto-js": "^3.1.9-1",

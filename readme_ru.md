@@ -10,6 +10,7 @@
 * Poloniex
 * Bittrex
 * Exmo
+* Bitfinex
 
 ## FAQ
 Перед тем как задавать вопросы, прочитайте [FAQ](faq_ru.md). Большинство ответов вы найдете в нем.
@@ -142,7 +143,7 @@
 **SECRET**              | API secret
 **NAME_COIN**           | Торговая валюта (Например: ltc)
 **NAME_COIN_TWO**       | Торговая валюта (Например: usd)
-EXCHANGE                | Выбор биржи: (default: btc-e)<br> **btc-e** <br> **poloniex**<br> **bittrex**<br> **exmo**<br>
+EXCHANGE                | Выбор биржи: (default: btc-e)<br> **btc-e** <br> **poloniex**<br> **bittrex**<br> **exmo**<br> **bitfinex**
 EXCHANGE_HOST           | Адрес API биржи. Если основной адрес недоступен.
 TELEGRAM_TOKEN          | Ваш токен для Telegram
 TELEGRAM_ID             | ID вашего пользователя в Telegram

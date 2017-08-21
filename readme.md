@@ -10,6 +10,7 @@ This app is working with server maintenance.
 * Poloniex
 * Bittrex
 * Exmo
+* Bitfinex
 
 ## FAQ
 Before asking questions, please read the [FAQ](faq.md). Most of the answers you will find in it.
@@ -57,7 +58,7 @@ The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs
 **SECRET**          | API secret
 **NAME_COIN**       | Trading currency (For example: ltc)
 **NAME_COIN_TWO**   | Trading currency (For example: usd)
-EXCHANGE            | The choice of the exchange (default: btc-e)<br> **btc-e**<br> **poloniex**<br> **bittrex** <br> **exmo**
+EXCHANGE            | The choice of the exchange (default: btc-e)<br> **btc-e**<br> **poloniex**<br> **bittrex** <br> **exmo** <br> **bitfinex**
 EXCHANGE_HOST       | Host exchange API. If the primary host is not available.
 TELEGRAM_TOKEN      | Telegram token
 TELEGRAM_ID         | Your User ID Telegram

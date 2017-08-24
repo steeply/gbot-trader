@@ -197,7 +197,8 @@
 	"На текущей стратегии данная функция недоступна!": "This function is not available at the current strategy!",
 	"Внимание! На новой паре должны быть средства для торговли, иначе переключение завершится ошибкой!": "Attention! There must be money for trading during a new pair, otherwise transition will be failed!",
 	"Новая торговая пара:": "New trading pair:",
-	"Демо версия с ограничениями!": "You are provided with a demo version with limitations!",
+	"Триал версия с ограничениями!": "You are provided with a trial version with limitations!",
 	"Только торговые пары с BTC!": "Only trading pairs with BTC!",
-	"Ограничение депозита %s BTC!": "Deposit limit %s BTC!"
+	"Ограничение депозита %s BTC!": "Deposit limit %s BTC!",
+	"Срок действия лицензии истекает!": "License expires!"
 }

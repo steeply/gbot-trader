@@ -1,11 +1,11 @@
 {
   "name": "gbot-trader",
-  "version": "0.19.2",
+  "version": "0.20.2",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
   },
-  "description": "btc-e, poloniex, bittrex, exmo gbot trader",
+  "description": "btc-e, poloniex, bittrex, exmo, bitfinex gbot trader",
   "main": "./build/server.js",
   "scripts": {
     "start": "node ./build/server"
@@ -22,6 +22,7 @@
     "poloniex",
     "bittrex",
     "exmo",
+    "bitfinex",
     "bitcoin",
     "btc",
     "eth",
@@ -32,13 +33,14 @@
   ],
   "license": "Shareware",
   "engines": {
-    "node": ">=8.3.0",
-    "npm": ">=5.3.0"
+    "node": ">=8.4.0",
+    "npm": "5.3.0"
   },
   "private": true,
   "dependencies": {
     "@you21979/bittrex.com": "0.0.4",
     "async": "^2.5.0",
+    "bitfinex-api-node": "^1.1.0",
     "btce-deal": "^0.2.3",
     "colors": "^1.1.2",
     "crypto-js": "^3.1.9-1",
@@ -48,8 +50,8 @@
     "moment": "^2.18.1",
     "moment-range": "^3.0.3",
     "ms": "^2.0.0",
-    "node-telegram-bot-api": "^0.27.0",
-    "nodemailer": "^4.0.0",
+    "node-telegram-bot-api": "^0.28.0",
+    "nodemailer": "^4.1.0",
     "poloniex-api-node": "^1.3.1",
     "request": "^2.81.0",
     "ta-lib": "^0.11.0",

@@ -10,6 +10,7 @@ This app is working with server maintenance.
 * Poloniex
 * Bittrex
 * Exmo
+* Bitfinex
 
 ## FAQ
 Before asking questions, please read the [FAQ](faq.md). Most of the answers you will find in it.
@@ -57,7 +58,7 @@ The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs
 **SECRET**          | API secret
 **NAME_COIN**       | Trading currency (For example: ltc)
 **NAME_COIN_TWO**   | Trading currency (For example: usd)
-EXCHANGE            | The choice of the exchange (default: btc-e)<br> **btc-e**<br> **poloniex**<br> **bittrex** <br> **exmo**
+EXCHANGE            | The choice of the exchange (default: btc-e)<br> **btc-e**<br> **poloniex**<br> **bittrex** <br> **exmo** <br> **bitfinex**
 EXCHANGE_HOST       | Host exchange API. If the primary host is not available.
 TELEGRAM_TOKEN      | Telegram token
 TELEGRAM_ID         | Your User ID Telegram
@@ -77,6 +78,8 @@ DEPOSIT_LIMIT_PERCENT               | Deposit consuming percent (default: 100)
 DEPOSIT_LIMIT_CURRENCY              | The size of the used part of the Deposit in the currency **NAME_COIN_TWO** (default: false)
 COUNT_ORDERS                        | Quantity all orders.<br> How many will be installed. (default: calculated based on Deposit amount).
 QUANTITY_ORDERS_IN_BLOCKS           | Quantity orders in blocks<br>How many orders will be simultaneously on the market. (default: false)
+SIZE_FIRST_ORDERS_CURRENCY          | The size of the first order (default: false)
+SIZE_FIRST_ORDERS_PERCENT           | The size of the first order in percent (default: false)
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (for Exponential - %, Linear - absolute number) (default: false)
 MARTINGALE_TYPE                     | Type Martingale (1 - exponential, 2 - linear) (default: 1)
 CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you restart the bot (default: false)
@@ -213,13 +216,15 @@ Additional commands:
 ```
 /info - list of all commands
 
-/version - The version of the bot
-/params - Parameters which can be changed via Telegram
-/config - Is a possible configuration parameters via a configuration file
-/martin [cache] - A theoretical calculation of the orders of the martingale (parameters are taken from config)
-/ticker coin_name - Shows a quote of a pair coin_name
-/stop [codeExit] - The application shutsdown. codeExit - an optional exit code.
-/sell_all - Sell on the market immediately. (Attention: The sale will be made without confirmation!)
+/version            - The version of the bot
+/params             - Parameters which can be changed via Telegram
+/config             - Is a possible configuration parameters via a configuration file
+/martin [cache]     - A theoretical calculation of the orders of the martingale (parameters are taken from config)
+/ticker coin_name   - Shows a quote of a pair coin_name
+/stop [codeExit]    - The application shutsdown. codeExit - an optional exit code.
+/sell_all           - Sell on the market immediately. (Attention: The sale will be made without confirmation!)
+/restart            - Restart GBot Trader
+/stats              - Trading statistics
 ```
 
 

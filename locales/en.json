@@ -74,6 +74,7 @@
 	"Изменяет размер сетки ордеров в процентах": "Change orders grid size in percent",
 	"Размер сетки": "Grid size",
 	"Первый": "The first",
+	"Профит": "The profit",
 	"Средняя цена покупки": "Average purchase price",
 	"Средняя цена продажи": "Average selling price",
 	"Авто-выход включен!": "Auto-exit is enabled!",
@@ -82,7 +83,7 @@
 	"Вы уверены, что хотите закрыть ордера?": "Are you sure you want to close the orders?",
 	"Начато закрытие ордеров": "Orders closing was started",
 	"Активные ордера закрыты на паре": "Active orders were closed at the pair",
-	"Изменяет отступ первого ордера в процентах, всех остальных в пунктах.": "Change first order indent in percent, all the rest points.",
+	"Изменяет отступ первого ордера и профит в процентах, всех остальных в пунктах.": "Change first order indent and profit in percent, all the rest points.",
 	"Остальные": "The rest",
 	"Цена рынка": "market-price",
 	"Цена First ордера": "First order price",
@@ -197,5 +198,8 @@
 	"Триал версия с ограничениями!": "You are provided with a trial version with limitations!",
 	"Только торговые пары с BTC!": "Only trading pairs with BTC!",
 	"Ограничение депозита %s BTC!": "Deposit limit %s BTC!",
-	"Срок действия лицензии истекает!": "License expires!"
+	"Срок действия лицензии истекает": "License expires!",
+	"Срок действия лицензии истек": "The license has expired!",
+	"Недействительный лицензионный ключ": "Invalid license key!"
+
 }

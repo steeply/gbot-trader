@@ -1,6 +1,6 @@
 {
   "name": "gbot-trader",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
@@ -49,6 +49,7 @@
     "lodash": "^4.17.4",
     "moment": "^2.18.1",
     "moment-range": "^3.0.3",
+    "moment-timezone": "^0.5.13",
     "ms": "^2.0.0",
     "node-telegram-bot-api": "^0.28.0",
     "nodemailer": "^4.1.0",

@@ -78,13 +78,21 @@ DEPOSIT_LIMIT_PERCENT               | Deposit consuming percent (default: 100)
 DEPOSIT_LIMIT_CURRENCY              | The size of the used part of the Deposit in the currency **NAME_COIN_TWO** (default: false)
 COUNT_ORDERS                        | Quantity all orders.<br> How many will be installed. (default: calculated based on Deposit amount).
 QUANTITY_ORDERS_IN_BLOCKS           | Quantity orders in blocks<br>How many orders will be simultaneously on the market. (default: false)
-SIZE_FIRST_ORDERS_CURRENCY          | The size of the first order (default: false)
+SIZE_FIRST_ORDERS_CURRENCY          | The size of the first order in the currency being traded (default: false)
+SIZE_FIRST_ORDERS_INSECOND_CURRENCY | The size of the first order in the base currency (default: false)
 SIZE_FIRST_ORDERS_PERCENT           | The size of the first order in percent (default: false)
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (for Exponential - %, Linear - absolute number) (default: false)
 MARTINGALE_TYPE                     | Type Martingale (1 - exponential, 2 - linear) (default: 1)
 CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you restart the bot (default: false)
 NOTIFICATION_PAIR                   | Notification pair of rate changing (For example: btc/usd, ltc/usd or **all/all** for all pair)
 NOTIFICATION_DEVIATION_PERCENT      | Relation of deviation percentage from current price for notification will work (default: 600)
+
+**Important!**
+
+> `SIZE_FIRST_ORDERS_INSECOND_CURRENCY` **can match** with `SIZE_FIRST_ORDERS_CURRENCY`, it depends on the trading pair.
+
+> `SIZE_FIRST_ORDERS_CURRENCY`, `SIZE_FIRST_ORDERS_INSECOND_CURRENCY` or `SIZE_FIRST_ORDERS_PERCENT` select **only 1 of the parameters**!
+
 
 #### Offset orders
 

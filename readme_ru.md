@@ -163,13 +163,20 @@ DEPOSIT_LIMIT_PERCENT               | Процент использования 
 DEPOSIT_LIMIT_CURRENCY              | Размер использования депозита в валюте параметра **NAME_COIN_TWO** (default: false)
 COUNT_ORDERS                        | Количество ордеров.<br> Сколько всего будет установлено. (default: рассчитывается на основе размера депозита)
 QUANTITY_ORDERS_IN_BLOCKS           | Количество ордеров в блоке.<br> Сколько ордеров будет одномоментно на рынке. (default: false)
-SIZE_FIRST_ORDERS_CURRENCY          | Размер первого ордера (default: false)
+SIZE_FIRST_ORDERS_CURRENCY          | Размер первого ордера в торгуемой валюте (default: false)
+SIZE_FIRST_ORDERS_INSECOND_CURRENCY | Размер первого ордера в базовой валюте (default: false)
 SIZE_FIRST_ORDERS_PERCENT           | Размер первого ордера в процентах (default: false)
 SIZE_ORDERS_MARTINGALE              | Размер ордеров по Мартингейл<br> (для Экспоненты - проценты, для Линейного - абсолютное число) (default: false)
 MARTINGALE_TYPE                     | Тип Мартингейла (1 - экспоненциальный, 2 - линейный) (default: 1)
 CONTINUE_MARTINGALE_GRID            | Продолжать сетку Мартингейл при перезапуске бота (default: false)
 NOTIFICATION_PAIR                   | Пары для уведомления о скачках курса (Например: btc/usd, ltc/usd или **all/all** для всех пар)
 NOTIFICATION_DEVIATION_PERCENT      | Насколько процентов должен увеличиться спред чтобы сработало уведомление (default: 600)
+
+**Важно!**
+
+> `SIZE_FIRST_ORDERS_INSECOND_CURRENCY` **может совпадать** с `SIZE_FIRST_ORDERS_CURRENCY`, это зависит от торговой пары.
+
+> `SIZE_FIRST_ORDERS_CURRENCY`, `SIZE_FIRST_ORDERS_INSECOND_CURRENCY` или `SIZE_FIRST_ORDERS_PERCENT` выбирается **только 1 из параметров**!
 
 #### Смещение ордеров
 

@@ -200,6 +200,6 @@
 	"Ограничение депозита %s BTC!": "Deposit limit %s BTC!",
 	"Срок действия лицензии истекает": "License expires!",
 	"Срок действия лицензии истек": "The license has expired!",
-	"Недействительный лицензионный ключ": "Invalid license key!"
-
+	"Недействительный лицензионный ключ": "Invalid license key!",
+	"Процент скачка цены для остановки бота": "The percentage of the price spike for the bot stopping"
 }

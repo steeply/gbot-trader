@@ -1,6 +1,6 @@
 {
   "name": "gbot-trader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
@@ -33,7 +33,7 @@
   ],
   "license": "Shareware",
   "engines": {
-    "node": ">=8.4.0",
+    "node": ">=8.5.0",
     "npm": "5.3.0"
   },
   "private": true,
@@ -57,7 +57,7 @@
     "request": "^2.81.0",
     "ta-lib": "^0.11.0",
     "winston": "^2.3.1",
-    "winston-daily-rotate-file": "^1.4.6"
+    "winston-daily-rotate-file": "^1.7.0"
   },
   "devDependencies": {}
 }

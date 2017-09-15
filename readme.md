@@ -116,6 +116,7 @@ OFFSET_FIRST_ORDERS_PERCENT         | Position difference of the first order in 
  Option | Description
 ----------------|----------------------
 DANGER_PRICE_STOP                   | Bot stopping according to the price spike (default: false)
+DANGER_PRICE_STOP_PERCENT           | The percentage of the price spike for the bot stopping (default: 9)
 DYNAMIC_SETTINGS_TIME               | Dynamic time updating for auto options (default: false)
 DYNAMIC_OFFSET_ORDERS               | Dynamic order allocation (default: false)
 TREND_DEFINITION                    | Trend determination (Experimentally) (default: false)

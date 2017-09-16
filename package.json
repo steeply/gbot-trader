@@ -1,6 +1,6 @@
 {
   "name": "gbot-trader",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
@@ -19,6 +19,7 @@
   "keywords": [
     "btc-e",
     "btce",
+    "wex",
     "poloniex",
     "bittrex",
     "exmo",

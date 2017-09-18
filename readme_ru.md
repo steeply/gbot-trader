@@ -174,7 +174,7 @@ NOTIFICATION_DEVIATION_PERCENT      | Насколько процентов до
 
 **Важно!**
 
-> `SIZE_FIRST_ORDERS_INSECOND_CURRENCY` **может совпадать** с `SIZE_FIRST_ORDERS_CURRENCY`, это зависит от торговой пары.
+> Размер ордера при `SIZE_FIRST_ORDERS_INSECOND_CURRENCY` будет рассчитан по формуле **SIZE_FIRST_ORDERS_INSECOND_CURRENCY / price**
 
 > `SIZE_FIRST_ORDERS_CURRENCY`, `SIZE_FIRST_ORDERS_INSECOND_CURRENCY` или `SIZE_FIRST_ORDERS_PERCENT` выбирается **только 1 из параметров**!
 

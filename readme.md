@@ -89,7 +89,7 @@ NOTIFICATION_DEVIATION_PERCENT      | Relation of deviation percentage from curr
 
 **Important!**
 
-> `SIZE_FIRST_ORDERS_INSECOND_CURRENCY` **can match** with `SIZE_FIRST_ORDERS_CURRENCY`, it depends on the trading pair.
+> The size of the order for `SIZE_FIRST_ORDERS_INSECOND_CURRENCY` will be calculated by the formula **SIZE_FIRST_ORDERS_INSECOND_CURRENCY / price**
 
 > `SIZE_FIRST_ORDERS_CURRENCY`, `SIZE_FIRST_ORDERS_INSECOND_CURRENCY` or `SIZE_FIRST_ORDERS_PERCENT` select **only 1 of the parameters**!
 

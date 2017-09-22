@@ -367,5 +367,5 @@ module.exports = API;
  Option | Description
 ----------------|----------------------
 DIRECTION_CURRENCY            | Направление валюты (straight или inverse)
-MINIMUM_ORDER_SIZE_IN_BTC     | Минимально допустимый размер ордера в базовой валюте (обычно это BTC) (default: 0.0005). Только для DIRECTION_CURRENCY=inverse
+MINIMUM_ORDER_SIZE_IN_BTC     | Минимально допустимый размер ордера в базовой валюте (обычно это BTC) (default: 0.0005).
 

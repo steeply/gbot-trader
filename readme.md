@@ -11,6 +11,7 @@ This app is working with server maintenance.
 * Bittrex
 * Exmo
 * Bitfinex
+* Liqui
 
 ## FAQ
 Before asking questions, please read the [FAQ](faq.md). Most of the answers you will find in it.
@@ -58,7 +59,7 @@ The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs
 **SECRET**          | API secret
 **NAME_COIN**       | Trading currency (For example: ltc)
 **NAME_COIN_TWO**   | Trading currency (For example: usd)
-EXCHANGE            | The choice of the exchange (default: wex)<br> **wex**<br> **poloniex**<br> **bittrex** <br> **exmo** <br> **bitfinex**
+EXCHANGE            | The choice of the exchange (default: wex)<br> **wex** <br> **poloniex** <br> **bittrex** <br> **exmo** <br> **bitfinex** <br> **liqui**
 EXCHANGE_HOST       | Host exchange API. If the primary host is not available.
 TELEGRAM_TOKEN      | Telegram token
 TELEGRAM_ID         | Your User ID Telegram
@@ -84,8 +85,9 @@ SIZE_FIRST_ORDERS_PERCENT           | The size of the first order in percent (de
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (for Exponential - %, Linear - absolute number) (default: false)
 MARTINGALE_TYPE                     | Type Martingale (1 - exponential, 2 - linear) (default: 1)
 CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you restart the bot (default: false)
-NOTIFICATION_PAIR                   | Notification pair of rate changing (For example: btc/usd, ltc/usd or **all/all** for all pair)
+NOTIFICATION_PAIR                   | Notification pair of rate changing (For example: `btc/usd, ltc/usd` or **all/all** for all pair)
 NOTIFICATION_DEVIATION_PERCENT      | Relation of deviation percentage from current price for notification will work (default: 600)
+MONITORING_PAIR                     | Pairs for monitoring. <br> (For example: `btc/usd, ltc/usd`, or just a pair currency, for example: `btc`). <br> If none of that is set, ALL available pairs will be monitored on the exchange. <br> (default: All pairs)
 
 **Important!**
 
@@ -234,6 +236,7 @@ Additional commands:
 /sell_all           - Sell on the market immediately. (Attention: The sale will be made without confirmation!)
 /restart            - Restart GBot Trader
 /stats              - Trading statistics
+/note [ignore text] - The text in this line will be ignored. It can be used as a comment.
 ```
 
 

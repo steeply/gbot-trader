@@ -289,8 +289,9 @@ NODE_ENV                    | Значение **production** включает:<
 
  Option | Description
 ----------------|----------------------
-DIRECTION_CURRENCY          | Направление валюты (straight или inverse)
-MINIMUM_ORDER_SIZE_IN_BTC   | Минимально допустимый размер ордера в базовой валюте (обычно это BTC) (default: 0.0005).
+DIRECTION_CURRENCY              | Направление валюты (straight или inverse)
+MINIMUM_ORDER_SIZE_IN_BTC       | Минимально допустимый размер ордера в базовой валюте (обычно это BTC) (default: 0.0005).
+MINIMUM_ORDER_CALCULATION_BTC   | Учитывать при расчете размера ордера его сумму в btc (default: false). Для poloniex, bittrex, liqui - true
 
 
 ## Запуск

@@ -13,6 +13,7 @@
 	"Тип": "Type",
 	"Сменить пару": "Change a pair",
 	"Изменить отступ": "Change an indent",
+	"Выход по циклам": "Exit on cycles",
 	"Авто-выход из пары": "Auto-Exit out of a pair",
 	"Количество циклов авто-выхода: %s из %s": "Number of Auto-Exit cycles: %s out of %s",
 	"Скорость": "Speed",

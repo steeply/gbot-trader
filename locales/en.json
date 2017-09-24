@@ -158,6 +158,7 @@
 	"по цене": "By price",
 	"Установлено ордеров": "Placed orders",
 	"Исполнено ордеров": "Executed orders",
+	"Количество циклов": "Number cycles",
 	"Перезапусков": "Restarts",
 	"Авто-выход завершен": "Auto-exit is completed",
 	"Бот поставлен на паузу": "Bot is paused ",
@@ -202,5 +203,8 @@
 	"Срок действия лицензии истекает": "License expires!",
 	"Срок действия лицензии истек": "The license has expired!",
 	"Недействительный лицензионный ключ": "Invalid license key!",
-	"Процент скачка цены для остановки бота": "The percentage of the price spike for the bot stopping"
+	"Процент скачка цены для остановки бота": "The percentage of the price spike for the bot stopping",
+	"Текущая стратегия": "Current Strategy",
+	"Новая стратегия": "New Strategy",
+	"При изменении стратегии бот будет перезагружен": "If you change the strategy, bot will be rebooted"
 }

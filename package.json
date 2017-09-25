@@ -1,6 +1,6 @@
 {
   "name": "gbot-trader",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
@@ -55,7 +55,7 @@
     "ms": "^2.0.0",
     "node-telegram-bot-api": "^0.28.0",
     "node.liqui.io": "^1.2.0",
-    "nodemailer": "^4.1.0",
+    "nodemailer": "^4.1.1",
     "poloniex-api-node": "^1.3.1",
     "request": "^2.82.0",
     "ta-lib": "^0.11.0",

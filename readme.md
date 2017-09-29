@@ -165,6 +165,8 @@ INTEGRITY_CONTROL_ORDERS            | Integrity control orders (**soft** or **ha
 TYPE_DATA_USED                      | Where to get information about the used orders (**active** - active orders,  **history** - trading history) (default: active)
 FIRST_LOADING_HISTORY               | Download the history when you start the bot (default: false)
 CYCLES_AUTO_EXIT                    | How many cycles to make the exit (default: false)
+STOP_LOSS_PERCENT                   | Stop Loss percentage (default: false)
+
 
 > If the parameter **INTEGRITY_CONTROL_ORDERS** in `hard` mode, then a sell order will be installed only if the volume installed and executed buy orders will be the same.
 
@@ -183,6 +185,7 @@ LOG                         | Calculating log output of auto settings (default: 
 LOG_DEBUG                   | The output of the debug log (default: false)
 LOG_TRANSPORTS              | Where to write the log (0 - console, 1 - file, 2 - console and file) (default: 0)
 LOG_PATH                    | A custom path to the directory with the log (default: Folder with bot)
+LOG_TREE                    | Save logs by directory year/month/day (default: false)
 RESTART_TRADER_TIME         | How many seconds to wait before re-querying the data after network errors (default: 5)
 NOTIFICATION_ERROR_COUNT    | The number of errors in 5 minutes for notification (default: false)
 EXCHANGE_FEE                | The Commission for transactions of the exchange (default: 0.25)

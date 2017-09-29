@@ -102,7 +102,6 @@
 	"Изменяет отступ ордеров по экспоненте в %": "Change orders indent by exponent in %",
 	"Отступ Exponential: Прошлый": "Indent Exponential: previous",
 	"Новый": "New",
-	"Бот на паре": "Bot at the pair",
 	"Время обновления авто настроек параметров (в мин)": "Auto-settings updating time of options (in minutes)",
 	"Отступ для ордеров в пунктах": "Indent for orders in points",
 	"Отступ для ордеров в процентах": "Indent for orders in percent",
@@ -207,5 +206,7 @@
 	"Процент скачка цены для остановки бота": "The percentage of the price spike for the bot stopping",
 	"Текущая стратегия": "Current Strategy",
 	"Новая стратегия": "New Strategy",
-	"При изменении стратегии бот будет перезагружен": "If you change the strategy, bot will be rebooted"
+	"При изменении стратегии бот будет перезагружен": "If you change the strategy, bot will be rebooted",
+	"Уровень StopLoss в процентах": "StopLoss percentage",
+	"Отображает информацию о StopLoss": "Displays StopLoss information"
 }

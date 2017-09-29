@@ -256,6 +256,7 @@ INTEGRITY_CONTROL_ORDERS            | Контроль целостности о
 TYPE_DATA_USED                      | Откуда брать информацию об исполненных ордерах (**active** - активные ордера, **history** - история) (default: active)
 FIRST_LOADING_HISTORY               | Загрузка истории при старте бота (default: false)
 CYCLES_AUTO_EXIT                    | Через сколько циклов совершить автовыход (default: false)
+STOP_LOSS_PERCENT                   | Уровень Stop Loss в процентах (default: false)
 
 > Если параметр **INTEGRITY_CONTROL_ORDERS** в режиме `hard`, то ордер будет установлен только, если объемы установленных и исполненных  ордеров будут совпадать (если ни один ордер не потеряется).
 
@@ -277,6 +278,7 @@ LOG                         | Вывод лога расчета авто пар
 LOG_DEBUG                   | Вывод дебаг лога (default: false)
 LOG_TRANSPORTS              | Куда писать лог (0 - консоль, 1 - файл, 2 - консоль и файл) (default: 0)
 LOG_PATH                    | Пользовательский путь до директории с логом (default: Директория с ботом)
+LOG_TREE                    | Сохранять логи по директориям год/месяц/день (default: false)
 RESTART_TRADER_TIME         | Через сколько секунд перезапрашивать данные после сетевых ошибок (default: 5)
 NOTIFICATION_ERROR_COUNT    | Количество ошибок за 5 минут для уведомления через telegram (default: false)
 EXCHANGE_FEE                | Комиссия на сделки биржи (default: 0.25)

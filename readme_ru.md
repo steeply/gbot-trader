@@ -189,8 +189,7 @@ MONITORING_PAIR                     | Пары для мониторинга.<br
 OFFSET_ORDERS_POINTS                | Отступ между ордерами в пунктах  (default: 10)
 OFFSET_ORDERS_PERCENT               | Отступ между ордерами в процентах (default: false)
 OFFSET_ORDERS_EXPONENTIAL           | Отступ между ордерами по экспоненте в % (default: false)
-RANGE_OFFSET                        | Диапазон смещения ордеров (default: false)
-
+RANGE_OFFSET                        | Диапазон смещения ордеров (перекрытие сетки) (default: false)
 OFFSET_FIRST_ORDERS_PERCENT         | Отступ первого ордера в процентах (default: false)
 
 > Параметр **OFFSET_FIRST_ORDERS_PERCENT** можно использовать совместно с любым из выбранных вариантов.
@@ -300,7 +299,7 @@ NODE_ENV                    | Значение **production** включает:<
 ----------------|----------------------
 DIRECTION_CURRENCY              | Направление валюты (straight или inverse)
 MINIMUM_ORDER_SIZE_IN_BTC       | Минимально допустимый размер ордера в базовой валюте (обычно это BTC) (default: 0.0005).
-MINIMUM_ORDER_CALCULATION_BTC   | Учитывать при расчете размера ордера его сумму в btc (default: false). Для poloniex, bittrex, liqui - true
+IS_ORDER_CALCULATION_BTC        | Учитывать при расчете размера ордера его сумму в btc (default: false). Для poloniex, bittrex, liqui - true
 
 
 ## Запуск

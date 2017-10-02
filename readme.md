@@ -147,7 +147,9 @@ STEP_BREAKEVEN_PERCENT              | Percentage of breakeven (default: 50)
  Option | Description
 ----------------|----------------------
 BBANDS                              | Bollinger Bands (Trend strategy!) (default: false)
-BBANDS_DEVIATION                    | Deviation (default: 20)
+BBANDS_DEVIATION                    | Deviation (default: 2)
+BBANDS_PERIOD                       | Period BBANDS (default: 20)
+RSI_PERIOD                          | Period RSI (default: 14)
 BBANDS_INTERVAL                     | Time-frame (min) (default: 1)
 
 

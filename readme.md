@@ -150,6 +150,8 @@ BBANDS                              | Bollinger Bands (Trend strategy!) (default
 BBANDS_DEVIATION                    | Deviation (default: 2)
 BBANDS_PERIOD                       | Period BBANDS (default: 20)
 RSI_PERIOD                          | Period RSI (default: 14)
+RSI_RANGE_SELL                      | RSI range for sell (percentage) (default: 70/99) <br> Values are specified in the format **start/end** of the range.
+RSI_RANGE_BUY                       | RSI range for buy (percentage) (default: 1/30)
 BBANDS_INTERVAL                     | Time-frame (min) (default: 1)
 
 

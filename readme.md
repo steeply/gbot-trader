@@ -107,6 +107,8 @@ OFFSET_ORDERS_PERCENT               | Position difference between orders in % (d
 OFFSET_ORDERS_EXPONENTIAL           | Position difference between orders is exponentially in % (default: false)
 RANGE_OFFSET                        | Range offset (default: false)
 OFFSET_FIRST_ORDERS_PERCENT         | Position difference of the first order in % (default: false)
+DISABLE_GRID_SELL                   | Disable order placement on the grid for Sell orders (default: false)
+DISABLE_GRID_BUY                    | Disable order placement on the grid for Buy orders (default: false)
 
 > Parameter **OFFSET_FIRST_ORDERS_PERCENT** can be used in conjunction with any of the selected options.
 

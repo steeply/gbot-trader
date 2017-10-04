@@ -107,13 +107,18 @@ OFFSET_ORDERS_PERCENT               | Position difference between orders in % (d
 OFFSET_ORDERS_EXPONENTIAL           | Position difference between orders is exponentially in % (default: false)
 RANGE_OFFSET                        | Range offset (default: false)
 OFFSET_FIRST_ORDERS_PERCENT         | Position difference of the first order in % (default: false)
-DISABLE_GRID_SELL                   | Disable order placement on the grid for Sell orders (default: false)
-DISABLE_GRID_BUY                    | Disable order placement on the grid for Buy orders (default: false)
 
 > Parameter **OFFSET_FIRST_ORDERS_PERCENT** can be used in conjunction with any of the selected options.
 
 > To set the first order in the market, use `OFFSET_FIRST_ORDERS_PERCENT=-1`
 
+
+#### Disable orders grid
+
+ Option | Description
+----------------|----------------------
+DISABLE_GRID_SELL                   | Disable order placement on the grid for Sell orders (default: false)
+DISABLE_GRID_BUY                    | Disable order placement on the grid for Buy orders (default: false)
 
 #### Modules AutoConfig
 
@@ -156,6 +161,7 @@ RSI_RANGE_SELL                      | RSI range for sell (percentage) (default: 
 RSI_RANGE_BUY                       | RSI range for buy (percentage) (default: 1/30)
 BBANDS_INTERVAL                     | Time-frame (min) (default: 1)
 
+> If `RSI_PERIOD = 0`, then the indicator is disabled and trading occurs only on the BBANDS indicator!
 
 #### Strategy "One Orders"
 **When you start the strategy of "Sell One, Buy a lot" the initial state of the balance of the base currency in the pair is ignored!**

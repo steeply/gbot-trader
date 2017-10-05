@@ -252,6 +252,7 @@ Additional commands:
 /restart            - Restart GBot Trader
 /stats              - Trading statistics
 /note [ignore text] - The text in this line will be ignored. It can be used as a comment.
+/stoploss           - Displays StopLoss information
 ```
 
 

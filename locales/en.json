@@ -182,7 +182,7 @@
 	"Слишком много ошибок API. Требуется внимание пользователя!": "Too many API errors. Pay attention!",
 	"Прошлый %s": "Previous %s",
 	"Новый %s": "New %s",
-	"Продано": "Sold",
+	"Исполнен": "Implemented",
 	"Нет подходящих вариантов": "Appropriate options were not found",
 	"Внимание! Пары для уведомлений не заданы": "Attention! Pairs for notifications are not specified",
 	"Ошибка получения данных с сервера": "Error in getting data from the server",
@@ -208,5 +208,6 @@
 	"Новая стратегия": "New Strategy",
 	"При изменении стратегии бот будет перезагружен": "If you change the strategy, bot will be rebooted",
 	"Уровень StopLoss в процентах": "StopLoss percentage",
-	"Отображает информацию о StopLoss": "Displays StopLoss information"
+	"Отображает информацию о StopLoss": "Displays StopLoss information",
+	"Запрещенный параметр!": "Disallowed parameter!"
 }

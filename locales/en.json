@@ -209,5 +209,6 @@
 	"При изменении стратегии бот будет перезагружен": "If you change the strategy, bot will be rebooted",
 	"Уровень StopLoss в процентах": "StopLoss percentage",
 	"Отображает информацию о StopLoss": "Displays StopLoss information",
-	"Запрещенный параметр!": "Disallowed parameter!"
+	"Запрещенный параметр!": "Disallowed parameter!",
+	"Уведомление об исполнении one orders": "Notice of execution of one orders"
 }

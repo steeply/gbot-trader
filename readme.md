@@ -85,9 +85,6 @@ SIZE_FIRST_ORDERS_PERCENT           | The size of the first order in percent (de
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (for Exponential - %, Linear - absolute number) (default: false)
 MARTINGALE_TYPE                     | Type Martingale (1 - exponential, 2 - linear) (default: 1)
 CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you restart the bot (default: false)
-NOTIFICATION_PAIR                   | Notification pair of rate changing (For example: `btc/usd, ltc/usd` or **all/all** for all pair)
-NOTIFICATION_DEVIATION_PERCENT      | Relation of deviation percentage from current price for notification will work (default: 600)
-MONITORING_PAIR                     | Pairs for monitoring. <br> (For example: `btc/usd, ltc/usd`, or just a pair currency, for example: `btc`). <br> If none of that is set, ALL available pairs will be monitored on the exchange. <br> (default: All pairs)
 
 **Important!**
 
@@ -186,12 +183,31 @@ STOP_LOSS_PERCENT                   | Stop Loss percentage (default: false)
 
 
 #### Additional options
+
+### Notifications
+
+ Option | Description
+----------------|----------------------
+NOTIFICATION_PAIR                   | Notification pair of rate changing (For example: `btc/usd, ltc/usd` or **all/all** for all pair)
+NOTIFICATION_DEVIATION_PERCENT      | Relation of deviation percentage from current price for notification will work (default: 600)
+MONITORING_PAIR                     | Pairs for monitoring. <br> (For example: `btc/usd, ltc/usd`, or just a pair currency, for example: `btc`). <br> If none of that is set, ALL available pairs will be monitored on the exchange. <br> (default: All pairs)
+NOTIFICATION_ERROR_COUNT            | The number of errors in 5 minutes for notification (default: false)
+NOTIFICATION_ORDER_IS_EXECUTED      | Notice of execution of one orders (default: false)
+
+
+### Email Error Notification
+
  Option | Description
 ----------------|----------------------
 EMAIL_REPORT_ADDRESS        | Email for notifications of network incidences and errors
 HOST_SMTP                   | Mail server address
 EMAIL_AUTH_USER             | Authorization login of the mail server
 EMAIL_AUTH_PASS             | Mail server password
+
+### Other parameters
+
+ Option | Description
+----------------|----------------------
 TIME_ZONE                   | Time zone (For example: Europe/Moscow) [Database Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
 LOG                         | Calculating log output of auto settings (default: false)
 LOG_DEBUG                   | The output of the debug log (default: false)
@@ -199,7 +215,6 @@ LOG_TRANSPORTS              | Where to write the log (0 - console, 1 - file, 2 -
 LOG_PATH                    | A custom path to the directory with the log (default: Folder with bot)
 LOG_TREE                    | Save logs by directory year/month/day (default: false)
 RESTART_TRADER_TIME         | How many seconds to wait before re-querying the data after network errors (default: 5)
-NOTIFICATION_ERROR_COUNT    | The number of errors in 5 minutes for notification (default: false)
 EXCHANGE_FEE                | The Commission for transactions of the exchange (default: 0.25)
 DELAY_REQUEST_API           | The delay of requests to the API in milliseconds (default: 500)
 DELAY_BETWEEN_MODULES       | Then delay in seconds between execution of consecutive modules. (default: 3)

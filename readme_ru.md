@@ -138,17 +138,17 @@
 
 #### Обязательные параметры
 
- Option | Description
-----------------|----------------------
-**KEY**                 | API key
-**SECRET**              | API secret
-**NAME_COIN**           | Торговая валюта (Например: ltc)
-**NAME_COIN_TWO**       | Торговая валюта (Например: usd)
-EXCHANGE                | Выбор биржи: (default: wex)<br> **wex** <br> **poloniex** <br> **bittrex** <br> **exmo** <br> **bitfinex** <br> **liqui**
-EXCHANGE_HOST           | Адрес API биржи. Если основной адрес недоступен.
-TELEGRAM_TOKEN          | Ваш токен для Telegram
-TELEGRAM_ID             | ID вашего пользователя в Telegram
-TELEGRAM_OFF            | Отключить Telegram. (default: false)
+ Option | Description| Type | Default
+--------|------------|-----|----------
+**KEY**                 | API key           | string | -
+**SECRET**              | API secret| string | -
+**NAME_COIN**           | Торговая валюта | string | ltc
+**NAME_COIN_TWO**       | Торговая валюта | string | usd
+EXCHANGE                | Выбор биржи: <br> **wex** <br> **poloniex** <br> **bittrex** <br> **exmo** <br> **bitfinex** <br> **liqui** | string | wex
+EXCHANGE_HOST           | Адрес API биржи. Если основной адрес недоступен. | string | -
+TELEGRAM_TOKEN          | Ваш токен для Telegram | string | -
+TELEGRAM_ID             | ID вашего пользователя в Telegram | number | -
+TELEGRAM_OFF            | Отключить Telegram. | boolean | false
 
 > Опция **TELEGRAM_OFF** отключает возможность использовать Telegram в боте. Всё управление и все уведомления посылаемые через Telegram будут так же отключены!
 
@@ -157,22 +157,19 @@ TELEGRAM_OFF            | Отключить Telegram. (default: false)
 
 #### Торговые параметры
 
- Option | Description
-----------------|----------------------
-TIME_UPDATE_AUTO_SETTINGS           | Время обновления авто параметров (в минутах) (default: 2)
-DEPOSIT_LIMIT_PERCENT               | Процент использования депозита (default: 100)
-DEPOSIT_LIMIT_CURRENCY              | Размер использования депозита в валюте параметра **NAME_COIN_TWO** (default: false)
-COUNT_ORDERS                        | Количество ордеров.<br> Сколько всего будет установлено. (default: рассчитывается на основе размера депозита)
-QUANTITY_ORDERS_IN_BLOCKS           | Количество ордеров в блоке.<br> Сколько ордеров будет одномоментно на рынке. (default: false)
-SIZE_FIRST_ORDERS_CURRENCY          | Размер первого ордера в торгуемой валюте (default: false)
-SIZE_FIRST_ORDERS_INSECOND_CURRENCY | Размер первого ордера в базовой валюте (default: false)
-SIZE_FIRST_ORDERS_PERCENT           | Размер первого ордера в процентах (default: false)
-SIZE_ORDERS_MARTINGALE              | Размер ордеров по Мартингейл<br> (для Экспоненты - проценты, для Линейного - абсолютное число) (default: false)
-MARTINGALE_TYPE                     | Тип Мартингейла (1 - экспоненциальный, 2 - линейный) (default: 1)
-CONTINUE_MARTINGALE_GRID            | Продолжать сетку Мартингейл при перезапуске бота (default: false)
-NOTIFICATION_PAIR                   | Пары для уведомления о скачках курса (Например: `btc/usd, ltc/usd` или **all/all** для всех пар)
-NOTIFICATION_DEVIATION_PERCENT      | Насколько процентов должен увеличиться спред, чтобы сработало уведомление (default: 600)
-MONITORING_PAIR                     | Пары для мониторинга.<br>(Например: `btc/usd, ltc/usd`. Или только валюта пары, например: `btc` ).<br>Если ничего не задано будут мониториться ВСЕ доступные пары на бирже.<br> (default: Все пары)
+ Option | Description|Type | Default
+--------|------------|-----|----------
+TIME_UPDATE_AUTO_SETTINGS           | Время обновления авто параметров (в минутах)  | number | 2
+DEPOSIT_LIMIT_PERCENT               | Процент использования депозита | number | 100
+DEPOSIT_LIMIT_CURRENCY              | Размер использования депозита в валюте параметра **NAME_COIN_TWO** | number | 0
+COUNT_ORDERS                        | Количество ордеров.<br> Сколько всего будет установлено. | number | рассчитывается на основе размера депозита
+QUANTITY_ORDERS_IN_BLOCKS           | Количество ордеров в блоке.<br> Сколько ордеров будет одномоментно на рынке. | number | 0
+SIZE_FIRST_ORDERS_CURRENCY          | Размер первого ордера в торгуемой валюте | number | 0
+SIZE_FIRST_ORDERS_INSECOND_CURRENCY | Размер первого ордера в базовой валюте | number | 0
+SIZE_FIRST_ORDERS_PERCENT           | Размер первого ордера в процентах | number | 0
+SIZE_ORDERS_MARTINGALE              | Размер ордеров по Мартингейл<br> (для Экспоненты - проценты, для Линейного - абсолютное число) | number | 0
+MARTINGALE_TYPE                     | Тип Мартингейла (1 - экспоненциальный, 2 - линейный) | number | 1
+CONTINUE_MARTINGALE_GRID            | Продолжать сетку Мартингейл при перезапуске бота | boolean | false
 
 **Важно!**
 
@@ -184,15 +181,13 @@ MONITORING_PAIR                     | Пары для мониторинга.<br
 
 Варианты возможных отступов ордеров. Выберите **один** из предложенных.
 
- Option | Description
-----------------|----------------------
-OFFSET_ORDERS_POINTS                | Отступ между ордерами в пунктах  (default: 10)
-OFFSET_ORDERS_PERCENT               | Отступ между ордерами в процентах (default: false)
-OFFSET_ORDERS_EXPONENTIAL           | Отступ между ордерами по экспоненте в % (default: false)
-RANGE_OFFSET                        | Диапазон смещения ордеров (перекрытие сетки) (default: false)
-OFFSET_FIRST_ORDERS_PERCENT         | Отступ первого ордера в процентах (default: false)
-DISABLE_GRID_SELL                   | Отключить расстановку ордеров по сетке для Sell ордеров (default: false)
-DISABLE_GRID_BUY                    | Отключить расстановку ордеров по сетке для Buy ордеров (default: false)
+ Option | Description|Type | Default
+--------|------------|-----|----------
+OFFSET_ORDERS_POINTS                | Отступ между ордерами в пунктах  | number | 10
+OFFSET_ORDERS_PERCENT               | Отступ между ордерами в процентах | number | 0
+OFFSET_ORDERS_EXPONENTIAL           | Отступ между ордерами по экспоненте в % | number | 0
+RANGE_OFFSET                        | Диапазон смещения ордеров (перекрытие сетки) | number | 0
+OFFSET_FIRST_ORDERS_PERCENT         | Отступ первого ордера в процентах | number | 0
 
 > Параметр **OFFSET_FIRST_ORDERS_PERCENT** можно использовать совместно с любым из выбранных вариантов.
 
@@ -200,23 +195,23 @@ DISABLE_GRID_BUY                    | Отключить расстановку 
 
 #### Отключение сетки ордеров
 
- Option | Description
-----------------|----------------------
-DISABLE_GRID_SELL                   | Отключить расстановку ордеров по сетке для Sell ордеров (default: false)
-DISABLE_GRID_BUY                    | Отключить расстановку ордеров по сетке для Buy ордеров (default: false)
+ Option | Description|Type | Default
+--------|------------|-----|----------
+DISABLE_GRID_SELL                   | Отключить расстановку ордеров по сетке для Sell ордеров | boolean | false
+DISABLE_GRID_BUY                    | Отключить расстановку ордеров по сетке для Buy ордеров | boolean | false
 
 #### Модули автоконфигурации
 Данные модули зависят от размера спреда и модифицируют конфигурацию, если спред превышает нормальные значения в 3 раза и более.
 
- Option | Description
-----------------|----------------------
-DANGER_PRICE_STOP                   | Остановка бота при большом скачке цены (default: false)
-DANGER_PRICE_STOP_PERCENT           | Процент скачка цены для остановки бота (default: 9)
-DYNAMIC_SETTINGS_TIME               | Динамическое время обновления авто параметров (default: false)
-DYNAMIC_OFFSET_ORDERS               | Динамическое распределение ордеров (default: false)
-TREND_DEFINITION                    | Определение тренда (Экспериментально) (default: false)
-ABRUPT_CHANGE_TREND                 | Быстрый разворот тренда (Экспериментально) (default: false)
-OFF_MODULES_AUTO_SETTINGS           | Отключение всех модулей авто настройки (default: false)
+ Option | Description|Type | Default
+--------|------------|-----|----------
+DANGER_PRICE_STOP                   | Остановка бота при большом скачке цены | boolean | false
+DANGER_PRICE_STOP_PERCENT           | Процент скачка цены для остановки бота | number | 9
+DYNAMIC_SETTINGS_TIME               | Динамическое время обновления авто параметров | boolean | false
+DYNAMIC_OFFSET_ORDERS               | Динамическое распределение ордеров | boolean | false
+TREND_DEFINITION                    | Определение тренда (Экспериментально) | boolean | false
+ABRUPT_CHANGE_TREND                 | Быстрый разворот тренда (Экспериментально) | boolean | false
+OFF_MODULES_AUTO_SETTINGS           | Отключение всех модулей авто настройки | boolean | false
 
 > Опции **TREND_DEFINITION** и **ABRUPT_CHANGE_TREND** только для стратегии **Scalper**.
 
@@ -229,24 +224,25 @@ OFF_MODULES_AUTO_SETTINGS           | Отключение всех модуле
 **Все стратегии взаимоисключающие. Если ни одна стратегия не выбрана, используется стратегия "Скальпер".**
 
 ### Стратегия "Скальпер" и "Линии Боллинджера"
- Option | Description
-----------------|----------------------
-TIME_CLOSE_ORDERS                   | Время закрытия неиспользованных ордеров (в минутах) (default: 5)
-TIME_CLOSE_ORDERS_INACTIVITY        | Время закрытия ордеров при бездействии (в минутах) (default: 15)
-STEP_BREAKEVEN_PERCENT              | Процент отступа от безубытка между bid и ask (default: 50)
+
+ Option | Description|Type | Default
+--------|------------|-----|----------
+TIME_CLOSE_ORDERS                   | Время закрытия неиспользованных ордеров (в минутах) | number | 5
+TIME_CLOSE_ORDERS_INACTIVITY        | Время закрытия ордеров при бездействии (в минутах) | number | 15
+STEP_BREAKEVEN_PERCENT              | Процент отступа от безубытка между bid и ask | number | 50
 
 
 ### Стратегия "Линии Боллинджера"
 
- Option | Description
-----------------|----------------------
-BBANDS                              | Линии Боллинджера (Трендовая стратегия) (default: false)
-BBANDS_DEVIATION                    | Отклонение (default: 2)
-BBANDS_PERIOD                       | Период BBANDS (default: 20)<br> Период - это количество цен (свечей) в массиве.
-RSI_PERIOD                          | Период RSI (default: 14)
-RSI_RANGE_SELL                      | Диапазон RSI для продажи (в процентах) (default: 70/99) <br> Значения указываются в формате **начало/конец** диапазона.
-RSI_RANGE_BUY                       | Диапазон RSI для покупки (в процентах) (default: 1/30)
-BBANDS_INTERVAL                     | Интервал запроса цен (в минутах) (default: 1) <br> Интервал - это размер свечи (Тайм-фрейм).
+ Option | Description|Type | Default
+--------|------------|-----|----------
+BBANDS                              | Линии Боллинджера (Трендовая стратегия) | boolean | false
+BBANDS_DEVIATION                    | Отклонение | number | 2
+BBANDS_PERIOD                       | Период BBANDS <br> Период - это количество цен (свечей) в массиве. | number | 20
+RSI_PERIOD                          | Период RSI  | number | 14
+RSI_RANGE_SELL                      | Диапазон RSI для продажи (в процентах) <br> Значения указываются в формате **начало/конец** диапазона. | string | 70/99
+RSI_RANGE_BUY                       | Диапазон RSI для покупки (в процентах)  | string | 1/30
+BBANDS_INTERVAL                     | Интервал запроса цен (в минутах) <br> Интервал - это размер свечи (Тайм-фрейм). | number | 1
 
 > Если `RSI_PERIOD = 0` тогда индикатор отключается и торговля происходит только по индикатору BBANDS!
 
@@ -259,17 +255,17 @@ BBANDS_INTERVAL                     | Интервал запроса цен (в
 * One Sell a lot Buy - накапливаются USD. Баланс BTC на момент запуска игнорируется.
 * One Buy a lot Sell - накапливаются BTC. Баланс USD на момент запуска игнорируется.
 
- Option | Description
-----------------|----------------------
-ONE_ORDERS_SELL                     | Стратегия "One Sell a lot Buy" (default: false)
-ONE_ORDERS_BUY                      | Стратегия "One Buy a lot Sell" (default: false)
-ONE_ORDERS_OFFSET                   | Разница между ценой LastPrice и первым ордером в стеке ордеров в %.<br> Будет подтягивать ордера вслед за ценой, если это значение будет превышено. (default: 2)
-ONE_ORDERS_PROFIT_PERCENT           | Задает процент желаемой прибыли (default: 1)
-INTEGRITY_CONTROL_ORDERS            | Контроль целостности ордеров (**soft** - мягкий, **hard** - жесткий) (default: soft)
-TYPE_DATA_USED                      | Откуда брать информацию об исполненных ордерах (**active** - активные ордера, **history** - история) (default: active)
-FIRST_LOADING_HISTORY               | Загрузка истории при старте бота (default: false)
-CYCLES_AUTO_EXIT                    | Через сколько циклов совершить автовыход (default: false)
-STOP_LOSS_PERCENT                   | Уровень Stop Loss в процентах (default: false)
+ Option | Description|Type | Default
+--------|------------|-----|----------
+ONE_ORDERS_SELL                     | Стратегия "One Sell a lot Buy" | boolean | false
+ONE_ORDERS_BUY                      | Стратегия "One Buy a lot Sell" | boolean | false
+ONE_ORDERS_OFFSET                   | Разница между ценой LastPrice и первым ордером в стеке ордеров в %.<br> Будет подтягивать ордера вслед за ценой, если это значение будет превышено. | number | 2
+ONE_ORDERS_PROFIT_PERCENT           | Задает процент желаемой прибыли | number | 1
+INTEGRITY_CONTROL_ORDERS            | Контроль целостности ордеров (**soft** - мягкий, **hard** - жесткий) | string | soft
+TYPE_DATA_USED                      | Откуда брать информацию об исполненных ордерах (**active** - активные ордера, **history** - история) | string | active
+FIRST_LOADING_HISTORY               | Загрузка истории при старте бота | boolean | false
+CYCLES_AUTO_EXIT                    | Через сколько циклов совершить автовыход | number | 0
+STOP_LOSS_PERCENT                   | Уровень Stop Loss в процентах | number | 0
 
 > Если параметр **INTEGRITY_CONTROL_ORDERS** в режиме `hard`, то ордер будет установлен только, если объемы установленных и исполненных  ордеров будут совпадать (если ни один ордер не потеряется).
 
@@ -277,28 +273,45 @@ STOP_LOSS_PERCENT                   | Уровень Stop Loss в процент
 
 > Если параметр **FIRST_LOADING_HISTORY** включен, будет загружены в кэш первые 100 исполненных ордеров до первого SELL/BUY ордера на выбранной паре и выставится SELL/BUY ордер исходя из этих данных.
 
+
 ## Дополнительные опции
 
- Option | Description
-----------------|----------------------
-EMAIL_REPORT_ADDRESS        | Email адрес для уведомлениях о падениях и ошибках сети
-HOST_SMTP                   | Адрес почтового сервера (default: smtp.yandex.ru)
-EMAIL_AUTH_USER             | Логин авторизации на почтовом сервере
-EMAIL_AUTH_PASS             | Пароль почтового сервера
-TIME_ZONE                   | Временная зона (Например: Europe/Moscow) [Database Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
-LOG                         | Вывод лога расчета авто параметров (default: false)
-LOG_DEBUG                   | Вывод дебаг лога (default: false)
-LOG_TRANSPORTS              | Куда писать лог (0 - консоль, 1 - файл, 2 - консоль и файл) (default: 0)
-LOG_PATH                    | Пользовательский путь до директории с логом (default: Директория с ботом)
-LOG_TREE                    | Сохранять логи по директориям год/месяц/день (default: false)
-RESTART_TRADER_TIME         | Через сколько секунд перезапрашивать данные после сетевых ошибок (default: 5)
-NOTIFICATION_ERROR_COUNT    | Количество ошибок за 5 минут для уведомления через telegram (default: false)
-EXCHANGE_FEE                | Комиссия на сделки биржи (default: 0.25)
-DELAY_REQUEST_API           | Задержка при выполнении запросов к api<br> в миллисекундах (default: 500)
-DELAY_BETWEEN_MODULES       | Задержка в секундах между выполнением последовательных модулей (default: 3). 
-TITLE                       | Заголовок окна консоли. (Работает не на всех системах).
-LANGUAGE                    | Язык интерфейса (`ru` или `en`) (default: ru)
-NODE_ENV                    | Значение **production** включает:<br>  1. уведомление о старте бота в Telegram.<br> 2. уведомления об ошибках на E-mail.<br> 3. запрещает использовать conf-dev.js.<br> 4. отключает колоризацию в логе.<br> 5. отключает TITLE
+### Уведомления
+
+ Option | Description|Type | Default
+--------|------------|-----|----------
+NOTIFICATION_PAIR                   | Пары для уведомления о скачках курса (Например: `btc/usd, ltc/usd` или **all/all** для всех пар) | string | -
+NOTIFICATION_DEVIATION_PERCENT      | Насколько процентов должен увеличиться спред, чтобы сработало уведомление | number | 600
+MONITORING_PAIR                     | Пары для мониторинга.<br>(Например: `btc/usd, ltc/usd`. Или только валюта пары, например: `btc` ).<br>Если ничего не задано будут мониториться ВСЕ доступные пары на бирже.<br> | string | Все пары
+NOTIFICATION_ERROR_COUNT            | Количество ошибок за 5 минут для уведомления через telegram | number | 0
+NOTIFICATION_ORDER_IS_EXECUTED      | Уведомление об исполнении one orders | boolean | false
+
+### Уведомление об ошибках на Email
+
+ Option | Description|Type | Default
+--------|------------|-----|----------
+EMAIL_REPORT_ADDRESS        | Email адрес для уведомлениях о падениях и ошибках сети | string | -
+HOST_SMTP                   | Адрес почтового сервера (default: smtp.yandex.ru) | string | smtp.yandex.ru
+EMAIL_AUTH_USER             | Логин авторизации на почтовом сервере | string | -
+EMAIL_AUTH_PASS             | Пароль почтового сервера | string | -
+
+### Остальные параметры
+
+ Option | Description|Type | Default
+--------|------------|-----|----------
+TIME_ZONE                   | Временная зона [Database Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) | string | Asia/Yekaterinburg
+LOG                         | Вывод лога расчета авто параметров | boolean | false
+LOG_DEBUG                   | Вывод дебаг лога | boolean | false
+LOG_TRANSPORTS              | Куда писать лог (0 - консоль, 1 - файл, 2 - консоль и файл) | number | 0 
+LOG_PATH                    | Пользовательский путь до директории с логом | string | Директория с ботом
+LOG_TREE                    | Сохранять логи по директориям год/месяц/день | boolean | false
+RESTART_TRADER_TIME         | Через сколько секунд перезапрашивать данные после сетевых ошибок | number | 5
+EXCHANGE_FEE                | Комиссия на сделки биржи | number | 0.25
+DELAY_REQUEST_API           | Задержка при выполнении запросов к api<br> в миллисекундах | number | 500
+DELAY_BETWEEN_MODULES       | Задержка в секундах между выполнением последовательных модулей | number | 3
+TITLE                       | Заголовок окна консоли. (Работает не на всех системах). | string | GBot
+LANGUAGE                    | Язык интерфейса (`ru` или `en`) | string | ru
+NODE_ENV                    | Значение **production** включает:<br>  1. уведомление о старте бота в Telegram.<br> 2. уведомления об ошибках на E-mail.<br> 3. запрещает использовать conf-dev.js.<br> 4. отключает колоризацию в логе.<br> 5. отключает TITLE | string | dev
 
 **Важно:**
 
@@ -308,11 +321,11 @@ NODE_ENV                    | Значение **production** включает:<
 #### Опции для разработчиков. Данные параметры зависят от биржи.
 Эти опции необходимы для создания [middleware exchange api](middleware_exchange_api.md)
 
- Option | Description
-----------------|----------------------
-DIRECTION_CURRENCY              | Направление валюты (straight или inverse)
-MINIMUM_ORDER_SIZE_IN_BTC       | Минимально допустимый размер ордера в базовой валюте (обычно это BTC) (default: 0.0005).
-IS_ORDER_CALCULATION_BTC        | Учитывать при расчете размера ордера его сумму в btc (default: false). Для poloniex, bittrex, liqui - true
+ Option | Description|Type | Default
+--------|------------|-----|----------
+DIRECTION_CURRENCY              | Направление валюты (straight или inverse) | string | straight
+MINIMUM_ORDER_SIZE_IN_BTC       | Минимально допустимый размер ордера в базовой валюте (обычно это BTC) | number |  0.0005
+IS_ORDER_CALCULATION_BTC        | Учитывать при расчете размера ордера его сумму в btc. | boolean | false<br><br> Для poloniex, bittrex, liqui: true
 
 
 ## Запуск

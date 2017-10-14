@@ -174,13 +174,15 @@ ONE_ORDERS_PROFIT_PERCENT           | Specifies the percentage desired profit | 
 INTEGRITY_CONTROL_ORDERS            | Integrity control orders (**soft** or **hard**) | string | soft
 TYPE_DATA_USED                      | Where to get information about the used orders (**active** - active orders,  **history** - trading history) | string | active
 FIRST_LOADING_HISTORY               | Download the history when you start the bot | boolean | false
+NUMBER_ROWS_LOAD_HISTORY            | Number of rows to load history | number | 100
 CYCLES_AUTO_EXIT                    | How many cycles to make the exit | number | 0
 STOP_LOSS_PERCENT                   | Stop Loss percentage | number | 0
+DISABLE_CAPITALIZATION              | Disable capitalization in profit order | boolean | false
 
 
 > If the parameter **INTEGRITY_CONTROL_ORDERS** in `hard` mode, then a sell order will be installed only if the volume installed and executed buy orders will be the same.
 
-> If the parameter **FIRST_LOADING_HISTORY** included, will be loaded into the cache the first 100 BUY orders before the first SELL order for the selected pair and put a SELL order on the basis of these data.
+> If the parameter **FIRST_LOADING_HISTORY** included, will be loaded into the cache the first `NUMBER_ROWS_LOAD_HISTORY` BUY orders before the first SELL order for the selected pair and put a SELL order on the basis of these data.
 
 
 #### Additional options

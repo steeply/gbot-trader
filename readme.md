@@ -184,6 +184,7 @@ DISABLE_CAPITALIZATION              | Disable capitalization in profit order | b
 
 > If the parameter **FIRST_LOADING_HISTORY** included, will be loaded into the cache the first `NUMBER_ROWS_LOAD_HISTORY` BUY orders before the first SELL order for the selected pair and put a SELL order on the basis of these data.
 
+> Option **DISABLE_CAPITALIZATION=true** activates `INTEGRITY_CONTROL_ORDERS` on **hard**.
 
 #### Additional options
 

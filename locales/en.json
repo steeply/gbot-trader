@@ -100,7 +100,7 @@
 	"Изменяет отступ ордеров в процентах": "Change orders indent in percent",
 	"Изменяет отступ ордеров в пунктах": "Change orders indent in points",
 	"Изменяет отступ ордеров по экспоненте в %": "Change orders indent by exponent in %",
-	"Отступ Exponential: Прошлый": "Indent Exponential: previous",
+	"Отступ Exponential => Прошлый": "Indent Exponential => Previous",
 	"Новый": "New",
 	"Время обновления авто настроек параметров (в мин)": "Auto-settings updating time of options (in minutes)",
 	"Отступ для ордеров в пунктах": "Indent for orders in points",

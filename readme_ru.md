@@ -317,6 +317,7 @@ DELAY_BETWEEN_MODULES       | Задержка в секундах между в
 TITLE                       | Заголовок окна консоли. (Работает не на всех системах). | string | GBot
 LANGUAGE                    | Язык интерфейса (`ru` или `en`) | string | ru
 NODE_ENV                    | Значение **production** включает:<br>  1. уведомление о старте бота в Telegram.<br> 2. уведомления об ошибках на E-mail.<br> 3. запрещает использовать conf-dev.js.<br> 4. отключает колоризацию в логе.<br> 5. отключает TITLE | string | dev
+URL_STATISTICS              | URL адрес сервера куда будет отправлена статистика в формате post json | string | -
 
 **Важно:**
 

@@ -161,7 +161,7 @@ TELEGRAM_OFF            | Отключить Telegram. | boolean | false
 --------|------------|-----|----------
 TIME_UPDATE_AUTO_SETTINGS           | Время обновления авто параметров (в минутах)  | number | 2
 DEPOSIT_LIMIT_PERCENT               | Процент использования депозита | number | 100
-DEPOSIT_LIMIT_CURRENCY              | Размер использования депозита в валюте параметра **NAME_COIN_TWO** | number | 0
+DEPOSIT_LIMIT_CURRENCY              | Размер использования депозита в валюте параметра **NAME_COIN_TWO**. Для бирж с инвертированной валютой в валюте параметра **NAME_COIN** | number | 0
 COUNT_ORDERS                        | Количество ордеров.<br> Сколько всего будет установлено. | number | рассчитывается на основе размера депозита
 QUANTITY_ORDERS_IN_BLOCKS           | Количество ордеров в блоке.<br> Сколько ордеров будет одномоментно на рынке. | number | 0
 SIZE_FIRST_ORDERS_CURRENCY          | Размер первого ордера в торгуемой валюте | number | 0

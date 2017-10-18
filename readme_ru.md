@@ -183,12 +183,12 @@ CONTINUE_MARTINGALE_GRID            | Продолжать сетку Марти
 
  Option | Description|Type | Default
 --------|------------|-----|----------
+OFFSET_FIRST_ORDERS_PERCENT         | Отступ первого ордера в процентах | number | 0
+OFFSET_FIRST_ORDERS_POINTS          | Отступ первого ордера в пунктах | number | 0
 OFFSET_ORDERS_POINTS                | Отступ между ордерами в пунктах  | number | 10
 OFFSET_ORDERS_PERCENT               | Отступ между ордерами в процентах | number | 0
 OFFSET_ORDERS_EXPONENTIAL           | Отступ между ордерами по экспоненте в % | number | 0
 RANGE_OFFSET                        | Диапазон смещения ордеров (перекрытие сетки) | number | 0
-OFFSET_FIRST_ORDERS_PERCENT         | Отступ первого ордера в процентах | number | 0
-OFFSET_FIRST_ORDERS_POINTS          | Отступ первого ордера в пунктах | number | 0
 
 > Параметр **OFFSET_FIRST_ORDERS_PERCENT** или **OFFSET_FIRST_ORDERS_POINTS** можно использовать совместно с любым из выбранных вариантов.
 
@@ -245,7 +245,7 @@ RSI_RANGE_SELL                      | Диапазон RSI для продажи
 RSI_RANGE_BUY                       | Диапазон RSI для покупки (в процентах)  | string | 1/30
 BBANDS_INTERVAL                     | Интервал запроса цен (в минутах) <br> Интервал - это размер свечи (Тайм-фрейм). | number | 1
 
-> Если `RSI_PERIOD = 0` тогда индикатор отключается и торговля происходит только по индикатору BBANDS!
+> Если `RSI_PERIOD=0` тогда индикатор отключается и торговля происходит только по индикатору BBANDS!
 
 ### Набор стратегий "One Orders"
 При запуске Стратегии "One Sell a lot Buy" начальное состояние баланса **основной** валюты в паре **игнорируется**!<br>
@@ -255,6 +255,7 @@ BBANDS_INTERVAL                     | Интервал запроса цен (в
 
 * One Sell a lot Buy - накапливаются USD. Баланс BTC на момент запуска игнорируется.
 * One Buy a lot Sell - накапливаются BTC. Баланс USD на момент запуска игнорируется.
+
 
  Option | Description|Type | Default
 --------|------------|-----|----------

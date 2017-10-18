@@ -225,6 +225,7 @@ DELAY_BETWEEN_MODULES       | Then delay in seconds between execution of consecu
 TITLE                       | The title of the console window. | string | GBot
 LANGUAGE                    | The language of the interface (`ru` or `en`) | string | ru
 NODE_ENV                    | Value **production** activate:<br>  1. notification about the start of a Telegram bot.<br> 2. error notifications by E-mail.<br> 3. prohibits the use of conf-dev.js.<br> 4. disabling colors in logs.<br>5. disables TITLE | string | dev
+URL_STATISTICS              | URL of the server where the statistics will be sent in post json format | string | -
 
 **Important:**
 

@@ -76,7 +76,7 @@ By default, the bot will work at default settings. You can change them using the
 --------|------------|-----|----------
 TIME_UPDATE_AUTO_SETTINGS           | Update time of auto settings (min) | number | 2
 DEPOSIT_LIMIT_PERCENT               | Deposit consuming percent | number | 100
-DEPOSIT_LIMIT_CURRENCY              | The size of the used part of the Deposit in the currency **NAME_COIN_TWO** | number | 0
+DEPOSIT_LIMIT_CURRENCY              | The size of the used part of the Deposit in the currency **NAME_COIN_TWO**. For exchanges with inverted currency in the currency of the parameter **NAME_COIN** | number | 0
 COUNT_ORDERS                        | Quantity all orders.<br> How many will be installed. | number | Calculated based on deposit amount
 QUANTITY_ORDERS_IN_BLOCKS           | Quantity orders in blocks<br>How many orders will be simultaneously on the market. | number | 0
 SIZE_FIRST_ORDERS_CURRENCY          | The size of the first order in the currency being traded | number | 0

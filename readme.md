@@ -59,7 +59,7 @@ The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs
 **SECRET**          | API secret    | string | -
 **NAME_COIN**       | Trading currency | string | ltc
 **NAME_COIN_TWO**   | Trading currency | string | usd
-EXCHANGE            | The choice of the exchange <br> **wex** <br> **poloniex** <br> **bittrex** <br> **exmo** <br> **bitfinex** <br> **liqui** | string | wex
+EXCHANGE            | The choice of the exchange <br> **wex** <br> **poloniex** (inverted pairs) <br> **bittrex** (inverted pairs) <br> **exmo** <br> **bitfinex** <br> **liqui** | string | wex
 EXCHANGE_HOST       | Host exchange API. If the primary host is not available. | string | -
 TELEGRAM_TOKEN      | Telegram token    | string | -
 TELEGRAM_ID         | Your User ID Telegram | number | -
@@ -76,14 +76,14 @@ By default, the bot will work at default settings. You can change them using the
 --------|------------|-----|----------
 TIME_UPDATE_AUTO_SETTINGS           | Update time of auto settings (min) | number | 2
 DEPOSIT_LIMIT_PERCENT               | Deposit consuming percent | number | 100
-DEPOSIT_LIMIT_CURRENCY              | The size of the used part of the Deposit in the currency **NAME_COIN_TWO**. For exchanges with inverted currency in the currency of the parameter **NAME_COIN** | number | 0
+DEPOSIT_LIMIT_CURRENCY              | The size of the used part of the Deposit in the currency **NAME_COIN_TWO**. <br>For exchanges with inverted currency in the currency of the parameter **NAME_COIN** | number | 0
 COUNT_ORDERS                        | Quantity all orders.<br> How many will be installed. | number | Calculated based on deposit amount
 QUANTITY_ORDERS_IN_BLOCKS           | Quantity orders in blocks<br>How many orders will be simultaneously on the market. | number | 0
 SIZE_FIRST_ORDERS_CURRENCY          | The size of the first order in the currency being traded | number | 0
 SIZE_FIRST_ORDERS_INSECOND_CURRENCY | The size of the first order in the base currency | number | 0
 SIZE_FIRST_ORDERS_PERCENT           | The size of the first order in percent | number | 0
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (for Exponential - %, Linear - absolute number) | number | 0
-MARTINGALE_TYPE                     | Type Martingale (1 - exponential, 2 - linear) | number | 1
+MARTINGALE_TYPE                     | Type Martingale: <br> 1 - exponential <br> 2 - linear | number | 1
 CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you restart the bot | boolean | false
 
 **Important!**
@@ -172,7 +172,7 @@ ONE_ORDERS_BUY                      | Strategy: "One Buy a lot Sell" | boolean |
 ONE_ORDERS_OFFSET                   | The difference between LastPrice and first order in the stack of orders in %. <br> Will pull the order, if this value is exceeded. | number | 2
 ONE_ORDERS_PROFIT_PERCENT           | Specifies the percentage desired profit | number | 1
 INTEGRITY_CONTROL_ORDERS            | Integrity control orders (**soft** or **hard**) | string | soft
-TYPE_DATA_USED                      | Where to get information about the used orders (**active** - active orders,  **history** - trading history) | string | active
+TYPE_DATA_USED                      | Where to get information about the used orders: <br>  **active** - active orders <br> **history** - trading history | string | active
 FIRST_LOADING_HISTORY               | Download the history when you start the bot | boolean | false
 NUMBER_ROWS_LOAD_HISTORY            | Number of rows to load history | number | 100
 CYCLES_AUTO_EXIT                    | How many cycles to make the exit | number | 0
@@ -215,7 +215,7 @@ EMAIL_AUTH_PASS             | Mail server password | string | -
 TIME_ZONE                   | Time zone [Database Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) | string | Asia/Yekaterinburg
 LOG                         | Calculating log output of auto settings | boolean | false
 LOG_DEBUG                   | The output of the debug log | boolean | false
-LOG_TRANSPORTS              | Where to write the log (0 - console, 1 - file, 2 - console and file) | number | 0 
+LOG_TRANSPORTS              | Where to write the log: <br>  0 - console <br>  1 - file <br>  2 - console and file | number | 0 
 LOG_PATH                    | A custom path to the directory with the log | string | Folder with bot
 LOG_TREE                    | Save logs by directory year/month/day | boolean | false
 RESTART_TRADER_TIME         | How many seconds to wait before re-querying the data after network errors | number | 5

@@ -14,7 +14,7 @@ This app is working with server maintenance.
 * Liqui
 
 ## FAQ
-Before asking questions, please read the [FAQ](faq.md). Most of the answers you will find in it.
+Before asking questions, please read the [FAQ](faq_ru.md). Most of the answers you will find in it.
 
 ## Install
 

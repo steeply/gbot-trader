@@ -144,7 +144,7 @@
 **SECRET**              | API secret| string | -
 **NAME_COIN**           | Торговая валюта | string | ltc
 **NAME_COIN_TWO**       | Торговая валюта | string | usd
-EXCHANGE                | Выбор биржи: <br> **wex** <br> **poloniex** <br> **bittrex** <br> **exmo** <br> **bitfinex** <br> **liqui** | string | wex
+EXCHANGE                | Выбор биржи: <br> **wex** <br> **poloniex** (инвертированные пары) <br> **bittrex** (инвертированные пары) <br> **exmo** <br> **bitfinex** <br> **liqui** | string | wex
 EXCHANGE_HOST           | Адрес API биржи. Если основной адрес недоступен. | string | -
 TELEGRAM_TOKEN          | Ваш токен для Telegram | string | -
 TELEGRAM_ID             | ID вашего пользователя в Telegram | number | -
@@ -161,14 +161,14 @@ TELEGRAM_OFF            | Отключить Telegram. | boolean | false
 --------|------------|-----|----------
 TIME_UPDATE_AUTO_SETTINGS           | Время обновления авто параметров (в минутах)  | number | 2
 DEPOSIT_LIMIT_PERCENT               | Процент использования депозита | number | 100
-DEPOSIT_LIMIT_CURRENCY              | Размер использования депозита в валюте параметра **NAME_COIN_TWO** | number | 0
+DEPOSIT_LIMIT_CURRENCY              | Размер использования депозита в валюте параметра **NAME_COIN_TWO**. <br>Для бирж с инвертированной валютой в валюте параметра **NAME_COIN** | number | 0
 COUNT_ORDERS                        | Количество ордеров.<br> Сколько всего будет установлено. | number | рассчитывается на основе размера депозита
 QUANTITY_ORDERS_IN_BLOCKS           | Количество ордеров в блоке.<br> Сколько ордеров будет одномоментно на рынке. | number | 0
 SIZE_FIRST_ORDERS_CURRENCY          | Размер первого ордера в торгуемой валюте | number | 0
 SIZE_FIRST_ORDERS_INSECOND_CURRENCY | Размер первого ордера в базовой валюте | number | 0
 SIZE_FIRST_ORDERS_PERCENT           | Размер первого ордера в процентах | number | 0
 SIZE_ORDERS_MARTINGALE              | Размер ордеров по Мартингейл<br> (для Экспоненты - проценты, для Линейного - абсолютное число) | number | 0
-MARTINGALE_TYPE                     | Тип Мартингейла (1 - экспоненциальный, 2 - линейный) | number | 1
+MARTINGALE_TYPE                     | Тип Мартингейла: <br> 1 - экспоненциальный <br> 2 - линейный | number | 1
 CONTINUE_MARTINGALE_GRID            | Продолжать сетку Мартингейл при перезапуске бота | boolean | false
 
 **Важно!**
@@ -263,8 +263,8 @@ ONE_ORDERS_SELL                     | Стратегия "One Sell a lot Buy" | 
 ONE_ORDERS_BUY                      | Стратегия "One Buy a lot Sell" | boolean | false
 ONE_ORDERS_OFFSET                   | Разница между ценой LastPrice и первым ордером в стеке ордеров в %.<br> Будет подтягивать ордера вслед за ценой, если это значение будет превышено. | number | 2
 ONE_ORDERS_PROFIT_PERCENT           | Задает процент желаемой прибыли | number | 1
-INTEGRITY_CONTROL_ORDERS            | Контроль целостности ордеров (**soft** - мягкий, **hard** - жесткий) | string | soft
-TYPE_DATA_USED                      | Откуда брать информацию об исполненных ордерах (**active** - активные ордера, **history** - история) | string | active
+INTEGRITY_CONTROL_ORDERS            | Контроль целостности ордеров: <br> **soft** - мягкий <br> **hard** - жесткий | string | soft
+TYPE_DATA_USED                      | Откуда брать информацию об исполненных ордерах: <br> **active** - активные ордера <br> **history** - история | string | active
 FIRST_LOADING_HISTORY               | Загрузка истории при старте бота | boolean | false
 NUMBER_ROWS_LOAD_HISTORY            | Количество строк для загрузки истории | number | 100
 CYCLES_AUTO_EXIT                    | Через сколько циклов совершить автовыход | number | 0
@@ -307,7 +307,7 @@ EMAIL_AUTH_PASS             | Пароль почтового сервера | s
 TIME_ZONE                   | Временная зона [Database Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) | string | Asia/Yekaterinburg
 LOG                         | Вывод лога расчета авто параметров | boolean | false
 LOG_DEBUG                   | Вывод дебаг лога | boolean | false
-LOG_TRANSPORTS              | Куда писать лог (0 - консоль, 1 - файл, 2 - консоль и файл) | number | 0 
+LOG_TRANSPORTS              | Куда писать лог: <br>  0 - консоль <br>  1 - файл <br>  2 - консоль и файл | number | 0 
 LOG_PATH                    | Пользовательский путь до директории с логом | string | Директория с ботом
 LOG_TREE                    | Сохранять логи по директориям год/месяц/день | boolean | false
 RESTART_TRADER_TIME         | Через сколько секунд перезапрашивать данные после сетевых ошибок | number | 5
@@ -317,20 +317,11 @@ DELAY_BETWEEN_MODULES       | Задержка в секундах между в
 TITLE                       | Заголовок окна консоли. (Работает не на всех системах). | string | GBot
 LANGUAGE                    | Язык интерфейса (`ru` или `en`) | string | ru
 NODE_ENV                    | Значение **production** включает:<br>  1. уведомление о старте бота в Telegram.<br> 2. уведомления об ошибках на E-mail.<br> 3. запрещает использовать conf-dev.js.<br> 4. отключает колоризацию в логе.<br> 5. отключает TITLE | string | dev
+URL_STATISTICS              | URL адрес сервера куда будет отправлена статистика в формате post json | string | -
 
 **Важно:**
 
 * Если вы изменили LANGUAGE, отправте команду `/start` в telegram бота для инициализации нового языка в telegram.
-
-
-#### Опции для разработчиков. Данные параметры зависят от биржи.
-Эти опции необходимы для создания [middleware exchange api](middleware_exchange_api.md)
-
- Option | Description|Type | Default
---------|------------|-----|----------
-DIRECTION_CURRENCY              | Направление валюты (straight или inverse) | string | straight
-MINIMUM_ORDER_SIZE_IN_BTC       | Минимально допустимый размер ордера в базовой валюте (обычно это BTC) | number |  0.0005
-IS_ORDER_CALCULATION_BTC        | Учитывать при расчете размера ордера его сумму в btc. | boolean | false<br><br> Для poloniex, bittrex, liqui: true
 
 
 ## Запуск

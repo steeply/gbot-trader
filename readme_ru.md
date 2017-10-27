@@ -324,16 +324,6 @@ URL_STATISTICS              | URL адрес сервера куда будет 
 * Если вы изменили LANGUAGE, отправте команду `/start` в telegram бота для инициализации нового языка в telegram.
 
 
-#### Опции для разработчиков. Данные параметры зависят от биржи.
-Эти опции необходимы для создания [middleware exchange api](middleware_exchange_api.md)
-
- Option | Description|Type | Default
---------|------------|-----|----------
-DIRECTION_CURRENCY              | Направление валюты (straight или inverse) | string | straight
-MINIMUM_ORDER_SIZE_IN_BTC       | Минимально допустимый размер ордера в базовой валюте (обычно это BTC) | number |  0.0005
-IS_ORDER_CALCULATION_BTC        | Учитывать при расчете размера ордера его сумму в btc. | boolean | false<br><br> Для poloniex, bittrex, liqui: true
-
-
 ## Запуск
  
 ### На хостинге

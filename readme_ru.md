@@ -177,6 +177,9 @@ CONTINUE_MARTINGALE_GRID            | Продолжать сетку Марти
 
 > `SIZE_FIRST_ORDERS_CURRENCY`, `SIZE_FIRST_ORDERS_INSECOND_CURRENCY` или `SIZE_FIRST_ORDERS_PERCENT` выбирается **только 1 из параметров**!
 
+> При ручном размере первого ордера **RANGE_OFFSET** не работает, а **COUNT_ORDERS** будет рассчитано автоматически.
+
+
 #### Смещение ордеров
 
 Варианты возможных отступов ордеров. Выберите **один** из предложенных.

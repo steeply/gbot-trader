@@ -155,8 +155,8 @@ BBANDS                              | Bollinger Bands (Trend strategy!) | boolea
 BBANDS_DEVIATION                    | Deviation | number | 2
 BBANDS_PERIOD                       | Period BBANDS | number | 20
 RSI_PERIOD                          | Period RSI | number | 14
-RSI_RANGE_SELL                      | RSI range for sell (percentage) <br> Values are specified in the format **start/end** of the range. | string | 70/99
-RSI_RANGE_BUY                       | RSI range for buy (percentage) | string | 1/30
+RSI_RANGE_SELL                      | RSI range for sell <br> Values are specified in the format **start/end** of the range. | string | 70/99
+RSI_RANGE_BUY                       | RSI range for buy | string | 1/30
 BBANDS_INTERVAL                     | Time-frame (min) | number | 1
 
 > If `RSI_PERIOD = 0`, then the indicator is disabled and trading occurs only on the BBANDS indicator!

@@ -92,6 +92,8 @@ CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you r
 
 > `SIZE_FIRST_ORDERS_CURRENCY`, `SIZE_FIRST_ORDERS_INSECOND_CURRENCY` or `SIZE_FIRST_ORDERS_PERCENT` select **only 1 of the parameters**!
 
+> With the manual size of the first order **RANGE_OFFSET** does not work, and **COUNT_ORDERS** will be calculated automatically.
+
 
 #### Offset orders
 

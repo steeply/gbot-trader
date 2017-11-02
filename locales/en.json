@@ -148,7 +148,7 @@
 	"Быстрое изменение направления тренда": "Fast change of the trend direction",
 	"Стратегия Полосы Боллинджера": "Bollinger Band Strategy",
 	"Отклонение": "Deviation",
-	"Таймфрейм (в мин)": "Time frame(in min)",
+	"Интервал запроса цен (в мин)": "The query interval of prices (in min)",
 	"Стратегия": "Strategy",
 	"Разница между ценой LastPrice и первым ордером в сетке ордеров в %": "Difference between LastPrice and the first order in the order stack in %",
 	"При таких настройках депозита хватит на %s хода цены!!! Не мало ли?": "Overlapping of the order grid will be %s of the price!!!",

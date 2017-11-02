@@ -159,7 +159,7 @@ BBANDS_PERIOD                       | Period BBANDS | number | 20
 RSI_PERIOD                          | Period RSI | number | 14
 RSI_RANGE_SELL                      | RSI range for sell <br> Values are specified in the format **start/end** of the range. | string | 70/100
 RSI_RANGE_BUY                       | RSI range for buy | string | 1/30
-BBANDS_INTERVAL                     | Time-frame (min) | number | 1
+BBANDS_INTERVAL                     | Interval of interrogation of the prices (minutes) | number | 1
 
 > If `RSI_PERIOD = 0`, then the indicator is disabled and trading occurs only on the BBANDS indicator!
 
@@ -277,9 +277,3 @@ Additional commands:
 /stoploss           - Displays StopLoss information
 ```
 
-
-## Donate
-
-```
-BTC: 1PZSrF3JWsf3KJUJR1GYP6XJZwoKQdSBEd
-```

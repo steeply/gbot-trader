@@ -84,7 +84,7 @@ SIZE_FIRST_ORDERS_INSECOND_CURRENCY | The size of the first order in the base cu
 SIZE_FIRST_ORDERS_PERCENT           | The size of the first order in percent | number | 0
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (for Exponential - %, Linear - absolute number) | number | 0
 MARTINGALE_TYPE                     | Type Martingale: <br> 1 - exponential <br> 2 - linear | number | 1
-CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you restart the bot | boolean | false
+CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you restart the bot (**saves the order size**) | boolean | false
 
 **Important!**
 
@@ -94,6 +94,7 @@ CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you r
 
 > With the manual size of the first order **RANGE_OFFSET** does not work, and **COUNT_ORDERS** will be calculated automatically.
 
+> The parameter **CONTINUE_MARTINGALE_GRID** does not restore indentation when using **OFFSET_ORDERS_EXPONENTIAL**.
 
 #### Offset orders
 

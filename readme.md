@@ -13,12 +13,16 @@ This app is working with server maintenance.
 * Bitfinex
 * Liqui
 
+## Full version in Russian documentation
+
+[README RU](readme_ru.md)
+
 ## FAQ
-Before asking questions, please read the [FAQ](faq_ru.md). Most of the answers you will find in it.
+Before asking questions, please read the [FAQ RU](faq_ru.md). Most of the answers you will find in it.
 
 ## Install
 
-1. Install [node.js](https://nodejs.org/en/) or use hosting ([heroku](https://signup.heroku.com/login), [pivotal](https://account.run.pivotal.io/z/uaa/sign-up), [UltraVDS](https://ultravds.com), etc.)
+1. Install [node.js](https://nodejs.org/en/) or use hosting ([heroku](https://signup.heroku.com/login), [pivotal](https://account.run.pivotal.io/z/uaa/sign-up), [UltraVDS](https://ultravds.com), [Zomro](http://zomro.com) and etc.)
 
 2. Copy the repository and install the dependency packages:
 ```
@@ -147,7 +151,7 @@ OFF_MODULES_AUTO_SETTINGS           | Disabling all Autotune Modules | boolean |
 --------|------------|-----|----------
 TIME_CLOSE_ORDERS                   | Closing time of unused orders (min) | number | 5
 TIME_CLOSE_ORDERS_INACTIVITY        | Closing time of undemanded orders (min) | number | 15
-STEP_BREAKEVEN_PERCENT              | Percentage of breakeven | number | 50
+STEP_BREAKEVEN_PERCENT              | Percentage of breakeven (Only for "Scalper") | number | 50
 
 
 #### Strategy "Bollinger Bands"

@@ -235,7 +235,7 @@ OFF_MODULES_AUTO_SETTINGS           | Отключение всех модуле
 --------|------------|-----|----------
 TIME_CLOSE_ORDERS                   | Время закрытия неиспользованных ордеров (в минутах) | number | 5
 TIME_CLOSE_ORDERS_INACTIVITY        | Время закрытия ордеров при бездействии (в минутах) | number | 15
-STEP_BREAKEVEN_PERCENT              | Процент отступа от безубытка между bid и ask | number | 50
+STEP_BREAKEVEN_PERCENT              | Процент отступа от безубытка между bid и ask (Только для "Скальпер") | number | 50
 
 
 ### Стратегия "Линии Боллинджера"

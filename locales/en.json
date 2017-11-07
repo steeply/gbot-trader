@@ -210,5 +210,7 @@
 	"Уровень StopLoss в процентах": "StopLoss percentage",
 	"Отображает информацию о StopLoss": "Displays StopLoss information",
 	"Запрещенный параметр!": "Disallowed parameter!",
-	"Уведомление об исполнении one orders": "Notice of execution of one orders"
+	"Уведомление об исполнении one orders": "Notice of execution of one orders",
+	"Ваша торговая пара:": "Your trading pair:",
+	"Стратегия не определена!": "The strategy is not defined!"
 }

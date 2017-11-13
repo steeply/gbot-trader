@@ -89,6 +89,7 @@ SIZE_FIRST_ORDERS_PERCENT           | The size of the first order in percent | n
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (for Exponential - %, Linear - absolute number) | number | 0
 MARTINGALE_TYPE                     | Type Martingale: <br> 1 - exponential <br> 2 - linear | number | 1
 CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you restart the bot (**saves the order size**) | boolean | false
+TRADING_PRICE_RANGE                 | Price range allowed for bidding (Example: 3000/5000)<br>If not specified, no restrictions | string | -
 
 **Important!**
 
@@ -200,7 +201,7 @@ DISABLE_CAPITALIZATION              | Disable capitalization in profit order | b
  Option | Description| Type | Default
 --------|------------|-----|----------
 NOTIFICATION_PAIR                   | Notification pair of rate changing (For example: `btc/usd, ltc/usd` or **all/all** for all pair) | string | -
-NOTIFICATION_DEVIATION_PERCENT      | Relation of deviation percentage from current price for notification will work | number | 600
+NOTIFICATION_DEVIATION_PERCENT      | In what percentage should the price spike for the notification to work | number | 5
 MONITORING_PAIR                     | Pairs for monitoring. <br> (For example: `btc/usd, ltc/usd`, or just a pair currency, for example: `btc`). <br> If none of that is set, ALL available pairs will be monitored on the exchange. | string | All pairs
 NOTIFICATION_ERROR_COUNT            | The number of errors in 5 minutes for notification | number | 0
 NOTIFICATION_ORDER_IS_EXECUTED      | Notice of execution of one orders | boolean | false

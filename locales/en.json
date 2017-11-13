@@ -133,7 +133,7 @@
 	"Процент использования депозита": "Deposit using percentage",
 	"Использование депозита в валюте": "Deposit using in currency",
 	"Пары для уведомления (или all/all для всех)": "Pairs for notification (for example: btc/usd, ltc/usd or all/all for all pairs)",
-	"На сколько процентов должен увеличиться спред, чтобы сработало уведомление": "In what percentage should the spread be increased for the notification to work",
+	"Насколько процентов должна скакнуть цена, чтобы сработало уведомление": "In what percentage should the price spike for the notification to work",
 	"Закрытие после бездействия": "Closing after inaction",
 	"Отступ ордеров в пунктах": "Orders indent in points",
 	"Отступ для ордеров в %": "Orders indent in %",
@@ -211,6 +211,7 @@
 	"Отображает информацию о StopLoss": "Displays StopLoss information",
 	"Запрещенный параметр!": "Disallowed parameter!",
 	"Уведомление об исполнении one orders": "Notice of execution of one orders",
+	"Исполнение one orders": "Еxecution of one orders",
 	"Ваша торговая пара:": "Your trading pair:",
 	"Стратегия не определена!": "The strategy is not defined!"
 }

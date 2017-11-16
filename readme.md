@@ -185,6 +185,7 @@ FIRST_LOADING_HISTORY               | Download the history when you start the bo
 NUMBER_ROWS_LOAD_HISTORY            | Number of rows to load history | number | 100
 CYCLES_AUTO_EXIT                    | How many cycles to make the exit | number | 0
 STOP_LOSS_PERCENT                   | Stop Loss percentage | number | 0
+TRAILING_STOP_PERCENT               | Trailing stop percentage | number | 0
 DISABLE_CAPITALIZATION              | Disable capitalization in profit order | boolean | false
 STRATEGY_AUTO_REVERS                | Auto switching strategy to reverse | boolean | false
 OFFSET_LAST_ORDER_PERCENT           | The percentage of the price distance from the last order to enable auto-switching of strategy | number | 5
@@ -283,5 +284,6 @@ To **launch the control panel** in a Telegram, send a message to:
 /stats              - Trading statistics
 /note [ignore text] - The text in this line will be ignored. It can be used as a comment.
 /stoploss           - Displays StopLoss information
+/trail              - Displays Trailing Stop information
 ```
 

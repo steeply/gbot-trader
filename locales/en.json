@@ -212,9 +212,12 @@
 	"При изменении стратегии бот будет перезагружен": "If you change the strategy, bot will be rebooted",
 	"Уровень StopLoss в процентах": "StopLoss percentage",
 	"Отображает информацию о StopLoss": "Displays StopLoss information",
+	"Уровень Trailing Stop в процентах": "Trailing Stop percentage",
+	"Отображает информацию о Trailing Stop": "Displays Trailing Stop information",
 	"Запрещенный параметр!": "Disallowed parameter!",
 	"Уведомление об исполнении one orders": "Notice of execution of one orders",
 	"Исполнение one orders": "Еxecution of one orders",
 	"Ваша торговая пара:": "Your trading pair:",
-	"Стратегия не определена!": "The strategy is not defined!"
+	"Стратегия не определена!": "The strategy is not defined!",
+	"Конфликтные переменные!": "Conflicting variables!"
 }

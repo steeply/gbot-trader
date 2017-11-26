@@ -187,6 +187,7 @@ CYCLES_AUTO_EXIT                    | How many cycles to make the exit | number 
 STOP_LOSS_PERCENT                   | Stop Loss percentage | number | 0
 TRAILING_STOP_PERCENT               | Trailing stop percentage | number | 0
 DISABLE_CAPITALIZATION              | Disable capitalization in profit order | boolean | false
+PERMANENT_DEPOSIT                   | Use the calculation of the total deposit with the cache (Experimental) | boolean | false
 STRATEGY_AUTO_REVERS                | Auto switching strategy to reverse | boolean | false
 OFFSET_LAST_ORDER_PERCENT           | The percentage of the price distance from the last order to enable auto-switching of strategy | number | 5
 
@@ -250,11 +251,25 @@ $ npm start
 
 For **Windows**
 
+Create a **start.bat** file, specify the necessary parameters in it and run this file.
 ```
 SET TELEGRAM_TOKEN=110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw 
 SET TELEGRAM_ID=12345678
 ....
+
 npm start
+pause
+```
+
+For **Linux and Mac**
+
+Create a **start.sh** file, specify the necessary parameters in it and run this file.
+```
+export TELEGRAM_TOKEN=110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw 
+export TELEGRAM_ID=12345678
+...
+
+node ./build/server
 ```
 
 For **Heroku**
@@ -271,7 +286,7 @@ To **launch the control panel** in a Telegram, send a message to:
 
 #### Additional commands in Telegram:
 ```
-/info - list of all commands
+/info               - list of all commands
 
 /version            - The version of the bot
 /params             - Parameters which can be changed via Telegram

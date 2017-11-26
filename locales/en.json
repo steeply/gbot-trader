@@ -219,5 +219,7 @@
 	"Исполнение one orders": "Еxecution of one orders",
 	"Ваша торговая пара:": "Your trading pair:",
 	"Стратегия не определена!": "The strategy is not defined!",
-	"Конфликтные переменные!": "Conflicting variables!"
+	"Конфликтные переменные": "Conflicting variables",
+	"Слишком много информации для отображения": "Too much information to display",
+	"Не найден API биржи": "Not found the Api exchange"
 }

@@ -167,8 +167,13 @@ RSI_PERIOD                          | Period RSI | number | 14
 RSI_RANGE_SELL                      | RSI range for sell <br> Values are specified in the format **start/end** of the range. | string | 70/100
 RSI_RANGE_BUY                       | RSI range for buy | string | 1/30
 BBANDS_INTERVAL                     | Time-frame. Interval of interrogation of the prices (minutes) | number | 1
+SAVE_PRICE_FILE                     | Save price cache to a file  | boolean | false
 
 > If `RSI_PERIOD = 0`, then the indicator is disabled and trading occurs only on the BBANDS indicator!
+
+> If you use the `SAVE_PRICE_FILE` option, you need write access to the directory. Note that if you run the bot and the real **market prices are different from those in the** file, the original orders may get wrong and **sell at a loss!**
+
+> The parameter `SAVE_PRICE_FILE` **will not work** on PaaS platforms (Heroku, Pivotal and any other platforms where container virtualization tools are used)!
 
 #### Strategy "One Orders"
 **When you start the strategy of "Sell One, Buy a lot" the initial state of the balance of the base currency in the pair is ignored!**

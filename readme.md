@@ -90,6 +90,7 @@ SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (fo
 MARTINGALE_TYPE                     | Type Martingale: <br> 1 - exponential <br> 2 - linear | number | 1
 CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you restart the bot (**saves the order size**) | boolean | false
 TRADING_PRICE_RANGE                 | Price range allowed for bidding (Example: 3000/5000)<br>If not specified, no restrictions | string | -
+TRADING_PRICE_RANGE_PERCENT         | Percent to automatically create a range of prices allowed for bidding<br>If not specified, no restrictions | number | -
 
 **Important!**
 
@@ -165,7 +166,7 @@ BBANDS_PERIOD                       | Period BBANDS | number | 20
 RSI_PERIOD                          | Period RSI | number | 14
 RSI_RANGE_SELL                      | RSI range for sell <br> Values are specified in the format **start/end** of the range. | string | 70/100
 RSI_RANGE_BUY                       | RSI range for buy | string | 1/30
-BBANDS_INTERVAL                     | Interval of interrogation of the prices (minutes) | number | 1
+BBANDS_INTERVAL                     | Time-frame. Interval of interrogation of the prices (minutes) | number | 1
 
 > If `RSI_PERIOD = 0`, then the indicator is disabled and trading occurs only on the BBANDS indicator!
 
@@ -190,6 +191,7 @@ DISABLE_CAPITALIZATION              | Disable capitalization in profit order | b
 PERMANENT_DEPOSIT                   | Use the calculation of the total deposit with the cache (Experimental) | boolean | false
 STRATEGY_AUTO_REVERS                | Auto switching strategy to reverse | boolean | false
 OFFSET_LAST_ORDER_PERCENT           | The percentage of the price distance from the last order to enable auto-switching of strategy | number | 5
+DELAY_TIME_CYCLES                   | The delay in seconds before the start of a new cycle after the execution of a profit order  | number | 0
 
 
 > If the parameter **INTEGRITY_CONTROL_ORDERS** in `hard` mode, then a sell order will be installed only if the volume installed and executed buy orders will be the same.

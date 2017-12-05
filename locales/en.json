@@ -11,10 +11,9 @@
 	"Уведомление": "Notification",
 	"Круг": "Cycle",
 	"Тип": "Type",
-	"Сменить пару": "Change a pair",
-	"Изменить отступ": "Change an indent",
+	"Отступы": "Change an indent",
 	"Выход по циклам": "Exit on cycles",
-	"Авто-выход из пары": "Auto-Exit out of a pair",
+	"Авто-выход": "Auto-Exit",
 	"Количество циклов авто-выхода: %s из %s": "Number of Auto-Exit cycles: %s out of %s",
 	"Скорость": "Speed",
 	"Состояние": "Status",
@@ -162,7 +161,7 @@
 	"Установлено ордеров": "Placed orders",
 	"Исполнено ордеров": "Executed orders",
 	"Количество циклов": "Number cycles",
-	"Перезапусков": "Restarts",
+	"Ошибок": "Errors",
 	"Авто-выход завершен": "Auto-exit is completed",
 	"Бот поставлен на паузу": "Bot is paused ",
 	"Ошибка закрытия ордеров!": "Error closing orders!",
@@ -221,5 +220,9 @@
 	"Стратегия не определена!": "The strategy is not defined!",
 	"Конфликтные переменные": "Conflicting variables",
 	"Слишком много информации для отображения": "Too much information to display",
-	"Не найден API биржи": "Not found the Api exchange"
+	"Не найден API биржи": "Not found the Api exchange",
+	"Trail Stop control": "TrailStop",
+	"Stop Loss control": "StopLoss",
+	"Auto Revers control": "AutoRevers",
+	"Переключает на указанную торговую пару": "Switches to the specified trading pair"
 }

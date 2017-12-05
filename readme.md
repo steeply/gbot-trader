@@ -300,6 +300,7 @@ To **launch the control panel** in a Telegram, send a message to:
 /config             - Is a possible configuration parameters via a configuration file
 /martin [cache]     - A theoretical calculation of the orders of the martingale (parameters are taken from config)
 /ticker coin_name   - Shows a quote of a pair coin_name
+/trade pair         - Switches to the specified trading pair
 /stop [codeExit]    - The application shutsdown. codeExit - an optional exit code.
 /sell_all           - Sell on the market immediately. (Attention: The sale will be made without confirmation!)
 /restart            - Restart GBot Trader

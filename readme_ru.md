@@ -147,6 +147,7 @@
 4. Выключите GBot Trader.
 5. Установите `TELEGRAM_ID`.
 
+Или воспользуйтесь ботом в Telegram **@userinfobot**
 
 ### Параметры переменного окружения:
 
@@ -159,7 +160,7 @@
 **NAME_COIN**           | Торговая валюта | string | ltc
 **NAME_COIN_TWO**       | Торговая валюта | string | usd
 EXCHANGE                | Выбор биржи: <br> **wex** <br> **poloniex** (инвертированные пары) <br> **bittrex** (инвертированные пары) <br> **exmo** <br> **bitfinex** <br> **liqui** | string | wex
-EXCHANGE_HOST           | Адрес API биржи. Если основной адрес недоступен. | string | -
+EXCHANGE_HOST           | Адрес API биржи. Если основной адрес недоступен.<br>Exmo: https://api.exmo.com<br>Wex: wex.nz  | string | -
 TELEGRAM_TOKEN          | Ваш токен для Telegram | string | -
 TELEGRAM_ID             | ID вашего пользователя в Telegram | number | -
 TELEGRAM_OFF            | Отключить Telegram. | boolean | false

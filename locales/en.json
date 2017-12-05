@@ -11,7 +11,6 @@
 	"Уведомление": "Notification",
 	"Круг": "Cycle",
 	"Тип": "Type",
-	"Сменить пару": "Change a pair",
 	"Отступы": "Change an indent",
 	"Выход по циклам": "Exit on cycles",
 	"Авто-выход": "Auto-Exit",
@@ -224,5 +223,6 @@
 	"Не найден API биржи": "Not found the Api exchange",
 	"Trail Stop control": "TrailStop",
 	"Stop Loss control": "StopLoss",
-	"Auto Revers control": "AutoRevers"
+	"Auto Revers control": "AutoRevers",
+	"Переключает на указанную торговую пару": "Switches to the specified trading pair"
 }

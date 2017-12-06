@@ -314,14 +314,18 @@ _Данный метод может быть пустым. Если ваше Mid
 
 ## Пример Middleware
 
-```
-const conf = require('../conf');                - конфигурационный файл приложения
-const exchangeApi = require('exchange-api');    - библиотека api биржи (если данное Middleware API не является самим API)
+```  
+var conf = require('../conf');                - конфигурационный файл приложения
+var exchangeApi = require('exchange-api');    - библиотека api биржи (если данное Middleware API не является самим API)
+
+var _ = require('lodash');                    - дополнительные библиотеки (если нужны)
+var moment = require('moment');
+var Promise = require('bluebird');
 
 API = (function(){
     API.displayName = 'API';
     
-    const Exchange = new exchangeApi.api(conf.key, conf.secret); 
+    var Exchange = new exchangeApi.api(conf.key, conf.secret); 
     
     API.prototype.getInfo = function(callback) {        - Метод Middleware API
     
@@ -345,6 +349,24 @@ API = (function(){
     
     };
     
+    API.prototype.getTicker = function(pair, callback){};
+   
+    API.prototype.getTrades = function(pair, opt, callback){};
+   
+    API.prototype.balanceRequest = function(currency, callback){};
+   
+    API.prototype.ordersRequest = function(pair, callback){};
+   
+    API.prototype.tradeSetOrder = function(pair, type, rate, amount, callback){};
+    
+    API.prototype.tradeCancelOrder = function(opt, callback){};
+    
+    API.prototype.tradeGetHistory = function(pair, count, callback){};
+    
+    API.prototype.setNonce = function(nonce){};
+    
+    function API(){}
+    return API;
 }());
 module.exports = API;
 ```

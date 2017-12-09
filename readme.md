@@ -163,11 +163,13 @@ STEP_BREAKEVEN_PERCENT              | Percentage of breakeven (Only for "Scalper
 BBANDS                              | Bollinger Bands (Trend strategy!) | boolean | false
 BBANDS_DEVIATION                    | Deviation | number | 2
 BBANDS_PERIOD                       | Period BBANDS | number | 20
+RSI_TYPE                            | rsi or stochrsi | string | rsi
 RSI_PERIOD                          | Period RSI | number | 14
 RSI_RANGE_SELL                      | RSI range for sell <br> Values are specified in the format **start/end** of the range. | string | 70/100
 RSI_RANGE_BUY                       | RSI range for buy | string | 1/30
 BBANDS_INTERVAL                     | Time-frame. Interval of interrogation of the prices (minutes) | number | 1
 SAVE_PRICE_FILE                     | Save price cache to a file  | boolean | false
+PRICE_FILE_PATH                     | A custom path to the directory with the file | string | Folder with bot
 
 > If `RSI_PERIOD = 0`, then the indicator is disabled and trading occurs only on the BBANDS indicator!
 

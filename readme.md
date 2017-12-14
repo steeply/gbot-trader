@@ -244,6 +244,7 @@ RESTART_TRADER_TIME         | How many seconds to wait before re-querying the da
 EXCHANGE_FEE                | The Commission for transactions of the exchange | number | 0.25
 DELAY_REQUEST_API           | The delay of requests to the API in milliseconds | number | 500
 DELAY_BETWEEN_MODULES       | Then delay in seconds between execution of consecutive modules. | number | 3
+NUMBER_CHECK_DATA           | How many times to check the data. <br> Use the value 2 or more. <br> 0 - off | number | 0
 TITLE                       | The title of the console window. | string | GBot
 LANGUAGE                    | The language of the interface (`ru` or `en`) | string | ru
 NODE_ENV                    | Value **production** activate:<br>  1. notification about the start of a Telegram bot.<br> 2. error notifications by E-mail.<br> 3. prohibits the use of conf-dev.js.<br> 4. disabling colors in logs.<br>5. disables TITLE | string | dev

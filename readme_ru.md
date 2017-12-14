@@ -362,6 +362,7 @@ EXCHANGE_FEE                | Комиссия на сделки биржи <br>
 MINIMUM_ORDER_SIZE_IN_BTC   | Минимально допустимый размер ордера в BTC | number | 0.001
 DELAY_REQUEST_API           | Задержка при выполнении запросов к api<br> в миллисекундах <br>(FAQ п.31) | number | 500
 DELAY_BETWEEN_MODULES       | Задержка в секундах между выполнением последовательных модулей <br>(FAQ п.31) | number | 3
+NUMBER_CHECK_DATA           | Сколько раз перепроверять данные.<br>Используется значение 2 и более.<br>0 - выключено | number | 0
 TITLE                       | Заголовок окна консоли. (Работает не на всех системах). | string | GBot
 LANGUAGE                    | Язык интерфейса (`ru` или `en`) | string | ru
 NODE_ENV                    | Значение **production** включает:<br>  1. уведомление о старте бота в Telegram.<br> 2. уведомления об ошибках на E-mail.<br> 3. запрещает использовать conf-dev.js.<br> 4. отключает колоризацию в логе. (+ флаг **--no-color**)<br> 5. отключает TITLE | string | dev

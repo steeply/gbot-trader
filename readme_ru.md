@@ -309,10 +309,11 @@ STOP_LOSS_PERCENT                   | Уровень Stop Loss в процент
 TRAILING_STOP_PERCENT               | Уровень Trailing stop в процентах <br>(FAQ п.45) | number | 0
 DISABLE_CAPITALIZATION              | Отключить капитализацию в profit ордере <br>(FAQ п.47) | boolean | false
 CAPITALIZATION_BUY_ORDER            | Включает частичную капитализацию Buy ордера при DISABLE_CAPITALIZATION <br>(FAQ п.47) | boolean | false
-PERMANENT_DEPOSIT                   | Использовать расчет общего депозита с кэшем (Экспериментально) | boolean | false
 STRATEGY_AUTO_REVERS                | Автопереключение стратегии на обратную <br>(FAQ п.52) | boolean | false
 OFFSET_LAST_ORDER_PERCENT           | Процент отдаления цены от последнего ордера чтобы сработало автопереключение стратегии <br>(FAQ п.52) | number | 5
 DELAY_TIME_CYCLES                   | Задержка в секундах перед началом нового цикла после исполнения профитного ордера  | number | 0
+
+<!-- PERMANENT_DEPOSIT Использовать расчет общего депозита с кэшем (Экспериментально) -->
 
 > Если параметр **INTEGRITY_CONTROL_ORDERS** в режиме `hard`, то ордер будет установлен только, если объемы установленных и исполненных  ордеров будут совпадать (если ни один ордер не потеряется).
 

@@ -12,6 +12,7 @@ This app is working with server maintenance.
 * Exmo
 * Bitfinex
 * Liqui
+* Dsx
 
 ## Full version in Russian documentation
 
@@ -63,7 +64,7 @@ The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs
 **SECRET**          | API secret    | string | -
 **NAME_COIN**       | Trading currency | string | ltc
 **NAME_COIN_TWO**   | Trading currency | string | usd
-EXCHANGE            | The choice of the exchange <br> **wex** <br> **poloniex** (inverted pairs) <br> **bittrex** (inverted pairs) <br> **exmo** <br> **bitfinex** <br> **liqui** | string | wex
+EXCHANGE            | The choice of the exchange <br> **wex** <br> **poloniex** (inverted pairs) <br> **bittrex** (inverted pairs) <br> **exmo** <br> **bitfinex** <br> **liqui** <br> **dsx** | string | wex
 EXCHANGE_HOST       | Host exchange API. If the primary host is not available. | string | -
 TELEGRAM_TOKEN      | Telegram token    | string | -
 TELEGRAM_ID         | Your User ID Telegram | number | -

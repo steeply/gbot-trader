@@ -12,6 +12,7 @@
 * Exmo
 * Bitfinex
 * Liqui
+* Dsx
 
 ## FAQ
 Перед тем как задавать вопросы, прочитайте, пожалуйста, [FAQ](faq_ru.md). Большинство ответов вы найдете в нем.
@@ -159,7 +160,7 @@
 **SECRET**              | API secret| string | -
 **NAME_COIN**           | Торговая валюта <br>(FAQ п.49) | string | ltc
 **NAME_COIN_TWO**       | Торговая валюта <br>(FAQ п.49)| string | usd
-EXCHANGE                | Выбор биржи: <br> **wex** <br> **poloniex** (инвертированные пары) <br> **bittrex** (инвертированные пары) <br> **exmo** <br> **bitfinex** <br> **liqui** | string | wex
+EXCHANGE                | Выбор биржи: <br> **wex** <br> **poloniex** (инвертированные пары) <br> **bittrex** (инвертированные пары) <br> **exmo** <br> **bitfinex** <br> **liqui** <br> **dsx** | string | wex
 EXCHANGE_HOST           | Адрес API биржи. Если основной адрес недоступен.<br>Exmo: https://api.exmo.com<br>Wex: wex.nz  | string | -
 TELEGRAM_TOKEN          | Ваш токен для Telegram | string | -
 TELEGRAM_ID             | ID вашего пользователя в Telegram | number | -

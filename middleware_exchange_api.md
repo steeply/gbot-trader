@@ -388,7 +388,7 @@ module.exports = API;
 Правильное определение базовой валюты важно для внутренних расчетов. По этому для указания какой вариант на бирже, используется параметр переменного окружения **DIRECTION_CURRENCY**. 
 Данный параметр переключает алгоритм расчета баланса, резерва депозита и т.д.
 
-Для прямых пар параметр можно не задавать, для обратных пар его значение равно DIRECTION_CURRENCY=**inverse**.
+Для прямых пар параметр не задавать, для обратных пар его значение равно `DIRECTION_CURRENCY_INVERSE=true`.
 
 Например:
 
@@ -401,8 +401,9 @@ module.exports = API;
 
  Option | Description
 ----------------|----------------------
-DIRECTION_CURRENCY            | Направление валюты (straight или inverse)
+DIRECTION_CURRENCY_INVERSE    | Флаг инвертированной валюты (default: false)
 MINIMUM_ORDER_SIZE_IN_BTC     | Минимально допустимый размер ордера в BTC (default: 0.001)
 IS_ORDER_CALCULATION_BTC      | Учитывать при расчете размера ордера его сумму в btc (default: false). Для poloniex, bittrex, liqui - true
-
+SUBTRACT_AMOUNT_ORDERS        | Объем который необходимо вычисть из финальной суммы ордера (default: 0.0000001)
+AMOUNT_DECIMAL_PLACES         | Количество знаков после запятой разрешенные при торгах для объема в ордере (default: 8)
 

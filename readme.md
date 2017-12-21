@@ -136,6 +136,9 @@ DANGER_PRICE_STOP                   | Bot stopping according to the price spike 
 DANGER_PRICE_STOP_PERCENT           | The percentage of the price spike for the bot stopping | number | 9
 DYNAMIC_SETTINGS_TIME               | Dynamic time updating for auto options | boolean | false
 DYNAMIC_OFFSET_ORDERS               | Dynamic order allocation | boolean | false
+DYNAMIC_OFFSET_INTERVAL             | The price check interval for the dynamic grid (in minutes) | number | 60
+DYNAMIC_OFFSET_PROFIT_DIVISOR       | The divisor of the change of the profitable order | number | 10
+DYNAMIC_OFFSET_INDENTION_DIVISOR    | Dividing the grid size | number | COUNT_ORDERS
 TREND_DEFINITION                    | Trend determination (Experimentally) | boolean | false
 ABRUPT_CHANGE_TREND                 | Rapid trend reversal (Experimentally) | boolean | false
 OFF_MODULES_AUTO_SETTINGS           | Disabling all Autotune Modules | boolean | false

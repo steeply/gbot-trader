@@ -239,7 +239,10 @@ DISABLE_GRID_BUY                    | Отключить расстановку 
 DANGER_PRICE_STOP                   | Остановка бота при большом скачке цены | boolean | false
 DANGER_PRICE_STOP_PERCENT           | Процент скачка цены для остановки бота | number | 9
 DYNAMIC_SETTINGS_TIME               | Динамическое время обновления авто параметров | boolean | false
-DYNAMIC_OFFSET_ORDERS               | Динамическое распределение ордеров | boolean | false
+DYNAMIC_OFFSET_ORDERS               | Динамическое распределение ордеров <br>(FAQ п.37) | boolean | false
+DYNAMIC_OFFSET_INTERVAL             | Интервал проверки цены для динамической сетки (в мин) <br>(FAQ п.37) | number | 60
+DYNAMIC_OFFSET_PROFIT_DIVISOR       | Делитель изменения профитного ордера <br>(FAQ п.37) | number | 10
+DYNAMIC_OFFSET_INDENTION_DIVISOR    | Делитель изменения размера сетки <br>(FAQ п.37) | number | COUNT_ORDERS
 TREND_DEFINITION                    | Определение тренда (Экспериментально) | boolean | false
 ABRUPT_CHANGE_TREND                 | Быстрый разворот тренда (Экспериментально) | boolean | false
 OFF_MODULES_AUTO_SETTINGS           | Отключение всех модулей авто настройки | boolean | false
@@ -369,7 +372,7 @@ EXCHANGE_FEE                | Комиссия на сделки биржи <br>
 MINIMUM_ORDER_SIZE_IN_BTC   | Минимально допустимый размер ордера в BTC | number | 0.001
 DELAY_REQUEST_API           | Задержка при выполнении запросов к api<br> в миллисекундах <br>(FAQ п.31) | number | 500
 DELAY_BETWEEN_MODULES       | Задержка в секундах между выполнением последовательных модулей <br>(FAQ п.31) | number | 3
-NUMBER_CHECK_DATA           | Сколько раз перепроверять данные.<br>Используется значение 2 и более.<br>0 - выключено | number | 0
+NUMBER_CHECK_DATA           | Сколько раз перепроверять данные.<br>Используется значение 2 и более.<br>0 - выключено <br>(FAQ п.54) | number | 0
 TITLE                       | Заголовок окна консоли. (Работает не на всех системах). | string | GBot
 LANGUAGE                    | Язык интерфейса (`ru` или `en`) | string | ru
 NODE_ENV                    | Значение **production** включает:<br>  1. уведомление о старте бота в Telegram.<br> 2. уведомления об ошибках на E-mail.<br> 3. запрещает использовать conf-dev.js.<br> 4. отключает колоризацию в логе. (+ флаг **--no-color**)<br> 5. отключает TITLE | string | dev

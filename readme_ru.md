@@ -12,6 +12,7 @@
 * Exmo
 * Bitfinex
 * Liqui
+* Dsx
 
 ## FAQ
 Перед тем как задавать вопросы, прочитайте, пожалуйста, [FAQ](faq_ru.md). Большинство ответов вы найдете в нем.
@@ -159,18 +160,23 @@
 **SECRET**              | API secret| string | -
 **NAME_COIN**           | Торговая валюта <br>(FAQ п.49) | string | ltc
 **NAME_COIN_TWO**       | Торговая валюта <br>(FAQ п.49)| string | usd
-EXCHANGE                | Выбор биржи: <br> **wex** <br> **poloniex** (инвертированные пары) <br> **bittrex** (инвертированные пары) <br> **exmo** <br> **bitfinex** <br> **liqui** | string | wex
-EXCHANGE_HOST           | Адрес API биржи. Если основной адрес недоступен.<br>Exmo: https://api.exmo.com<br>Wex: wex.nz  | string | -
+EXCHANGE                | Выбор биржи: <br> **wex** <br> **poloniex** (инвертированные пары) <br> **bittrex** (инвертированные пары) <br> **exmo** <br> **bitfinex** <br> **liqui** <br> **dsx** | string | wex
+EXCHANGE_HOST           | Адрес API биржи. Если основной адрес недоступен.<br>Exmo: https://api.exmo.com<br>Wex: wex.nz<br>Dsx: https://dsx.uk  | string | -
 TELEGRAM_TOKEN          | Ваш токен для Telegram | string | -
 TELEGRAM_ID             | ID вашего пользователя в Telegram | number | -
 TELEGRAM_OFF            | Отключить Telegram. | boolean | false
 
 > Опция **TELEGRAM_OFF** отключает возможность использовать Telegram в боте. Всё управление и все уведомления посылаемые через Telegram будут так же отключены!
 
+**Внимание!**
+У биржи **Dsx** стоят жесткие ограничения на число знаков в объеме ордера для каждой торговой пары, которые в большинстве случаев равно 2 - 5 знакам. Для все остальных бирж обычно используются 8 знаков. В связи с этим возникает момент когда размер ордера может не быть равным указанной длине, по этому будет происходить обрезание или округление числа в большую или меньшую сторону. А значит в ордер будет установлен больший/меньший объем чем не обходимо, чтобы вписаться в эти ограничения. В связи с этим на балансе должно оставаться достаточное количество средств чтобы компенсировать это округление.<br>У биржи есть ДЕМО аккаунт, где можно протестировать ваши настройки.
 
-По умолчанию бот запустится на дефолтных настройках. Вы можете их изменить, используя следующие параметры:
+
 
 #### Торговые параметры
+
+**По умолчанию бот запустится на дефолтных настройках. По этому указывать все известные параметры совсем не обязательно если они совпадают с настройками по умолчанию.**
+
 
  Option | Description|Type | Default
 --------|------------|-----|----------
@@ -233,7 +239,10 @@ DISABLE_GRID_BUY                    | Отключить расстановку 
 DANGER_PRICE_STOP                   | Остановка бота при большом скачке цены | boolean | false
 DANGER_PRICE_STOP_PERCENT           | Процент скачка цены для остановки бота | number | 9
 DYNAMIC_SETTINGS_TIME               | Динамическое время обновления авто параметров | boolean | false
-DYNAMIC_OFFSET_ORDERS               | Динамическое распределение ордеров | boolean | false
+DYNAMIC_OFFSET_ORDERS               | Динамическое распределение ордеров <br>(FAQ п.37) | boolean | false
+DYNAMIC_OFFSET_INTERVAL             | Интервал проверки цены для динамической сетки (в мин) <br>(FAQ п.37) | number | 60
+DYNAMIC_OFFSET_PROFIT_DIVISOR       | Делитель изменения профитного ордера <br>(FAQ п.37) | number | 10
+DYNAMIC_OFFSET_INDENTION_DIVISOR    | Делитель изменения размера сетки <br>(FAQ п.37) | number | COUNT_ORDERS
 TREND_DEFINITION                    | Определение тренда (Экспериментально) | boolean | false
 ABRUPT_CHANGE_TREND                 | Быстрый разворот тренда (Экспериментально) | boolean | false
 OFF_MODULES_AUTO_SETTINGS           | Отключение всех модулей авто настройки | boolean | false
@@ -288,7 +297,7 @@ PRICE_FILE_PATH                     | Пользовательский путь 
 * One Sell a lot Buy - накапливаются USD (`BTC`). Баланс BTC (`LTC`) на момент запуска игнорируется.
 * One Buy a lot Sell - накапливаются BTC (`LTC`). Баланс USD (`BTC`) на момент запуска игнорируется.
 
-На примере BTC/LTC и (`USDT/BTC`) биржа Poloniex:
+На примере BTC/LTC и (`USDT/BTC`) биржа Poloniex / Bittrex:
 
 * One Sell a lot Buy - накапливаются BTC (`USDT`). Баланс LTC (`BTC`) на момент запуска игнорируется.
 * One Buy a lot Sell - накапливаются LTC (`BTC`). Баланс BTC (`USDT`) на момент запуска игнорируется.
@@ -309,10 +318,11 @@ STOP_LOSS_PERCENT                   | Уровень Stop Loss в процент
 TRAILING_STOP_PERCENT               | Уровень Trailing stop в процентах <br>(FAQ п.45) | number | 0
 DISABLE_CAPITALIZATION              | Отключить капитализацию в profit ордере <br>(FAQ п.47) | boolean | false
 CAPITALIZATION_BUY_ORDER            | Включает частичную капитализацию Buy ордера при DISABLE_CAPITALIZATION <br>(FAQ п.47) | boolean | false
-PERMANENT_DEPOSIT                   | Использовать расчет общего депозита с кэшем (Экспериментально) | boolean | false
 STRATEGY_AUTO_REVERS                | Автопереключение стратегии на обратную <br>(FAQ п.52) | boolean | false
 OFFSET_LAST_ORDER_PERCENT           | Процент отдаления цены от последнего ордера чтобы сработало автопереключение стратегии <br>(FAQ п.52) | number | 5
 DELAY_TIME_CYCLES                   | Задержка в секундах перед началом нового цикла после исполнения профитного ордера  | number | 0
+
+<!-- PERMANENT_DEPOSIT Использовать расчет общего депозита с кэшем (Экспериментально) -->
 
 > Если параметр **INTEGRITY_CONTROL_ORDERS** в режиме `hard`, то ордер будет установлен только, если объемы установленных и исполненных  ордеров будут совпадать (если ни один ордер не потеряется).
 
@@ -362,6 +372,7 @@ EXCHANGE_FEE                | Комиссия на сделки биржи <br>
 MINIMUM_ORDER_SIZE_IN_BTC   | Минимально допустимый размер ордера в BTC | number | 0.001
 DELAY_REQUEST_API           | Задержка при выполнении запросов к api<br> в миллисекундах <br>(FAQ п.31) | number | 500
 DELAY_BETWEEN_MODULES       | Задержка в секундах между выполнением последовательных модулей <br>(FAQ п.31) | number | 3
+NUMBER_CHECK_DATA           | Сколько раз перепроверять данные.<br>Используется значение 2 и более.<br>0 - выключено <br>(FAQ п.54) | number | 0
 TITLE                       | Заголовок окна консоли. (Работает не на всех системах). | string | GBot
 LANGUAGE                    | Язык интерфейса (`ru` или `en`) | string | ru
 NODE_ENV                    | Значение **production** включает:<br>  1. уведомление о старте бота в Telegram.<br> 2. уведомления об ошибках на E-mail.<br> 3. запрещает использовать conf-dev.js.<br> 4. отключает колоризацию в логе. (+ флаг **--no-color**)<br> 5. отключает TITLE | string | dev

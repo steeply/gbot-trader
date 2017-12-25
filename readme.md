@@ -12,6 +12,7 @@ This app is working with server maintenance.
 * Exmo
 * Bitfinex
 * Liqui
+* Dsx
 
 ## Full version in Russian documentation
 
@@ -63,7 +64,7 @@ The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs
 **SECRET**          | API secret    | string | -
 **NAME_COIN**       | Trading currency | string | ltc
 **NAME_COIN_TWO**   | Trading currency | string | usd
-EXCHANGE            | The choice of the exchange <br> **wex** <br> **poloniex** (inverted pairs) <br> **bittrex** (inverted pairs) <br> **exmo** <br> **bitfinex** <br> **liqui** | string | wex
+EXCHANGE            | The choice of the exchange <br> **wex** <br> **poloniex** (inverted pairs) <br> **bittrex** (inverted pairs) <br> **exmo** <br> **bitfinex** <br> **liqui** <br> **dsx** | string | wex
 EXCHANGE_HOST       | Host exchange API. If the primary host is not available. | string | -
 TELEGRAM_TOKEN      | Telegram token    | string | -
 TELEGRAM_ID         | Your User ID Telegram | number | -
@@ -135,6 +136,9 @@ DANGER_PRICE_STOP                   | Bot stopping according to the price spike 
 DANGER_PRICE_STOP_PERCENT           | The percentage of the price spike for the bot stopping | number | 9
 DYNAMIC_SETTINGS_TIME               | Dynamic time updating for auto options | boolean | false
 DYNAMIC_OFFSET_ORDERS               | Dynamic order allocation | boolean | false
+DYNAMIC_OFFSET_INTERVAL             | The price check interval for the dynamic grid (in minutes) | number | 60
+DYNAMIC_OFFSET_PROFIT_DIVISOR       | The divisor of the change of the profitable order | number | 10
+DYNAMIC_OFFSET_INDENTION_DIVISOR    | Dividing the grid size | number | COUNT_ORDERS
 TREND_DEFINITION                    | Trend determination (Experimentally) | boolean | false
 ABRUPT_CHANGE_TREND                 | Rapid trend reversal (Experimentally) | boolean | false
 OFF_MODULES_AUTO_SETTINGS           | Disabling all Autotune Modules | boolean | false
@@ -196,11 +200,11 @@ STOP_LOSS_PERCENT                   | Stop Loss percentage | number | 0
 TRAILING_STOP_PERCENT               | Trailing stop percentage | number | 0
 DISABLE_CAPITALIZATION              | Disable capitalization in profit order | boolean | false
 CAPITALIZATION_BUY_ORDER            | Includes partial capitalization of Buy orders in DISABLE_CAPITALIZATION | boolean | false
-PERMANENT_DEPOSIT                   | Use the calculation of the total deposit with the cache (Experimental) | boolean | false
 STRATEGY_AUTO_REVERS                | Auto switching strategy to reverse | boolean | false
 OFFSET_LAST_ORDER_PERCENT           | The percentage of the price distance from the last order to enable auto-switching of strategy | number | 5
 DELAY_TIME_CYCLES                   | The delay in seconds before the start of a new cycle after the execution of a profit order  | number | 0
 
+<!-- PERMANENT_DEPOSIT Use the calculation of the total deposit with the cache (Experimental) -->
 
 > If the parameter **INTEGRITY_CONTROL_ORDERS** in `hard` mode, then a sell order will be installed only if the volume installed and executed buy orders will be the same.
 
@@ -244,6 +248,7 @@ RESTART_TRADER_TIME         | How many seconds to wait before re-querying the da
 EXCHANGE_FEE                | The Commission for transactions of the exchange | number | 0.25
 DELAY_REQUEST_API           | The delay of requests to the API in milliseconds | number | 500
 DELAY_BETWEEN_MODULES       | Then delay in seconds between execution of consecutive modules. | number | 3
+NUMBER_CHECK_DATA           | How many times to check the data. <br> Use the value 2 or more. <br> 0 - off | number | 0
 TITLE                       | The title of the console window. | string | GBot
 LANGUAGE                    | The language of the interface (`ru` or `en`) | string | ru
 NODE_ENV                    | Value **production** activate:<br>  1. notification about the start of a Telegram bot.<br> 2. error notifications by E-mail.<br> 3. prohibits the use of conf-dev.js.<br> 4. disabling colors in logs.<br>5. disables TITLE | string | dev

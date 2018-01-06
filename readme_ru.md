@@ -357,22 +357,34 @@ HOST_SMTP                   | Адрес почтового сервера | str
 EMAIL_AUTH_USER             | Логин авторизации на почтовом сервере | string | -
 EMAIL_AUTH_PASS             | Пароль почтового сервера | string | -
 
+### Логирование
+
+ Option | Description|Type | Default
+--------|------------|-----|----------
+LOG                         | Вывод лога расчета авто-параметров <br>(FAQ п.33) | boolean | false
+LOG_DEBUG                   | Вывод дебаг лога (расчет ордеров и остальная матиматика) | boolean | false
+LOG_TRANSPORTS              | Куда писать лог: <br>  0 - консоль <br>  1 - файл <br>  2 - консоль и файл | number | 0 
+LOG_PATH                    | Пользовательский путь до директории с логом | string | Директория с ботом
+LOG_TREE                    | Сохранять логи по директориям год/месяц/день | boolean | false
+
+### Обработка ошибок
+
+ Option | Description|Type | Default
+--------|------------|-----|----------
+NUMBER_CHECK_DATA           | Сколько раз перепроверять данные.<br>Используется значение 2 и более.<br>0 - выключено <br>(FAQ п.54) | number | 0
+AUTO_RESTART_HANGING        | Авто-перезапуск воркера в случае его зависания (сообщение об ошибке "Worker does not meet" )<br> **Это НЕ рестарт всего бота со сбросом всех данных.** | boolean | false
+RESTART_TRADER_TIME         | Через сколько секунд перезапрашивать данные после сетевых ошибок <br>(FAQ п.31) | number | 5
+
+
 ### Остальные параметры
 
  Option | Description|Type | Default
 --------|------------|-----|----------
 TIME_ZONE                   | Временная зона [Database Time Zones](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) | string | Asia/Yekaterinburg
-LOG                         | Вывод лога расчета авто параметров <br>(FAQ п.33) | boolean | false
-LOG_DEBUG                   | Вывод дебаг лога | boolean | false
-LOG_TRANSPORTS              | Куда писать лог: <br>  0 - консоль <br>  1 - файл <br>  2 - консоль и файл | number | 0 
-LOG_PATH                    | Пользовательский путь до директории с логом | string | Директория с ботом
-LOG_TREE                    | Сохранять логи по директориям год/месяц/день | boolean | false
-RESTART_TRADER_TIME         | Через сколько секунд перезапрашивать данные после сетевых ошибок <br>(FAQ п.31) | number | 5
 EXCHANGE_FEE                | Комиссия на сделки биржи <br>(FAQ п.32) | number | 0.25
 MINIMUM_ORDER_SIZE_IN_BTC   | Минимально допустимый размер ордера в BTC | number | 0.001
 DELAY_REQUEST_API           | Задержка при выполнении запросов к api<br> в миллисекундах <br>(FAQ п.31) | number | 500
 DELAY_BETWEEN_MODULES       | Задержка в секундах между выполнением последовательных модулей <br>(FAQ п.31) | number | 3
-NUMBER_CHECK_DATA           | Сколько раз перепроверять данные.<br>Используется значение 2 и более.<br>0 - выключено <br>(FAQ п.54) | number | 0
 TITLE                       | Заголовок окна консоли. (Работает не на всех системах). | string | GBot
 LANGUAGE                    | Язык интерфейса (`ru` или `en`) | string | ru
 NODE_ENV                    | Значение **production** включает:<br>  1. уведомление о старте бота в Telegram.<br> 2. уведомления об ошибках на E-mail.<br> 3. запрещает использовать conf-dev.js.<br> 4. отключает колоризацию в логе. (+ флаг **--no-color**)<br> 5. отключает TITLE | string | dev

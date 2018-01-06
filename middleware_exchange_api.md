@@ -393,7 +393,7 @@ module.exports = API;
 
 Для прямых пар параметр не задавать, для обратных пар его значение равно `DIRECTION_CURRENCY_INVERSE=true`.
 
-Если при расчетах размера ордера необходимо учитывать эквивалентный размер в BTC используйте параметры `IS_ORDER_CALCULATION_BTC` и `MINIMUM_ORDER_SIZE_IN_BTC`
+Если при расчетах размера ордера необходимо учитывать эквивалентный размер в BTC используйте параметры `IS_ORDER_CALCULATION_BTC` и `MINIMUM_ORDER_SIZE_IN_BTC` (эти параметры НЕ работают с фиатными парами, т.е BTC/USD(t), LTC/USD(t) и т.д)
 
 Если биржа использует нестандартную длину числа в объеме ордера используйте параметр `AMOUNT_DECIMAL_PLACES` (для всех пар), либо же укажите нужное ограничение в методе **getInfo** для каждой валютной пары.
 
@@ -412,4 +412,5 @@ MINIMUM_ORDER_SIZE_IN_BTC     | Минимально допустимый раз
 IS_ORDER_CALCULATION_BTC      | Учитывать при расчете размера ордера его сумму в btc (default: false). Например для poloniex, bittrex, liqui - true
 SUBTRACT_AMOUNT_ORDERS        | Объем который необходимо вычисть из финальной суммы ордера (default: 0.0000001)
 AMOUNT_DECIMAL_PLACES         | Количество знаков после запятой разрешенные при торгах для объема в ордере (default: 8)
+ROUND_METHOD                  | Тип округления `rounded`, `gauss`, `truncate` (default: `rounded`)
 

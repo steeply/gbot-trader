@@ -192,7 +192,7 @@ ONE_ORDERS_BUY                      | Strategy: "One Buy a lot Sell" | boolean |
 ONE_ORDERS_OFFSET                   | The difference between LastPrice and first order in the stack of orders in %. <br> Will pull the order, if this value is exceeded. | number | 2
 ONE_ORDERS_PROFIT_PERCENT           | Specifies the percentage desired profit | number | 1
 INTEGRITY_CONTROL_ORDERS            | Integrity control orders (**soft** or **hard**) | string | soft
-TYPE_DATA_USED                      | Where to get information about the used orders: <br>  **active** - active orders <br> **history** - trading history | string | active
+TYPE_DATA_USED                      | Where to get information about the used orders: <br>  **active** - active orders <br> **history** - active orders + trading history | string | active
 FIRST_LOADING_HISTORY               | Download the history when you start the bot | boolean | false
 NUMBER_ROWS_LOAD_HISTORY            | Number of rows to load history | number | 100
 CYCLES_AUTO_EXIT                    | How many cycles to make the exit | number | 0
@@ -246,7 +246,7 @@ LOG_PATH                    | A custom path to the directory with the log | stri
 LOG_TREE                    | Save logs by directory year/month/day | boolean | false
 RESTART_TRADER_TIME         | How many seconds to wait before re-querying the data after network errors | number | 5
 EXCHANGE_FEE                | The Commission for transactions of the exchange | number | 0.25
-DELAY_REQUEST_API           | The delay of requests to the API in milliseconds | number | 500
+DELAY_REQUEST_API           | The delay of requests to the API in milliseconds | number | 200
 DELAY_BETWEEN_MODULES       | Then delay in seconds between execution of consecutive modules. | number | 3
 NUMBER_CHECK_DATA           | How many times to check the data. <br> Use the value 2 or more. <br> 0 - off | number | 0
 TITLE                       | The title of the console window. | string | GBot
@@ -305,7 +305,7 @@ To **launch the control panel** in a Telegram, send a message to:
 
 /version            - The version of the bot
 /params             - Parameters which can be changed via Telegram
-/config             - Is a possible configuration parameters via a configuration file
+/params_no_comment
 /martin [cache]     - A theoretical calculation of the orders of the martingale (parameters are taken from config)
 /ticker coin_name   - Shows a quote of a pair coin_name
 /trade pair         - Switches to the specified trading pair

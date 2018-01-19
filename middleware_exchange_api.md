@@ -9,8 +9,12 @@
 ## Использование
 Все Middleware API должны находиться в директории **build/api** и называться по названию биржи.
 
-Параметры **key** и **secret** доступны из конфигурационого файла. `const conf = require('../conf')`. 
-При необходимости можно использовать lodash.delay c параметром conf.delayRequestApi - задержка перед выполнением запроса. Практически все параметры из переменного окружения заданы в camelCase и доступны в объекте conf.
+Параметры **key**, **secret**, **delayRequestApi** и т.д доступны из конструктора и передоваемого в него объекта conf. 
+При необходимости можно использовать lodash.delay или lodash.throttle c параметром conf.delayRequestApi - задержка перед выполнением запроса. 
+
+Практически все параметры из переменного окружения заданы в **camelCase** и доступны в объекте conf.
+
+Если вам нужно переопределить в боте параметры разработчика из объекта **conf** используйте свойство **getConfig**.
 
 Название торговых пар должны быть в lowercase в формате `btc_usd`.
 
@@ -318,7 +322,6 @@ _Данный метод может быть пустым. Если ваше Mid
 ## Пример Middleware
 
 ```  
-var conf = require('../conf');                - конфигурационный файл приложения
 var exchangeApi = require('exchange-api');    - библиотека api биржи (если данное Middleware API не является самим API)
 
 var _ = require('lodash');                    - дополнительные библиотеки (если нужны)
@@ -327,12 +330,21 @@ var Promise = require('bluebird');
 
 API = (function(){
     API.displayName = 'API';
+    var constructor = API;
+    function API(conf) {                                            - конструктор с параметрами conf (конфиг. файл приложения)
+      constructor.Exchange = new exchangeApi.api(conf.key, conf.secret);
+      constructor.delayRequestApi = conf.delayRequestApi;
+    }
     
-    var Exchange = new exchangeApi.api(conf.key, conf.secret); 
+    API.prototype.getConfig = {                                     - если нужно переопределить параметры разработчика из conf
+      directionInverse: false,                                        укажите их значение здесь.
+      isOrderCalculationBtc: false,                                   Новые параметры будут возвращены боту.
+      roundMethod: 'rounded'
+    };
     
-    API.prototype.getInfo = function(callback) {        - Метод Middleware API
+    API.prototype.getInfo = function(callback) {                    - Метод Middleware API
     
-      return Exchange.Info().then(function(data) {      - Метод API биржи.
+      return constructor.Exchange.Info().then(function(data) {      - Метод API биржи.
         
         обработка данных data
         (Здесь вы производите конвертацию данных из API биржи в API бота)
@@ -371,7 +383,6 @@ API = (function(){
     
     API.prototype.setNonce = function(nonce){};
     
-    function API(){}
     return API;
 }());
 module.exports = API;
@@ -403,14 +414,17 @@ module.exports = API;
 - для инвертированной торговой пары расчет будет уже: `(balanceTwo * price) + balance`.
 - если минимальный объем ордера должен быть эквивалентен минимальному объему btc указаному на бирже (0.001). Т.е, если у вас валюта Coin стоит 0.000041 btc, минимальный объем ордера в этой валюте будет 0.001 / 0.000041 = 24.39 
 
-#### Опции для разработчиков. Данные параметры зависят от биржи.
+#### Данные параметры зависят от биржи.
+
+**Важно!** Если параметры определены в **getConfig** то они будут в приоритете над переменным окружением и пользователь не сможет их изменить.
+
+
 
  Option | Description
 ----------------|----------------------
 DIRECTION_CURRENCY_INVERSE    | Флаг инвертированной валюты (default: false)
-MINIMUM_ORDER_SIZE_IN_BTC     | Минимально допустимый размер ордера в BTC (default: 0.001)
 IS_ORDER_CALCULATION_BTC      | Учитывать при расчете размера ордера его сумму в btc (default: false). Например для poloniex, bittrex, liqui - true
-SUBTRACT_AMOUNT_ORDERS        | Объем который необходимо вычисть из финальной суммы ордера (default: 0.0000001)
+MINIMUM_ORDER_SIZE_IN_BTC     | Минимально допустимый размер ордера в BTC (default: 0.001)
 AMOUNT_DECIMAL_PLACES         | Количество знаков после запятой разрешенные при торгах для объема в ордере (default: 8)
 ROUND_METHOD                  | Тип округления `rounded`, `gauss`, `truncate` (default: `rounded`)
-
+SUBTRACT_AMOUNT_ORDERS        | Объем который необходимо вычисть из финальной суммы ордера (default: 0.0000001)

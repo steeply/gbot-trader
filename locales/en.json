@@ -202,5 +202,6 @@
 	"Trail Stop control": "TrailStop",
 	"Stop Loss control": "StopLoss",
 	"Auto Revers control": "AutoRevers",
-	"Переключает на указанную торговую пару": "Switches to the specified trading pair"
+	"Переключает на указанную торговую пару": "Switches to the specified trading pair",
+	"Закрывает противоположную сетку ордеров": "Closes the opposite orders grid"
 }

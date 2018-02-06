@@ -92,6 +92,7 @@ MARTINGALE_TYPE                     | Type Martingale: <br> 1 - exponential <br>
 CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you restart the bot (**saves the order size**) | boolean | false
 TRADING_PRICE_RANGE                 | Price range allowed for bidding (Example: 3000/5000)<br>If not specified, no restrictions | string | -
 TRADING_PRICE_RANGE_PERCENT         | Percent to automatically create a range of prices allowed for bidding<br>If not specified, no restrictions | number | -
+IGNORE_ORDERS_AT_START              | Ignore the previously set orders at the start / restart of the bot | boolean | false
 
 **Important!**
 

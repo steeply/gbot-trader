@@ -203,5 +203,6 @@
 	"Stop Loss control": "StopLoss",
 	"Auto Revers control": "AutoRevers",
 	"Переключает на указанную торговую пару": "Switches to the specified trading pair",
-	"Закрывает противоположную сетку ордеров": "Closes the opposite orders grid"
+	"Закрывает противоположную сетку ордеров": "Closes the opposite orders grid",
+	"Загрузка списка ордеров": "Load order list"
 }

@@ -226,6 +226,7 @@ NOTIFICATION_DEVIATION_PERCENT      | In what percentage should the price spike 
 MONITORING_PAIR                     | Pairs for monitoring. <br> (For example: `btc/usd, ltc/usd`, or just a pair currency, for example: `btc`). <br> If none of that is set, ALL available pairs will be monitored on the exchange. | string | All pairs
 NOTIFICATION_ERROR_COUNT            | The number of errors in 5 minutes for notification | number | 0
 NOTIFICATION_ORDER_IS_EXECUTED      | Notice of execution of one orders | boolean | false
+NOTIFICATION_END_GRID               | Notification of the end of the order grid. Notification will be sent if there are less than 3 orders left | boolean | false
 
 
 ### Email Error Notification

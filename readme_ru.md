@@ -348,6 +348,7 @@ NOTIFICATION_DEVIATION_PERCENT      | Насколько процентов до
 MONITORING_PAIR                     | Пары для мониторинга.<br>(Например: `btc/usd, ltc/usd`. Или только валюта пары, например: `btc` ).<br>Если ничего не задано (**параметр не установлен**) будут мониториться **ВСЕ** доступные пары на бирже.<br> | string | Все пары
 NOTIFICATION_ERROR_COUNT            | Количество ошибок за 5 минут для уведомления через telegram | number | 0
 NOTIFICATION_ORDER_IS_EXECUTED      | Уведомление об исполнении профитного one orders | boolean | false
+NOTIFICATION_END_GRID               | Уведомление об окончании сетки ордеров. Будет выслано уведомление если осталось меньше 3 ордеров | boolean | false
 
 ### Уведомление об ошибках на Email
 Подробнее FAQ п.27

@@ -102,6 +102,7 @@
 	"Время обновления авто настроек параметров (в мин)": "Auto-settings updating time of options (in minutes)",
 	"Отступ для ордеров в пунктах": "Indent for orders in points",
 	"Отступ для ордеров в процентах": "Indent for orders in percent",
+	"Отступ для ордеров по экспоненте в %": "Indent for orders by exponent in %",
 	"Диапазон смещения ордеров в %": "Range of orders displacement in percent",
 	"Процент отступа безубытка для торговли": "Percentage of break-even indent for trading",
 	"Сколько минут ждать перед закрытием неисполнившихся ордеров": "How many minutes to wait before closing unfulfilled orders",
@@ -204,5 +205,6 @@
 	"Auto Revers control": "AutoRevers",
 	"Переключает на указанную торговую пару": "Switches to the specified trading pair",
 	"Закрывает противоположную сетку ордеров": "Closes the opposite orders grid",
-	"Загрузка списка ордеров": "Load order list"
+	"Загрузка списка ордеров": "Load order list",
+	"Уведомление об окончании сетки ордеров": "Notification of the end of the order grid"
 }

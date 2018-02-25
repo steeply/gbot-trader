@@ -677,6 +677,8 @@ depositProf2Percent:         - Разница депозита в процент
 price:                       - Цена которая участвовала в расчетах              (number)
 currentCycle:                - Текущий цикл                                     (number)
 cycles:                      - Общае число циклов                               (number)
+profitAmount:                - Размер профитного ордера (для One Orders)        (number)
+oneOrdersProfitPercent:      - Тоже что и параметр ONE_ORDERS_PROFIT_PERCENT    (number)
 ```
 
 ### 47. Параметр DISABLE_CAPITALIZATION.

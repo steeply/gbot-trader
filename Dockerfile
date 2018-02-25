@@ -8,4 +8,4 @@ ADD . /bot/
 
 RUN npm install
 
-CMD ["npm", "start"]
+CMD ["node", "./build/server.js"]

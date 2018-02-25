@@ -1,6 +1,6 @@
 {
   "name": "gbot-trader",
-  "version": "1.4.6",
+  "version": "1.4.7",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
@@ -42,9 +42,11 @@
     "@you21979/bittrex.com": "0.0.4",
     "async": "^2.6.0",
     "bitfinex-api-node": "1.2.1",
+    "body-parser": "^1.18.2",
     "btce-deal": "0.2.3",
     "colors": "^1.1.2",
     "crypto-js": "^3.1.9-1",
+    "express": "^4.16.2",
     "fs-extra": "^5.0.0",
     "hashids": "^1.1.4",
     "i18n": "^0.8.3",
@@ -55,7 +57,7 @@
     "ms": "^2.1.1",
     "node-telegram-bot-api": "0.28.0",
     "node.liqui.io": "^1.2.0",
-    "nodemailer": "^4.4.2",
+    "nodemailer": "^4.6.0",
     "poloniex-api-node": "^1.8.1",
     "request": "^2.83.0",
     "ta-lib": "^0.11.0",

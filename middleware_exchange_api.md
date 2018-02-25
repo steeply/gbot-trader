@@ -244,6 +244,7 @@ funds: Баланс после запроса.
 ```
 opt {
  order_id: string or number
+ currency: object { name: 'btc', nameTwo: 'usd', pair: 'btc_usd' }
 }
 ```
 
@@ -317,6 +318,24 @@ _Данный метод может быть пустым. Если ваше Mid
 Метод ни чего не возвращает.
 
 
+## Telegram внутри api
+
+### setTelegram(msg, cbk-send-telergam)
+
+Метод может использоваться когда необходимо обработать какую-то специфичную команду для вашего api, например для вашего DEBUG.
+
+Чтобы отправить сообщение в этот метод необходимо в чате Telegram отправить боту сообщение с командой: `/api ваш текст`
+
+##### Принимает параметры:
+* msg - текст сообщения из Telegram.
+* cbk-send-telergam - колбек, метод отправки обратно сообщения в Telegram. (Может ни чего не возвращать если вам не нужно отправлять обратно сообщение).
+
+cbk-send-telergam имеет параметры text и opt (см. sendMessage в api telegram)(необязательный параметр).
+
+**Важно:**
+
+* Если этот метод вам не нужен просто игнорируйте его описание.
+
 
 
 ## Пример Middleware
@@ -382,6 +401,7 @@ API = (function(){
     };
     
     API.prototype.setNonce = function(nonce){};
+    API.prototype.setTelegram = function(msq, cbkSendTelergam){};
     
     return API;
 }());

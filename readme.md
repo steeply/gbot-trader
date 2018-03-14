@@ -345,9 +345,9 @@ Install git and screen:
 
 Git clone this repo: 
 
-```git clone https://github.com/juanzolo/gbot-trader/```
+```git clone https://github.com/juanzolo/Gbot-CryptoPing-Plugin.git```
 
-CD to gbot-trader/
+CD to Gbot-CryptoPing-Plugin/
 
 ```cd gbot-trader/```
 
@@ -367,7 +367,7 @@ Then install gbot-trader:
 
 Git clone telethon: 
 
-```git clone https://github.com/LonamiWebs/Telethon```
+```git clone https://github.com/LonamiWebs/Telethon.git```
 
 CD to Telethon/
 

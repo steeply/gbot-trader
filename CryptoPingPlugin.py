@@ -370,7 +370,7 @@ client = TelegramClient(session_name,
                         update_workers=4,
                         spawn_read_thread=False)
 if True:
-    client.start(phone='+18325443691')
+    client.start(phone='+1YOURPHONENUMBERHERE')
 else:
     client.start()
 

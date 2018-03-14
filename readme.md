@@ -337,3 +337,53 @@ To **launch the control panel** in a Telegram, send a message to:
 /trail              - Displays Trailing Stop information
 ```
 
+***CryptoPing Plugin Install as Follows:***
+
+Install git and screen:
+```sudo apt-get install git screen```
+Git clone this repo: 
+```git clone https://github.com/juanzolo/gbot-trader/```
+CD to gbot-trader/
+```cd gbot-trader/```
+install nodejs and python3 and python3-pip:
+```
+curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+sudo apt-get install -y nodejs python3 python3-pip
+```
+Then install gbot-trader:
+```npm install```
+Git clone telethon: 
+```git clone https://github.com/LonamiWebs/Telethon```
+CD to Telethon/
+```cd Telethon```
+run ```python3 setup.py install```
+Replace YOURBOTNAMEHERE and YOURPHONENUMBERHERE in this file:
+```nano CryptoPingPlugin.py```
+Input your API hash and ID from here https://my.telegram.org/apps into:
+```nano api/settings_example```
+Move this file into api/settings:
+```mv api/settings_example api/settings```
+then ```mv ../CryptoPingPlugin.py Telethon/```
+
+Start the trade bot and edit settings, get a new bot ID from @botfather (this goes into the CryptoPingPlugin.py file:
+```cd ../
+nano ./start.sh
+```
+Run:
+```
+screen -S bot
+````
+then run:
+```./start.sh```
+Tap CTRL+a then D to detach
+
+Then run:
+```
+cd Telethon/
+```
+Then run:
+```screen -S CryotpPingPlugin```
+Then run in this screen:
+```python3 CryptoPingPlugin.py```
+
+Your telegram will now forward all signals with a hashtag before them to the bot.

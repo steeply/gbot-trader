@@ -47,7 +47,7 @@ The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs
 
 #### The receipt of Telegram ID
 
-1. Set the parameters API Exchange: `KEY`, `SECRET` and `TELEGRAM_TOKEN`.
+1. Set the parameters API Exchange: `EXCHANGE`, `KEY`, `SECRET` and `TELEGRAM_TOKEN`.
 2. Run GBot Trader.
 3. Write your Telegram bot (which you created earlier using [@BotFather](https://core.telegram.org/bots#6-botfather)) any message, you will receive your id number.
 4. Turn Off GBot Trader.
@@ -64,7 +64,7 @@ The **token** is a string along the lines of `110201543:AAHdqTcvCH1vGWJxfSeofSAs
 **SECRET**          | API secret    | string | -
 **NAME_COIN**       | Trading currency | string | ltc
 **NAME_COIN_TWO**   | Trading currency | string | usd
-EXCHANGE            | The choice of the exchange <br> **wex** <br> **poloniex** (inverted pairs) <br> **bittrex** (inverted pairs) <br> **exmo** <br> **bitfinex** <br> **liqui** <br> **dsx** | string | wex
+**EXCHANGE**        | The choice of the exchange <br> **wex** <br> **poloniex** (inverted pairs) <br> **bittrex** (inverted pairs) <br> **exmo** <br> **bitfinex** <br> **liqui** <br> **dsx** | string | -
 EXCHANGE_HOST       | Host exchange API. If the primary host is not available. | string | -
 TELEGRAM_TOKEN      | Telegram token    | string | -
 TELEGRAM_ID         | Your User ID Telegram | number | -

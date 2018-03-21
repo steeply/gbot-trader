@@ -13,6 +13,14 @@ This app is working with server maintenance.
 * Bitfinex
 * Liqui
 * Dsx
+* Binance (Unofficial)  
+* Cex (Unofficial) 
+* Cryptopia (Unofficial) 
+* Kraken (Unofficial) 
+* Yobit (Unofficial) 
+* Huobi (Unofficial)
+
+The module on the exchange Unofficial is purchased separately from third-party developers! Telegram - @solvento.
 
 ## Full version in Russian documentation
 
@@ -200,6 +208,7 @@ NUMBER_ROWS_LOAD_HISTORY            | Number of rows to load history | number | 
 CYCLES_AUTO_EXIT                    | How many cycles to make the exit | number | 0
 STOP_LOSS_PERCENT                   | Stop Loss percentage | number | 0
 TRAILING_STOP_PERCENT               | Trailing stop percentage | number | 0
+TRAILING_GRID_PERCENT               | Trailing grid percentage | number | 0
 DISABLE_CAPITALIZATION              | Disable capitalization in profit order | boolean | false
 CAPITALIZATION_BUY_ORDER            | Includes partial capitalization of Buy orders in DISABLE_CAPITALIZATION | boolean | false
 STRATEGY_AUTO_REVERS                | Auto switching strategy to reverse | boolean | false
@@ -255,7 +264,7 @@ LOG_TREE                    | Save logs by directory year/month/day | boolean | 
  Option | Description|Type | Default
 --------|------------|-----|----------
 NUMBER_CHECK_DATA           | How many times to check the data. <br> Use the value 2 or more. <br> 0 - off | number | 0
-AUTO_RESTART_HANGING        | Auto-restart of the worker in case of his hangup (error message: "Worker does not meet" ) | boolean | false
+AUTO_RESTART_HANGING        | Auto-restart of the worker in case of his hangup (error message: "Worker does not meet" ) | boolean | true
 RESTART_TRADER_TIME         | How many seconds to wait before re-querying the data after network errors | number | 5
 
 

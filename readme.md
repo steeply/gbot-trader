@@ -166,7 +166,17 @@ OFF_MODULES_AUTO_SETTINGS           | Disabling all Autotune Modules | boolean |
 --------|------------|-----|----------
 TIME_CLOSE_ORDERS                   | Closing time of unused orders (min) | number | 5
 TIME_CLOSE_ORDERS_INACTIVITY        | Closing time of undemanded orders (min) | number | 15
-STEP_BREAKEVEN_PERCENT              | Percentage of breakeven (Only for "Scalper") | number | 50
+
+
+###  Strategy "Scalper"
+
+ Option | Description|Type | Default
+--------|------------|-----|----------
+TYPE_SCALPER                        | Scalper type of work. Value: 1 or 2 | number | 1
+STEP_BREAKEVEN_PERCENT              | Only for `TYPE_SCALPER=1`<br>Percentage of breakeven | number | 50
+TRADING_AMOUNT_RANGE                | Range of random order size<br> Values are specified in the format **start/end** of the range. | string | -
+
+> When using `TRADING_AMOUNT_RANGE`, the parameters `COUNT_ORDERS`, `SIZE_ORDERS_MARTINGALE`, `SIZE_FIRST_ORDERS_*`, etc. do not make sense and will be ignored.
 
 
 #### Strategy "Bollinger Bands"

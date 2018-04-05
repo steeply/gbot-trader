@@ -274,8 +274,16 @@ OFF_MODULES_AUTO_SETTINGS           | Отключение всех модуле
 --------|------------|-----|----------
 TIME_CLOSE_ORDERS                   | Время закрытия неиспользованных ордеров (в минутах)<br>(FAQ п.44) | number | 5
 TIME_CLOSE_ORDERS_INACTIVITY        | Время закрытия ордеров при бездействии (в минутах)<br>(FAQ п.44) | number | 15
-STEP_BREAKEVEN_PERCENT              | Процент отступа от безубытка между bid и ask (Только для "Скальпер")<br>(FAQ п.20) | number | 50
 
+###  Стратегия "Скальпер"
+
+ Option | Description|Type | Default
+--------|------------|-----|----------
+TYPE_SCALPER                        | Тип работы скальпера. Значение: 1 или 2 <br>(FAQ п.57) | number | 1
+STEP_BREAKEVEN_PERCENT              | Только для `TYPE_SCALPER=1`<br>Процент отступа от безубытка между bid и ask<br>(FAQ п.20) | number | 50
+TRADING_AMOUNT_RANGE                | Диапазон рандомного размера ордеров<br> Значения указываются в формате **начало/конец** диапазона. | string | -
+
+> При использовании `TRADING_AMOUNT_RANGE` параметры `COUNT_ORDERS`, `SIZE_ORDERS_MARTINGALE`, `SIZE_FIRST_ORDERS_*` и т.д. не имеют смысла и будут проигнорированы. 
 
 ### Стратегия "Линии Боллинджера"
 

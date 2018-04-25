@@ -87,6 +87,7 @@
 	"Показывает котировку пары coin_name": "Show a quotation of the coin_name pair",
 	"Завершение работы приложения. codeExit - необязательный код выхода": "Closing the application. CodeExit - optional exit code",
 	"Продать по рынку немедленно": "Sell on the market immediately",
+	"Купить по рынку немедленно": "Buy on the market immediately",
 	"Статистика торговли": "Trading statistics",
 	"Изменяет отступ ордеров в процентах": "Change orders indent in percent",
 	"Изменяет отступ ордеров в пунктах": "Change orders indent in points",

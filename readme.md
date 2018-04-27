@@ -111,7 +111,7 @@ SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (fo
 MARTINGALE_TYPE                     | Type Martingale: <br> 1 - exponential <br> 2 - linear | number | 1
 CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you restart the bot (**saves the order size**) | boolean | false
 TRADING_PRICE_RANGE                 | Price range allowed for bidding (Example: 3000/5000)<br>If not specified, no restrictions | string | -
-TRADING_PRICE_RANGE_PERCENT         | Percent to automatically create a range of prices allowed for bidding<br>If not specified, no restrictions | number | -
+TRADING_PRICE_RANGE_PERCENT         | Percent to automatically create a range of prices allowed for bidding<br>Format: `number` or `bottom/top`<br>If not specified, no restrictions | number or string | -
 IGNORE_ORDERS_AT_START              | Ignore the previously set orders at the start / restart of the bot | boolean | false
 
 **Important!**
@@ -238,6 +238,8 @@ STRATEGY_AUTO_REVERS                | Auto switching strategy to reverse | boole
 OFFSET_LAST_ORDER_PERCENT           | The percentage of the price distance from the last order to enable auto-switching of strategy | number | 5
 DELAY_TIME_CYCLES                   | The delay in seconds before the start of a new cycle after the execution of a profit order  | number | 0
 PERMANENT_DEPOSIT                   | Use the calculation of the total deposit with the cache | boolean | false
+PRICE_TRADING_TYPE_CHANGE           | Price at which the trade type will change<br>Format: `number` or `low/high`  | number or string | -
+PERCENT_TRADING_TYPE_CHANGE         | Same as `PRICE_TRADING_TYPE_CHANGE` only in percentage.<br>Format `number` or `low/high` | number or string | -
 
 > If the parameter **INTEGRITY_CONTROL_ORDERS** in `hard` mode, then a sell order will be installed only if the volume installed and executed buy orders will be the same.
 
@@ -300,7 +302,7 @@ DELAY_REQUEST_API           | The delay of requests to the API in milliseconds |
 DELAY_BETWEEN_MODULES       | Then delay in seconds between execution of consecutive modules. | number | 3
 TITLE                       | The title of the console window. | string | GBot
 LANGUAGE                    | The language of the interface (`ru` or `en`) | string | ru
-NODE_ENV                    | Value **production** activate:<br>  1. notification about the start of a Telegram bot.<br> 2. error notifications by E-mail.<br> 3. prohibits the use of conf-dev.js.<br> 4. disabling colors in logs.<br>5. disables TITLE | string | dev
+NODE_ENV                    | Value **production** activate:<br> 1. error notifications by E-mail.<br> 2. prohibits the use of conf-dev.js.<br> 3. disabling colors in logs.<br>4. disables TITLE | string | dev
 BOT_TRADE                   | Allow trading | boolean | true
 URL_STATISTICS              | URL of the server where the statistics will be sent in post json format | string | -
 

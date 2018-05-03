@@ -1,5 +1,17 @@
 # GBot Trader
 
+
+**Attention!** 
+
+In version 1.5.0, some parameters were changed and merged.
+
+ Old | New | Example
+-----------------|----------------|-----------------
+DEPOSIT_LIMIT_PERCENT<br>DEPOSIT_LIMIT_CURRENCY | DEPOSIT_LIMIT | DEPOSIT_LIMIT=`400`<br>DEPOSIT_LIMIT=`10%`
+SIZE_FIRST_ORDERS_CURRENCY<br>SIZE_FIRST_ORDERS_PERCENT | SIZE_FIRST_ORDERS | SIZE_FIRST_ORDERS=`0.1`<br>SIZE_FIRST_ORDERS=`5%`
+TRADING_PRICE_RANGE<br>TRADING_PRICE_RANGE_PERCENT | TRADING_PRICE_RANGE | `3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`
+PRICE_TRADING_TYPE_CHANGE<br>PERCENT_TRADING_TYPE_CHANGE | PRICE_TRADING_TYPE_CHANGE | `3000/5000`<br>`10%/20%`<br>`1000/10%`<br>`10%`<br>`3000`<br>
+
 [![Dependency Status](https://david-dm.org/steeply/gbot-trader.svg)](https://david-dm.org/steeply/gbot-trader)
 
 This app is working with server maintenance.
@@ -100,25 +112,26 @@ By default, the bot will work at default settings. You can change them using the
  Option | Description| Type | Default
 --------|------------|-----|----------
 TIME_UPDATE_AUTO_SETTINGS           | Update time of auto settings (min) | number | 2
-DEPOSIT_LIMIT_PERCENT               | Deposit consuming percent | number | 100
-DEPOSIT_LIMIT_CURRENCY              | The size of the used part of the Deposit in the currency **NAME_COIN_TWO**. <br>For exchanges with inverted currency in the currency of the parameter **NAME_COIN** | number | 0
+DEPOSIT_LIMIT                       | Deposit consuming percent or the absolute number<br><br>If an absolute number is specified: the size of the used part of the Deposit in the currency **NAME_COIN_TWO**. <br>For exchanges with inverted currency in the currency of the parameter **NAME_COIN**  | number or string | 100%
 COUNT_ORDERS                        | Quantity all orders.<br> How many will be installed. | number | Calculated based on deposit amount
 QUANTITY_ORDERS_IN_BLOCKS           | Quantity orders in blocks<br>How many orders will be simultaneously on the market. | number | 0
-SIZE_FIRST_ORDERS_CURRENCY          | The size of the first order in the currency being traded | number | 0
+GREEDY_FIRST_ORDER_SIZE             | Size of the "zero" order in the traded currency or percentage<br>Format: 0.1 or 5% | number or string | 0
+GREEDY_FIRST_ORDER_SIZE_INSECOND_CURRENCY | Size of the "zero" order in the base currency | number | 0
+SIZE_FIRST_ORDERS                   | The size of the first order in the currency being traded or in percent<br>Example: 0.1 or 5% | string | 0
 SIZE_FIRST_ORDERS_INSECOND_CURRENCY | The size of the first order in the base currency | number | 0
-SIZE_FIRST_ORDERS_PERCENT           | The size of the first order in percent | number | 0
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (for Exponential - %, Linear - absolute number) | number | 0
 MARTINGALE_TYPE                     | Type Martingale: <br> 1 - exponential <br> 2 - linear | number | 1
 CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you restart the bot (**saves the order size**) | boolean | false
-TRADING_PRICE_RANGE                 | Price range allowed for bidding (Example: 3000/5000)<br>If not specified, no restrictions | string | -
-TRADING_PRICE_RANGE_PERCENT         | Percent to automatically create a range of prices allowed for bidding<br>Format: `number` or `bottom/top`<br>If not specified, no restrictions | number or string | -
+TRADING_PRICE_RANGE                 | Price range allowed for bidding, absolute numbers or percentages. <br>Example: <br>`3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`<br>If not specified, no restrictions<br> | string | -
 IGNORE_ORDERS_AT_START              | Ignore the previously set orders at the start / restart of the bot | boolean | false
 
 **Important!**
 
 > The size of the order for `SIZE_FIRST_ORDERS_INSECOND_CURRENCY` will be calculated by the formula **SIZE_FIRST_ORDERS_INSECOND_CURRENCY / price**
 
-> `SIZE_FIRST_ORDERS_CURRENCY`, `SIZE_FIRST_ORDERS_INSECOND_CURRENCY` or `SIZE_FIRST_ORDERS_PERCENT` select **only 1 of the parameters**!
+> `SIZE_FIRST_ORDERS` or `SIZE_FIRST_ORDERS_INSECOND_CURRENCY` select **only 1 of the parameters**!
+
+> `GREEDY_FIRST_ORDER_SIZE` or `GREEDY_FIRST_ORDER_SIZE_INSECOND_CURRENCY` select **only 1 of the parameters**!
 
 > With the manual size of the first order **RANGE_OFFSET** does not work, and **COUNT_ORDERS** will be calculated automatically.
 
@@ -238,8 +251,7 @@ STRATEGY_AUTO_REVERS                | Auto switching strategy to reverse | boole
 OFFSET_LAST_ORDER_PERCENT           | The percentage of the price distance from the last order to enable auto-switching of strategy | number | 5
 DELAY_TIME_CYCLES                   | The delay in seconds before the start of a new cycle after the execution of a profit order  | number | 0
 PERMANENT_DEPOSIT                   | Use the calculation of the total deposit with the cache | boolean | false
-PRICE_TRADING_TYPE_CHANGE           | Price at which the trade type will change<br>Format: `number` or `low/high`  | number or string | -
-PERCENT_TRADING_TYPE_CHANGE         | Same as `PRICE_TRADING_TYPE_CHANGE` only in percentage.<br>Format `number` or `low/high` | number or string | -
+PRICE_TRADING_TYPE_CHANGE           | Price at which the trade type will change (Absolute value and percentage)<br>Format: `number` or `low/high`<br>Example: <br>`3000`<br>`3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`<br>(FAQ п.58)  | number or string | -
 
 > If the parameter **INTEGRITY_CONTROL_ORDERS** in `hard` mode, then a sell order will be installed only if the volume installed and executed buy orders will be the same.
 

@@ -1,6 +1,6 @@
 {
   "name": "gbot-trader",
-  "version": "1.4.11",
+  "version": "1.5.0",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
@@ -35,8 +35,8 @@
   ],
   "license": "Shareware",
   "engines": {
-    "node": ">=9.7.0",
-    "npm": ">=5.7.0"
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
   },
   "private": true,
   "dependencies": {
@@ -45,15 +45,15 @@
     "bitfinex-api-node": "1.2.1",
     "body-parser": "^1.18.2",
     "btce-deal": "0.2.3",
-    "colors": "^1.2.1",
+    "colors": "^1.2.3",
     "crypto-js": "^3.1.9-1",
     "express": "^4.16.3",
-    "fs-extra": "^5.0.0",
+    "fs-extra": "^6.0.0",
     "hashids": "^1.1.4",
     "i18n": "^0.8.3",
     "lodash": "^4.17.10",
     "moment": "^2.22.1",
-    "moment-range": "^4.0.0",
+    "moment-range": "^4.0.1",
     "moment-timezone": "^0.5.14",
     "ms": "^2.1.1",
     "node-telegram-bot-api": "0.28.0",

@@ -11,6 +11,7 @@ DEPOSIT_LIMIT_PERCENT<br>DEPOSIT_LIMIT_CURRENCY | DEPOSIT_LIMIT | DEPOSIT_LIMIT=
 SIZE_FIRST_ORDERS_CURRENCY<br>SIZE_FIRST_ORDERS_PERCENT | SIZE_FIRST_ORDERS | SIZE_FIRST_ORDERS=`0.1`<br>SIZE_FIRST_ORDERS=`5%`
 TRADING_PRICE_RANGE<br>TRADING_PRICE_RANGE_PERCENT | TRADING_PRICE_RANGE | `3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`
 PRICE_TRADING_TYPE_CHANGE<br>PERCENT_TRADING_TYPE_CHANGE | PRICE_TRADING_TYPE_CHANGE | `3000/5000`<br>`10%/20%`<br>`1000/10%`<br>`10%`<br>`3000`<br>
+SIZE_ORDERS_MARTINGALE<br>MARTINGALE_TYPE | SIZE_ORDERS_MARTINGALE | SIZE_ORDERS_MARTINGALE=`1`<br>SIZE_ORDERS_MARTINGALE=`10%`
 
 [![Dependency Status](https://david-dm.org/steeply/gbot-trader.svg)](https://david-dm.org/steeply/gbot-trader)
 
@@ -119,8 +120,7 @@ GREEDY_FIRST_ORDER_SIZE             | Size of the "zero" order in the traded cur
 GREEDY_FIRST_ORDER_SIZE_INSECOND_CURRENCY | Size of the "zero" order in the base currency | number | 0
 SIZE_FIRST_ORDERS                   | The size of the first order in the currency being traded or in percent<br>Example: 0.1 or 5% | string | 0
 SIZE_FIRST_ORDERS_INSECOND_CURRENCY | The size of the first order in the base currency | number | 0
-SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (for Exponential - %, Linear - absolute number) | number | 0
-MARTINGALE_TYPE                     | Type Martingale: <br> 1 - exponential <br> 2 - linear | number | 1
+SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (for Exponential - %, Linear - absolute number)<br>Example: 0.1 or 5% | string or number | 0
 CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you restart the bot (**saves the order size**) | boolean | false
 TRADING_PRICE_RANGE                 | Price range allowed for bidding, absolute numbers or percentages. <br>Example: <br>`3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`<br>If not specified, no restrictions<br> | string | -
 IGNORE_ORDERS_AT_START              | Ignore the previously set orders at the start / restart of the bot | boolean | false
@@ -334,11 +334,20 @@ Create a **start.bat** file, specify the necessary parameters in it and run this
 ```
 SET TELEGRAM_TOKEN=110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw 
 SET TELEGRAM_ID=12345678
+
+SET DEPOSIT_LIMIT=80%%
+
 ....
 
 npm start
 pause
 ```
+
+**Attention!**
+
+The percentages settings for Windows are specified by a double percent sign (%%)
+
+
 
 For **Linux and Mac**
 
@@ -346,6 +355,9 @@ Create a **start.sh** file, specify the necessary parameters in it and run this 
 ```
 export TELEGRAM_TOKEN=110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw 
 export TELEGRAM_ID=12345678
+
+export DEPOSIT_LIMIT=80%
+
 ...
 
 node ./build/server
@@ -381,5 +393,9 @@ To **launch the control panel** in a Telegram, send a message to:
 /note [ignore text] - The text in this line will be ignored. It can be used as a comment.
 /stoploss           - Displays StopLoss information
 /trail              - Displays Trailing Stop information
+/getbalance         - Displays the start balance
+/setbalance number  - Sets the starting balance
+/addbalance number  - Add coins to the starting balance
+
 ```
 

@@ -12,6 +12,11 @@ DEPOSIT_LIMIT_PERCENT<br>DEPOSIT_LIMIT_CURRENCY | DEPOSIT_LIMIT | DEPOSIT_LIMIT=
 SIZE_FIRST_ORDERS_CURRENCY<br>SIZE_FIRST_ORDERS_PERCENT | SIZE_FIRST_ORDERS | SIZE_FIRST_ORDERS=`0.1`<br>SIZE_FIRST_ORDERS=`5%`
 TRADING_PRICE_RANGE<br>TRADING_PRICE_RANGE_PERCENT | TRADING_PRICE_RANGE | `3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`
 PRICE_TRADING_TYPE_CHANGE<br>PERCENT_TRADING_TYPE_CHANGE | PRICE_TRADING_TYPE_CHANGE | `3000/5000`<br>`10%/20%`<br>`1000/10%`<br>`10%`<br>`3000`<br>
+SIZE_ORDERS_MARTINGALE<br>MARTINGALE_TYPE | SIZE_ORDERS_MARTINGALE | SIZE_ORDERS_MARTINGALE=`1`<br>SIZE_ORDERS_MARTINGALE=`10%`
+
+**Внимание!**
+Параметры процентов для Windows задаются двойным знаком процента (%%)
+
 
 [![Dependency Status](https://david-dm.org/steeply/gbot-trader.svg)](https://david-dm.org/steeply/gbot-trader)
 
@@ -219,8 +224,7 @@ GREEDY_FIRST_ORDER_SIZE             | Размер "нулевого" ордер
 GREEDY_FIRST_ORDER_SIZE_INSECOND_CURRENCY | Размер "нулевого" ордера в базовой валюте | number | 0
 SIZE_FIRST_ORDERS                   | Размер первого ордера в торгуемой валюте или в процентах<br>Пример: 0.1 или 5% | string | 0
 SIZE_FIRST_ORDERS_INSECOND_CURRENCY | Размер первого ордера в базовой валюте | number | 0
-SIZE_ORDERS_MARTINGALE              | Размер ордеров по Мартингейл<br> (для Экспоненты - проценты, для Линейного - абсолютное число)<br>(FAQ п.43) | number | 0
-MARTINGALE_TYPE                     | Тип Мартингейла: <br> 1 - экспоненциальный <br> 2 - линейный<br>(FAQ п.43) | number | 1
+SIZE_ORDERS_MARTINGALE              | Размер ордеров по Мартингейл<br> (для Экспоненты - проценты, для Линейного - абсолютное число)<br>Формат: 0.1 или 5%<br>(FAQ п.43) | string or number | 0
 CONTINUE_MARTINGALE_GRID            | Продолжать сетку Мартингейл при перезапуске бота (**сохраняет размер ордера**)<br>(FAQ п.43) | boolean | false
 TRADING_PRICE_RANGE                 | Диапазон цен разрешенных для торгов, абсолютные числа или проценты. <br>Например: <br>`3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`<br>Если не указано, нет ограничений<br>(FAQ п.51)  | string | -
 IGNORE_ORDERS_AT_START              | Игнорировать ранее установленные ордера при старте/рестарте бота. <br>(FAQ п.55) | boolean | false
@@ -473,11 +477,19 @@ echo off
 SET TELEGRAM_TOKEN=110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw 
 SET TELEGRAM_ID=12345678
 
+SET DEPOSIT_LIMIT=80%%
+
 ... остальные параметры ...
 
 npm start
 pause
 ```
+
+**Важно!**
+
+Параметры процентов для Windows задаются двойным знаком процента (%%)
+
+
 
 ### Для Linux или Mac
 Создайте **start.sh** файл, укажите в нем необходимые параметры и запускайте этот файл.
@@ -485,6 +497,8 @@ pause
 #!/bin/sh
 export TELEGRAM_TOKEN=110201543:AAHdqTcvCH1vGWJxfSeofSAs0K5PALDsaw 
 export TELEGRAM_ID=12345678
+
+export DEPOSIT_LIMIT=80%
 
 ... остальные параметры ...
 
@@ -516,5 +530,9 @@ node ./build/server
 /note [ignore text] - Текст в этой строке будет проигнорирован. Можно использовать как коментарий.
 /stoploss           - Отображает информацию о StopLoss
 /trail              - Отображает информацию о Trailing Stop
+/getbalance         - Отображает стартовый баланс
+/setbalance number  - Устанавливает стартовый баланс
+/addbalance number  - Добавляет монет к стартовому балансу
+
 ```
 

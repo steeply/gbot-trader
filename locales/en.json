@@ -33,7 +33,7 @@
 	"Текущее состояние": "Current status",
 	"Динам. время обновления": "Dinamic Update time",
 	"Выкл": "Off",
-	"Динам. распределение ордеров": "Dinamic order distribution",
+	"Динам. сетка ордеров": "Dinamic orders grid",
 	"Определение тренда": "Trend determination",
 	"Контроль смены тренда": "Trend changing control",
 	"Стоп при большом изменении цены": "Stop if the price is too high",

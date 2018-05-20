@@ -124,6 +124,7 @@ SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (fo
 CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you restart the bot (**saves the order size**) | boolean | false
 TRADING_PRICE_RANGE                 | Price range allowed for bidding, absolute numbers or percentages. <br>Example: <br>`3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`<br>If not specified, no restrictions<br> | string | -
 IGNORE_ORDERS_AT_START              | Ignore the previously set orders at the start / restart of the bot | boolean | false
+DELAY_TIME_CYCLES                   | Delay in seconds before starting a new cycle <br > * for **One orders**: after execution of a profit order <br > * for **Scalper**: after TIME_CLOSE_ORDERS | number | 0
 
 **Important!**
 
@@ -143,16 +144,16 @@ The possible indentation of the orders. Select one of the offered.
 
  Option | Description| Type | Default
 --------|------------|-----|----------
+OFFSET_FIRST_ORDERS_PERCENT         | Position difference of the first order in % | number | 0
+OFFSET_FIRST_ORDERS_POINTS          | Position difference of the first order in points | number | 0
 OFFSET_ORDERS_POINTS                | Position difference between orders in points | number | 10
 OFFSET_ORDERS_PERCENT               | Position difference between orders in % | number | 0
 OFFSET_ORDERS_EXPONENTIAL           | Position difference between orders is exponentially in % | number | 0
 RANGE_OFFSET                        | Range offset | number | 0
-OFFSET_FIRST_ORDERS_PERCENT         | Position difference of the first order in % | number | 0
-OFFSET_FIRST_ORDERS_POINTS          | Position difference of the first order in points | number | 0
 
 > Parameter **OFFSET_FIRST_ORDERS_PERCENT** or **OFFSET_FIRST_ORDERS_POINTS** can be used in conjunction with any of the selected options.
 
-> To set the first order in the market, use `OFFSET_FIRST_ORDERS_PERCENT=-1` or `OFFSET_FIRST_ORDERS_POINTS=-1`
+> To set the first order in the market, use `OFFSET_FIRST_ORDERS_PERCENT=-1`.
 
 
 #### Disable orders grid
@@ -249,7 +250,6 @@ DISABLE_CAPITALIZATION              | Disable capitalization in profit order | b
 CAPITALIZATION_BUY_ORDER            | Includes partial capitalization of Buy orders in DISABLE_CAPITALIZATION | boolean | false
 STRATEGY_AUTO_REVERS                | Auto switching strategy to reverse | boolean | false
 OFFSET_LAST_ORDER_PERCENT           | The percentage of the price distance from the last order to enable auto-switching of strategy | number | 5
-DELAY_TIME_CYCLES                   | The delay in seconds before the start of a new cycle after the execution of a profit order  | number | 0
 PERMANENT_DEPOSIT                   | Use the calculation of the total deposit with the cache | boolean | false
 PRICE_TRADING_TYPE_CHANGE           | Price at which the trade type will change (Absolute value and percentage)<br>Format: `number` or `low/high`<br>Example: <br>`3000`<br>`3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`<br>(FAQ п.58)  | number or string | -
 

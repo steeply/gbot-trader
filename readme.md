@@ -250,7 +250,7 @@ DISABLE_CAPITALIZATION              | Disable capitalization in profit order | b
 CAPITALIZATION_BUY_ORDER            | Includes partial capitalization of Buy orders in DISABLE_CAPITALIZATION | boolean | false
 STRATEGY_AUTO_REVERS                | Auto switching strategy to reverse | boolean | false
 OFFSET_LAST_ORDER_PERCENT           | The percentage of the price distance from the last order to enable auto-switching of strategy | number | 5
-PERMANENT_DEPOSIT                   | Use the calculation of the total deposit with the cache | boolean | false
+PERMANENT_DEPOSIT                   | Use the total deposit calculation together with the trades history | boolean | false
 PRICE_TRADING_TYPE_CHANGE           | Price at which the trade type will change (Absolute value and percentage)<br>Format: `number` or `low/high`<br>Example: <br>`3000`<br>`3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`<br>(FAQ п.58)  | number or string | -
 
 > If the parameter **INTEGRITY_CONTROL_ORDERS** in `hard` mode, then a sell order will be installed only if the volume installed and executed buy orders will be the same.

@@ -372,7 +372,7 @@ CAPITALIZATION_BUY_ORDER            | Включает частичную кап
 PARTIALLY_EXECUTED_GRID             | Учитывать частичное исполнение ордеров из сетки<br> Только для DISABLE_CAPITALIZATION=true | boolean | false
 STRATEGY_AUTO_REVERS                | Автопереключение стратегии на обратную <br>(FAQ п.52) | boolean | false
 OFFSET_LAST_ORDER_PERCENT           | Процент отдаления цены от последнего ордера чтобы сработало автопереключение стратегии <br>(FAQ п.52) | number | 5
-PERMANENT_DEPOSIT                   | Использовать расчет общего депозита с кэшем   | boolean | false
+PERMANENT_DEPOSIT                   | Использовать расчет общего депозита вместе с историей сделок   | boolean | false
 PRICE_TRADING_TYPE_CHANGE           | Цена при которой изменится тип торговли в абсолютном или процентном значении<br>Формат `number` или `low/high`<br>Например: <br>`3000`<br>`3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`<br>(FAQ п.58) | number or string | -
 
 > Если параметр **INTEGRITY_CONTROL_ORDERS** в режиме `hard`, то ордер будет установлен только, если объемы установленных и исполненных  ордеров будут совпадать (если ни один ордер не потеряется).

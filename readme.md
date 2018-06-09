@@ -96,7 +96,6 @@ EXCHANGE_HOST       | Host exchange API. If the primary host is not available. |
 --------|------------|-----|----------
 TELEGRAM_TOKEN      | Telegram token    | string | -
 TELEGRAM_ID         | Your User ID Telegram | number | -
-URL_TELEGRAM        | URL API host Telegram | string | https://api.telegram.org
 SOCKS5_HOST         | HOST SOCKS5 | string | -
 SOCKS5_PORT         | PORT SOCKS5  | number | 1080
 SOCKS5_USERNAME     | Username SOCKS5 | string | -
@@ -112,7 +111,7 @@ By default, the bot will work at default settings. You can change them using the
 
  Option | Description| Type | Default
 --------|------------|-----|----------
-TIME_UPDATE_AUTO_SETTINGS           | Update time of auto settings (min) | number | 2
+TIME_UPDATE_AUTO_SETTINGS           | Interval update of auto settings (min) | number | 2
 DEPOSIT_LIMIT                       | Deposit consuming percent or the absolute number<br><br>If an absolute number is specified: the size of the used part of the Deposit in the currency **NAME_COIN_TWO**. <br>For exchanges with inverted currency in the currency of the parameter **NAME_COIN**  | number or string | 100%
 COUNT_ORDERS                        | Quantity all orders.<br> How many will be installed. | number | Calculated based on deposit amount
 QUANTITY_ORDERS_IN_BLOCKS           | Quantity orders in blocks<br>How many orders will be simultaneously on the market. | number | 0

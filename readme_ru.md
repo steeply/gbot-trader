@@ -1,26 +1,13 @@
 # GBot Trader
 
-
-
-**Внимание!** 
-
-В версии 1.5.0 некоторые параметры были изменены и объединены.
-
- Старый параметр | Новый параметр | Пример использования
------------------|----------------|-----------------
-DEPOSIT_LIMIT_PERCENT<br>DEPOSIT_LIMIT_CURRENCY | DEPOSIT_LIMIT | DEPOSIT_LIMIT=`400`<br>DEPOSIT_LIMIT=`10%`
-SIZE_FIRST_ORDERS_CURRENCY<br>SIZE_FIRST_ORDERS_PERCENT | SIZE_FIRST_ORDERS | SIZE_FIRST_ORDERS=`0.1`<br>SIZE_FIRST_ORDERS=`5%`
-TRADING_PRICE_RANGE<br>TRADING_PRICE_RANGE_PERCENT | TRADING_PRICE_RANGE | `3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`
-PRICE_TRADING_TYPE_CHANGE<br>PERCENT_TRADING_TYPE_CHANGE | PRICE_TRADING_TYPE_CHANGE | `3000/5000`<br>`10%/20%`<br>`1000/10%`<br>`10%`<br>`3000`<br>
-SIZE_ORDERS_MARTINGALE<br>MARTINGALE_TYPE | SIZE_ORDERS_MARTINGALE | SIZE_ORDERS_MARTINGALE=`1`<br>SIZE_ORDERS_MARTINGALE=`10%`
-
-**Внимание!**
-Параметры процентов для Windows задаются двойным знаком процента (%%)
-
-
 [![Dependency Status](https://david-dm.org/steeply/gbot-trader.svg)](https://david-dm.org/steeply/gbot-trader)
 
 Это приложение работает на стороне сервера и управляется через Telegram.
+
+### GUI Web Panel
+
+Web Panel для GUI бота лежит тут: [GBot Web Panel](https://github.com/steeply/gbot-web-panel)
+
 
 ## Интегрированные биржи
 
@@ -219,6 +206,7 @@ TIME_UPDATE_AUTO_SETTINGS           | Интервал обновления ав
 DEPOSIT_LIMIT                       | Размер использования депозита в процентах или абсолютное число<br><br>Если задано абсолютное число то указывается размер использования депозита в валюте параметра **NAME_COIN_TWO**. <br>Для бирж с инвертированной валютой в валюте параметра **NAME_COIN** <br>(FAQ п.19) | number or string | 100%
 COUNT_ORDERS                        | Количество ордеров.<br> Сколько всего будет установлено.<br>(FAQ п.22) | number | рассчитывается на основе размера депозита
 QUANTITY_ORDERS_IN_BLOCKS           | Количество ордеров в блоке.<br> Сколько ордеров будет одномоментно на рынке. <br>(FAQ п.22) | number | 0
+HOLD_QUANTITY_ORDERS                | Удерживать заданное число ордеров в QUANTITY_ORDERS_IN_BLOCKS <br>(FAQ п.22) | boolean | true
 GREEDY_FIRST_ORDER_SIZE             | Размер "нулевого" ордера в торгуемой валюте или процентах<br>Формат: 0.1 или 5% | number or string | 0
 GREEDY_FIRST_ORDER_SIZE_INSECOND_CURRENCY | Размер "нулевого" ордера в базовой валюте | number | 0
 SIZE_FIRST_ORDERS                   | Размер первого ордера в торгуемой валюте или в процентах<br>Пример: 0.1 или 5% | string | 0

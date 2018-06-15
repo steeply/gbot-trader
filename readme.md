@@ -115,6 +115,7 @@ TIME_UPDATE_AUTO_SETTINGS           | Interval update of auto settings (min) | n
 DEPOSIT_LIMIT                       | Deposit consuming percent or the absolute number<br><br>If an absolute number is specified: the size of the used part of the Deposit in the currency **NAME_COIN_TWO**. <br>For exchanges with inverted currency in the currency of the parameter **NAME_COIN**  | number or string | 100%
 COUNT_ORDERS                        | Quantity all orders.<br> How many will be installed. | number | Calculated based on deposit amount
 QUANTITY_ORDERS_IN_BLOCKS           | Quantity orders in blocks<br>How many orders will be simultaneously on the market. | number | 0
+HOLD_QUANTITY_ORDERS                | To hold a given number of orders in QUANTITY_ORDERS_IN_BLOCKS <br>(FAQ п.22) | boolean | true
 GREEDY_FIRST_ORDER_SIZE             | Size of the "zero" order in the traded currency or percentage<br>Format: 0.1 or 5% | number or string | 0
 GREEDY_FIRST_ORDER_SIZE_INSECOND_CURRENCY | Size of the "zero" order in the base currency | number | 0
 SIZE_FIRST_ORDERS                   | The size of the first order in the currency being traded or in percent<br>Example: 0.1 or 5% | string | 0

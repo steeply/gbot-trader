@@ -1,18 +1,5 @@
 # GBot Trader
 
-
-**Attention!** 
-
-In version 1.5.0, some parameters were changed and merged.
-
- Old | New | Example
------------------|----------------|-----------------
-DEPOSIT_LIMIT_PERCENT<br>DEPOSIT_LIMIT_CURRENCY | DEPOSIT_LIMIT | DEPOSIT_LIMIT=`400`<br>DEPOSIT_LIMIT=`10%`
-SIZE_FIRST_ORDERS_CURRENCY<br>SIZE_FIRST_ORDERS_PERCENT | SIZE_FIRST_ORDERS | SIZE_FIRST_ORDERS=`0.1`<br>SIZE_FIRST_ORDERS=`5%`
-TRADING_PRICE_RANGE<br>TRADING_PRICE_RANGE_PERCENT | TRADING_PRICE_RANGE | `3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`
-PRICE_TRADING_TYPE_CHANGE<br>PERCENT_TRADING_TYPE_CHANGE | PRICE_TRADING_TYPE_CHANGE | `3000/5000`<br>`10%/20%`<br>`1000/10%`<br>`10%`<br>`3000`<br>
-SIZE_ORDERS_MARTINGALE<br>MARTINGALE_TYPE | SIZE_ORDERS_MARTINGALE | SIZE_ORDERS_MARTINGALE=`1`<br>SIZE_ORDERS_MARTINGALE=`10%`
-
 [![Dependency Status](https://david-dm.org/steeply/gbot-trader.svg)](https://david-dm.org/steeply/gbot-trader)
 
 This app is working with server maintenance.
@@ -32,8 +19,12 @@ This app is working with server maintenance.
 * Kraken (Unofficial) 
 * Yobit (Unofficial) 
 * Huobi (Unofficial)
+* Kucoin (Unofficial) 
+* Hitbtc (Unofficial) 
+* Okex (Unofficial) 
+* Bleutrade (Unofficial)
 
-The module on the exchange Unofficial is purchased separately from third-party developers! Telegram - @solvento.
+The module on the exchange Unofficial is purchased separately from third-party developers! Telegram - [@solvento](https://t.me/solvento).
 
 ## Full version in Russian documentation
 
@@ -242,7 +233,7 @@ INTEGRITY_CONTROL_ORDERS            | Integrity control orders (**soft** or **ha
 TYPE_DATA_USED                      | Where to get information about the used orders: <br>  **active** - active orders <br> **history** - active orders + trading history | string | active
 FIRST_LOADING_HISTORY               | Download the history when you start the bot | boolean | false
 NUMBER_ROWS_LOAD_HISTORY            | Number of rows to load history | number | 100
-LOAD_HISTORY_DAYS                   | The number of days of history<br>While only used for Poloniex | number | 3
+LOAD_HISTORY_DAYS                   | The number of days of history<br>While only used for Poloniex | number | 30
 CYCLES_AUTO_EXIT                    | How many cycles to make the exit | number | 0
 STOP_LOSS_PERCENT                   | Stop Loss percentage | number | 0
 TRAILING_STOP_PERCENT               | Trailing stop percentage | number | 0

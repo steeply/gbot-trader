@@ -24,8 +24,12 @@ Web Panel для GUI бота лежит тут: [GBot Web Panel](https://github
 * Kraken (Unofficial) 
 * Yobit (Unofficial) 
 * Huobi (Unofficial)
+* Kucoin (Unofficial) 
+* Hitbtc (Unofficial) 
+* Okex (Unofficial) 
+* Bleutrade (Unofficial)
 
-Модуль на биржи Unofficial приобретается отдельно у сторонних разработчиков! Модули можно купить у проверенного разработчика написав ему в Telegram - @solvento.
+Модуль на биржи Unofficial приобретается отдельно у сторонних разработчиков! Модули можно купить у проверенного разработчика написав ему в Telegram - [@solvento](https://t.me/solvento).
 
 ## FAQ
 Перед тем как задавать вопросы, прочитайте, пожалуйста, [FAQ](faq_ru.md). Большинство ответов вы найдете в нем.
@@ -350,7 +354,7 @@ INTEGRITY_CONTROL_ORDERS            | Контроль целостности о
 TYPE_DATA_USED                      | Откуда брать информацию об исполненных ордерах: <br> **active** - активные ордера <br> **history** - активные ордера + история сделок | string | active
 FIRST_LOADING_HISTORY               | Загрузка истории при старте бота | boolean | false
 NUMBER_ROWS_LOAD_HISTORY            | Количество строк для загрузки истории | number | 100
-LOAD_HISTORY_DAYS                   | Количество дней истории<br>Пока используется только для Poloniex | number | 3
+LOAD_HISTORY_DAYS                   | Количество дней истории<br>Пока используется только для Poloniex | number | 30
 CYCLES_AUTO_EXIT                    | Через сколько циклов совершить автовыход <br>(FAQ п.48) | number | 0
 STOP_LOSS_PERCENT                   | Уровень Stop Loss в процентах <br>(FAQ п.53) | number | 0
 TRAILING_STOP_PERCENT               | Уровень Trailing stop в процентах <br>(FAQ п.45) | number | 0

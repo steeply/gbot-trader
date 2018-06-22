@@ -1,6 +1,6 @@
 {
   "name": "gbot-trader",
-  "version": "1.5.5",
+  "version": "1.5.6",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
@@ -54,11 +54,11 @@
     "lodash": "^4.17.10",
     "moment": "^2.22.2",
     "moment-range": "^4.0.1",
-    "moment-timezone": "^0.5.17",
+    "moment-timezone": "^0.5.20",
     "ms": "^2.1.1",
     "node-telegram-bot-api": "0.28.0",
     "node.liqui.io": "^1.2.0",
-    "nodemailer": "^4.6.6",
+    "nodemailer": "^4.6.7",
     "poloniex-api-node": "^1.9.0",
     "request": "^2.87.0",
     "socks5-https-client": "^1.2.1",

@@ -185,6 +185,7 @@
 	"При изменении стратегии бот будет перезагружен": "If you change the strategy, bot will be rebooted",
 	"Уровень StopLoss в процентах": "StopLoss percentage",
 	"Уровень StopLoss по цене": "StopLoss at a price",
+	"Уровень BuyStop по цене": "BuyStop at a price",
 	"Отображает информацию о StopLoss": "Displays StopLoss information",
 	"Уровень Trailing Stop в процентах": "Trailing Stop percentage",
 	"Уровень Trailing Grid в процентах": "Trailing Grid percentage",

@@ -116,7 +116,8 @@ CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you r
 TRADING_PRICE_RANGE                 | Price range allowed for bidding, absolute numbers or percentages. <br>Example: <br>`3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`<br>If not specified, no restrictions<br> | string | -
 IGNORE_ORDERS_AT_START              | Ignore the previously set orders at the start / restart of the bot | boolean | false
 DELAY_TIME_CYCLES                   | Delay in seconds before starting a new cycle <br > * for **One orders**: after execution of a profit order <br > * for **Scalper**: after TIME_CLOSE_ORDERS | number | 0
-STOP_LOSS_ABS                       | Absolute price value for Stop Loss | number | 0
+STOP_LOSS_ABS                       | Absolute price value for Stop Loss <br>(FAQ п.53) | number | 0
+BUY_STOP_ABS                        | Absolute price value for Buy Stop <br>(FAQ п.53) | number | 0
 
 **Important!**
 

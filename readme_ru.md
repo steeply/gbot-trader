@@ -318,7 +318,7 @@ RSI_TYPE                            | Тип **rsi** или **stochrsi** | strin
 RSI_PERIOD                          | Период RSI  | number | 14
 RSI_RANGE_SELL                      | Диапазон RSI для продажи <br> Значения указываются в формате **начало/конец** диапазона. | string | 70/100
 RSI_RANGE_BUY                       | Диапазон RSI для покупки  | string | 1/30
-BBANDS_INTERVAL                     | Таймфрейм. Интервал запроса цен (в минутах). Используйте значения доступные на бирже | number | 1
+TIMEFRAME                           | Таймфрейм. Интервал запроса цен (в минутах). Используйте значения доступные на бирже | number | 1
 CLOSE_GRID_OPPOSITE                 | Закрывает противоположную сетку ордеров как только индикаторы изменят тип действия (покупать или продавать) | boolean | false
 SAVE_PRICE_FILE                     | Сохранять кэш цен в файл  | boolean | false
 PRICE_FILE_PATH                     | Пользовательский путь до директории с файлом | string | Директория с ботом
@@ -350,7 +350,7 @@ PRICE_FILE_PATH                     | Пользовательский путь 
 ONE_ORDERS_SELL                     | Стратегия "One Sell a lot Buy" | boolean | false
 ONE_ORDERS_BUY                      | Стратегия "One Buy a lot Sell" | boolean | false
 ONE_ORDERS_OFFSET                   | Разница между ценой LastPrice и первым ордером в стеке ордеров в %.<br> Будет подтягивать ордера вслед за ценой, если это значение будет превышено. | number | 2
-ONE_ORDERS_PROFIT_PERCENT           | Задает процент желаемой прибыли | number | 1
+ONE_ORDERS_PROFIT_PERCENT           | Задает процент желаемой прибыли.<br>Может принимать фикс значение, так и диапазон min/max | string or number | 1
 INTEGRITY_CONTROL_ORDERS            | Контроль целостности ордеров: <br> **soft** - Что вернула биржа то и ставим <br> **hard** - Бот считает сам <br>(FAQ п.23) | string | soft
 TYPE_DATA_USED                      | Откуда брать информацию об исполненных ордерах: <br> **active** - активные ордера <br> **history** - активные ордера + история сделок | string | active
 FIRST_LOADING_HISTORY               | Загрузка истории при старте бота | boolean | false

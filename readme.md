@@ -229,7 +229,8 @@ PRICE_FILE_PATH                     | A custom path to the directory with the fi
 ONE_ORDERS_SELL                     | Strategy: "One Sell a lot Buy" | boolean | false
 ONE_ORDERS_BUY                      | Strategy: "One Buy a lot Sell" | boolean | false
 ONE_ORDERS_OFFSET                   | The difference between LastPrice and first order in the stack of orders in %. <br> Will pull the order, if this value is exceeded. | number | 2
-ONE_ORDERS_PROFIT_PERCENT           | Specifies the percentage desired profit | number | 1
+ONE_ORDERS_PROFIT_PERCENT           | Specifies the percentage desired profit <br>May take a fixed value, and range min/max | string or number | 1
+ONE_ORDERS_SPO_PERCENT              | Sets the percentage of the desired profit when the price jumps. | number | 0
 INTEGRITY_CONTROL_ORDERS            | Integrity control orders (**soft** or **hard**) | string | soft
 TYPE_DATA_USED                      | Where to get information about the used orders: <br>  **active** - active orders <br> **history** - active orders + trading history | string | active
 FIRST_LOADING_HISTORY               | Download the history when you start the bot | boolean | false

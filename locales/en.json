@@ -107,6 +107,7 @@
 	"Размер ордера мартингейла (проценты или абсолютное число)": "Size of the Martingale order (percent or absolute number)",
 	"Использование депозита (бот будет перезагружен)": "Deposit using (bot will be rebooted)",
 	"Задает процент желаемой прибыли": "Set percentage of desired profit",
+	"Задает процент желаемой прибыли при сквизе": "Sets the percentage of the desired profit when the price jumps",
 	"Через сколько секунд рестартовать воркер после ошибки": "After how many seconds to request data after an error",
 	"Задержка в секундах между выполнением последовательных модулей": "Then delay in seconds between execution of consecutive modules",
 	"Тип используемых данных": "Type of data used",

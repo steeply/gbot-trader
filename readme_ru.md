@@ -208,6 +208,7 @@ TELEGRAM_OFF            | Отключить Telegram. | boolean | false
 --------|------------|-----|----------
 TIME_UPDATE_AUTO_SETTINGS           | Интервал обновления авто параметров (в минутах)<br>(FAQ п.21)  | number | 2
 DEPOSIT_LIMIT                       | Размер использования депозита в процентах или абсолютное число<br><br>Если задано абсолютное число то указывается размер использования депозита в валюте параметра **NAME_COIN_TWO**. <br>Для бирж с инвертированной валютой в валюте параметра **NAME_COIN** <br>(FAQ п.19) | number or string | 100%
+PERMANENT_DEPOSIT                   | Жесткий контроль ограничения депозита<br>(FAQ п.19) | boolean | false
 COUNT_ORDERS                        | Количество ордеров.<br> Сколько всего будет установлено.<br>(FAQ п.22) | number | рассчитывается на основе размера депозита
 QUANTITY_ORDERS_IN_BLOCKS           | Количество ордеров в блоке.<br> Сколько ордеров будет одномоментно на рынке. <br>(FAQ п.22) | number | 0
 HOLD_QUANTITY_ORDERS                | Удерживать заданное число ордеров в QUANTITY_ORDERS_IN_BLOCKS <br>(FAQ п.22) | boolean | true
@@ -351,6 +352,7 @@ ONE_ORDERS_SELL                     | Стратегия "One Sell a lot Buy" | 
 ONE_ORDERS_BUY                      | Стратегия "One Buy a lot Sell" | boolean | false
 ONE_ORDERS_OFFSET                   | Разница между ценой LastPrice и первым ордером в стеке ордеров в %.<br> Будет подтягивать ордера вслед за ценой, если это значение будет превышено. | number | 2
 ONE_ORDERS_PROFIT_PERCENT           | Задает процент желаемой прибыли.<br>Может принимать фикс значение, так и диапазон min/max | string or number | 1
+ONE_ORDERS_SPO_PERCENT              | Сквиз-профит-ордер. Задает процент желаемой прибыли при сквизе цены. | number | 0
 INTEGRITY_CONTROL_ORDERS            | Контроль целостности ордеров: <br> **soft** - Что вернула биржа то и ставим <br> **hard** - Бот считает сам <br>(FAQ п.23) | string | soft
 TYPE_DATA_USED                      | Откуда брать информацию об исполненных ордерах: <br> **active** - активные ордера <br> **history** - активные ордера + история сделок | string | active
 FIRST_LOADING_HISTORY               | Загрузка истории при старте бота | boolean | false
@@ -365,9 +367,9 @@ CAPITALIZATION_BUY_ORDER            | Включает частичную кап
 PARTIALLY_EXECUTED_GRID             | Учитывать частичное исполнение ордеров из сетки<br> Только для DISABLE_CAPITALIZATION=true | boolean | false
 STRATEGY_AUTO_REVERS                | Автопереключение стратегии на обратную <br>(FAQ п.52) | boolean | false
 OFFSET_LAST_ORDER_PERCENT           | Процент отдаления цены от последнего ордера чтобы сработало автопереключение стратегии <br>(FAQ п.52) | number | 5
-PERMANENT_DEPOSIT                   | Использовать расчет общего депозита вместе с историей сделок   | boolean | false
 PRICE_TRADING_TYPE_CHANGE           | Цена при которой изменится тип торговли в абсолютном или процентном значении<br>Формат `number` или `low/high`<br>Например: <br>`3000`<br>`3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`<br>(FAQ п.58) | number or string | -
 IND_CHECK                           | Использование индикаторов для сетки<br>Значния: 'rsi', 'bbands', 'rsi,bbands'<br>(FAQ п.59) | string | -
+IS_PROFIT_INDICATORS                | Учитывать индикаторы так же для профит ордера | boolean | false
 
 > Если параметр **INTEGRITY_CONTROL_ORDERS** в режиме `hard`, то ордер будет установлен только, если объемы установленных и исполненных  ордеров будут совпадать (если ни один ордер не потеряется).
 

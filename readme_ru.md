@@ -234,8 +234,6 @@ BUY_STOP_ABS                        | Абсолютное значение це
 
 > При ручном размере первого ордера **RANGE_OFFSET** не работает, а **COUNT_ORDERS** будет рассчитано автоматически.
 
-> Параметр **CONTINUE_MARTINGALE_GRID** не восстанавливает отступы при использовании **OFFSET_ORDERS_EXPONENTIAL**.
-
 
 #### Смещение ордеров
 
@@ -352,7 +350,7 @@ ONE_ORDERS_SELL                     | Стратегия "One Sell a lot Buy" | 
 ONE_ORDERS_BUY                      | Стратегия "One Buy a lot Sell" | boolean | false
 ONE_ORDERS_OFFSET                   | Разница между ценой LastPrice и первым ордером в стеке ордеров в %.<br> Будет подтягивать ордера вслед за ценой, если это значение будет превышено. | number | 2
 ONE_ORDERS_PROFIT_PERCENT           | Задает процент желаемой прибыли.<br>Может принимать фикс значение, так и диапазон min/max | string or number | 1
-ONE_ORDERS_SPO_PERCENT              | Сквиз-профит-ордер. Задает процент желаемой прибыли при сквизе цены. | number | 0
+ONE_ORDERS_SPO_PERCENT              | Сквиз-профит-ордер. Задает процент желаемой прибыли при сквизе цены.<br>(FAQ п.61) | number | 0
 INTEGRITY_CONTROL_ORDERS            | Контроль целостности ордеров: <br> **soft** - Что вернула биржа то и ставим <br> **hard** - Бот считает сам <br>(FAQ п.23) | string | soft
 TYPE_DATA_USED                      | Откуда брать информацию об исполненных ордерах: <br> **active** - активные ордера <br> **history** - активные ордера + история сделок | string | active
 FIRST_LOADING_HISTORY               | Загрузка истории при старте бота | boolean | false
@@ -422,6 +420,8 @@ EMAIL_AUTH_PASS             | Пароль почтового сервера | s
 --------|------------|-----|----------
 LOG                         | Вывод лога расчета авто-параметров <br>(FAQ п.33) | boolean | false
 LOG_DEBUG                   | Вывод дебаг лога (расчет ордеров и остальная матиматика) | boolean | false
+LOG_INDICATORS              | Непосредственный вывод лога индикаторов<br>Очень сильно засирает консоль информацией! | boolean | false
+LOG_STACK                   | Стек вывода ошибки при падении бота. | boolean | false
 LOG_TRANSPORTS              | Куда писать лог: <br>  0 - консоль <br>  1 - файл <br>  2 - консоль и файл | number | 0 
 LOG_PATH                    | Пользовательский путь до директории с логом | string | Директория с ботом
 LOG_TREE                    | Сохранять логи по директориям год/месяц/день | boolean | false

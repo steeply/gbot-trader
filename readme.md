@@ -129,7 +129,6 @@ BUY_STOP_ABS                        | Absolute price value for Buy Stop <br>(FAQ
 
 > With the manual size of the first order **RANGE_OFFSET** does not work, and **COUNT_ORDERS** will be calculated automatically.
 
-> The parameter **CONTINUE_MARTINGALE_GRID** does not restore indentation when using **OFFSET_ORDERS_EXPONENTIAL**.
 
 #### Offset orders
 

@@ -373,7 +373,7 @@ IS_PROFIT_INDICATORS                | Учитывать индикаторы т
 
 > Если параметр **FIRST_LOADING_HISTORY** включен, будет загружены в кэш первые `NUMBER_ROWS_LOAD_HISTORY` исполненных ордеров из сетки ордеров до первого SELL/BUY ордера на выбранной паре и выставится профитный SELL/BUY ордер исходя из этих данных.
 
-> Параметр **ONE_ORDERS_OFFSET** не может быть меньше **OFFSET_FIRST_ORDERS_PERCENT** (или **OFFSET_ORDERS_PERCENT** если OFFSET_FIRST_ORDERS_PERCENT не включен) или его эквивалента в **OFFSET_FIRST_ORDERS_POINTS**.
+> Если параметр **ONE_ORDERS_OFFSET** меньше **OFFSET_FIRST_ORDERS_PERCENT** (или **OFFSET_ORDERS_PERCENT** если OFFSET_FIRST_ORDERS_PERCENT не включен) или его эквивалента в **OFFSET_FIRST_ORDERS_POINTS** тогда переставление ордеров **будет в обе стороны**.
 
 > Включенный параметр **DISABLE_CAPITALIZATION** переводит `INTEGRITY_CONTROL_ORDERS` в **hard**.
 

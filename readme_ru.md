@@ -490,8 +490,7 @@ SET DEPOSIT_LIMIT=80%%
 
 ... остальные параметры ...
 
-npm start
-pause
+cmd /K node ./build/server
 ```
 
 **Важно!**

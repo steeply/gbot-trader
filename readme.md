@@ -114,6 +114,8 @@ SIZE_FIRST_ORDERS_INSECOND_CURRENCY | The size of the first order in the base cu
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (for Exponential - %, Linear - absolute number)<br>Example: 0.1 or 5% | string or number | 0
 CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you restart the bot (**saves the order size**) | boolean | false
 TRADING_PRICE_RANGE                 | Price range allowed for bidding, absolute numbers or percentages. <br>Example: <br>`3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`<br>If not specified, no restrictions<br> | string | -
+TRADING_PRICE_RANGE_OTHER           | Range of prices, another currency pair allowed for trading, absolute numbers or percentages. <br>Example: <br>`3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`<br>If not specified, no restrictions<br> | string | -
+OTHER_PAIR                          | Currency pair to monitor the price range. Specified as well as on the exchange. <br>Example: `btc/usd` | string | -
 IGNORE_ORDERS_AT_START              | Ignore the previously set orders at the start / restart of the bot | boolean | false
 DELAY_TIME_CYCLES                   | Delay in seconds before starting a new cycle <br > * for **One orders**: after execution of a profit order <br > * for **Scalper**: after TIME_CLOSE_ORDERS | number | 0
 STOP_LOSS_ABS                       | Absolute price value for Stop Loss <br>(FAQ п.53) | number | 0
@@ -314,6 +316,18 @@ URL_STATISTICS              | URL of the server where the statistics will be sen
 **Important:**
 
 * If you've changed LANGUAGE send a command `/start` in Telegram bot for a new language initialization in Telegram
+
+
+### The settings for the DEMO module.
+
+To enable the Demo module and emulate the trades select the option `EXCHANGE=demo`.
+
+ Option | Description|Type | Default
+--------|------------|-----|----------
+DEMO_EXCHANGE       | The choice of the exchange to emulate | string | -
+BALANCE_COIN        | Virtual balance of the first coin | number | -
+BALANCE_COIN_TWO    | The virtual balance of the second coin | number | -
+
 
 ## Run
 

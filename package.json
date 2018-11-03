@@ -1,6 +1,6 @@
 {
   "name": "gbot-trader",
-  "version": "1.5.11",
+  "version": "1.5.12",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
@@ -56,7 +56,7 @@
     "moment": "^2.22.2",
     "moment-range": "^4.0.1",
     "moment-round": "^1.0.1",
-    "moment-timezone": "^0.5.21",
+    "moment-timezone": "^0.5.23",
     "ms": "^2.1.1",
     "node-telegram-bot-api": "0.28.0",
     "node.liqui.io": "^1.2.0",

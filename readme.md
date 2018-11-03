@@ -238,7 +238,9 @@ FIRST_LOADING_HISTORY               | Download the history when you start the bo
 NUMBER_ROWS_LOAD_HISTORY            | Number of rows to load history | number | 100
 LOAD_HISTORY_DAYS                   | The number of days of history<br>While only used for Poloniex | number | 30
 CYCLES_AUTO_EXIT                    | How many cycles to make the exit | number | 0
+AUTO_EXIT_PERCENT                   | How much percentage should the price move away from the last profit of the order to complete the current cycle. <br>(FAQ п.62) | number | 0
 STOP_LOSS_PERCENT                   | Stop Loss percentage | number | 0
+BUY_STOP_PERCENT                    | Buy Stop percentage | number | 0
 TRAILING_STOP_PERCENT               | Trailing stop percentage | number | 0
 TRAILING_GRID_PERCENT               | Trailing grid percentage | number | 0
 DISABLE_CAPITALIZATION              | Disable capitalization in profit order | boolean | false
@@ -399,6 +401,7 @@ To **launch the control panel** in a Telegram, send a message to:
 /stats              - Trading statistics
 /note [ignore text] - The text in this line will be ignored. It can be used as a comment.
 /stoploss           - Displays StopLoss information
+/buystop            - Displays BuyStop information
 /trail              - Displays Trailing Stop information
 /getbalance         - Displays the start balance
 /setbalance number  - Sets the starting balance

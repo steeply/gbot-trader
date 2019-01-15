@@ -120,6 +120,7 @@ IGNORE_ORDERS_AT_START              | Ignore the previously set orders at the st
 DELAY_TIME_CYCLES                   | Delay in seconds before starting a new cycle <br > * for **One orders**: after execution of a profit order <br > * for **Scalper**: after TIME_CLOSE_ORDERS | number | 0
 STOP_LOSS_ABS                       | Absolute price value for Stop Loss <br>(FAQ п.53) | number | 0
 BUY_STOP_ABS                        | Absolute price value for Buy Stop <br>(FAQ п.53) | number | 0
+STOP_LOSS_FLOATING                  | Percentage of price drop from High price to trigger a floating Stop Loss | number | 0
 
 **Important!**
 
@@ -237,6 +238,7 @@ TYPE_DATA_USED                      | Where to get information about the used or
 FIRST_LOADING_HISTORY               | Download the history when you start the bot | boolean | false
 NUMBER_ROWS_LOAD_HISTORY            | Number of rows to load history | number | 100
 LOAD_HISTORY_DAYS                   | The number of days of history<br>While only used for Poloniex | number | 30
+SAVE_HISTORY                        | Save a copy of history to your computer | boolean | false
 CYCLES_AUTO_EXIT                    | How many cycles to make the exit | number | 0
 AUTO_EXIT_PERCENT                   | How much percentage should the price move away from the last profit of the order to complete the current cycle. <br>(FAQ п.62) | number | 0
 STOP_LOSS_PERCENT                   | Stop Loss percentage | number | 0
@@ -400,6 +402,7 @@ To **launch the control panel** in a Telegram, send a message to:
 /restart            - Restart GBot Trader
 /stats              - Trading statistics
 /note [ignore text] - The text in this line will be ignored. It can be used as a comment.
+/stoplossfloating   - Displays Stop Loss Floating information
 /stoploss           - Displays StopLoss information
 /buystop            - Displays BuyStop information
 /trail              - Displays Trailing Stop information

@@ -225,6 +225,7 @@ IGNORE_ORDERS_AT_START              | Игнорировать ранее уст
 DELAY_TIME_CYCLES                   | Задержка в секундах перед началом нового цикла <br>* для **One orders**: после исполнения профитного ордера <br>* для **Скальпера**: после TIME_CLOSE_ORDERS | number | 0
 STOP_LOSS_ABS                       | Абсолютное значение цены для срабатывания Stop Loss <br>(FAQ п.53) | number | 0
 BUY_STOP_ABS                        | Абсолютное значение цены для срабатывания Buy Stop <br>(FAQ п.53) | number | 0
+STOP_LOSS_FLOATING                  | Процент падения цены от High price для срабатывания плавающего Stop Loss <br>(FAQ п.53) | number | 0
 
 **Важно!**
 
@@ -355,9 +356,10 @@ ONE_ORDERS_PROFIT_PERCENT           | Задает процент желаемо
 ONE_ORDERS_SPO_PERCENT              | Сквиз-профит-ордер. Задает процент желаемой прибыли при сквизе цены.<br>(FAQ п.61) | number | 0
 INTEGRITY_CONTROL_ORDERS            | Контроль целостности ордеров: <br> **soft** - Что вернула биржа то и ставим <br> **hard** - Бот считает сам <br>(FAQ п.23) | string | soft
 TYPE_DATA_USED                      | Откуда брать информацию об исполненных ордерах: <br> **active** - активные ордера <br> **history** - активные ордера + история сделок | string | active
-FIRST_LOADING_HISTORY               | Загрузка истории при старте бота | boolean | false
+FIRST_LOADING_HISTORY               | Загрузка истории с биржи при старте бота | boolean | false
 NUMBER_ROWS_LOAD_HISTORY            | Количество строк для загрузки истории | number | 100
 LOAD_HISTORY_DAYS                   | Количество дней истории<br>Пока используется только для Poloniex | number | 30
+SAVE_HISTORY                        | Сохранять копию истории на компьютер | boolean | false
 CYCLES_AUTO_EXIT                    | Через сколько циклов совершить автовыход <br>(FAQ п.48) | number | 0
 AUTO_EXIT_PERCENT                   | Процент отдаления цены от последнего профитного ордера для выполнения автовыхода. <br>(FAQ п.62) | number | 0
 STOP_LOSS_PERCENT                   | Уровень Stop Loss в процентах <br>(FAQ п.53) | number | 0
@@ -552,6 +554,7 @@ node ./build/server
 /restart            - Горячая перезагрузка GBot Trader
 /stats              - Статистика торговли
 /note [ignore text] - Текст в этой строке будет проигнорирован. Можно использовать как коментарий.
+/stoplossfloating   - Отображает информацию о StopLossFloating (Плавающий StopLoss)
 /stoploss           - Отображает информацию о StopLoss
 /buystop            - Отображает информацию о BuyStop
 /trail              - Отображает информацию о Trailing Stop

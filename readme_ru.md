@@ -29,7 +29,9 @@ Web Panel для GUI бота лежит тут: [GBot Web Panel](https://github
 * Okex (Unofficial) 
 * Bleutrade (Unofficial)
 
-Модуль на биржи Unofficial приобретается отдельно у сторонних разработчиков! Модули можно купить у проверенного разработчика написав ему в Telegram - [@solvento](https://t.me/solvento).
+### Про Unofficial
+* Модуль на биржи [Unofficial](https://github.com/unsv/gbotmod) приобретается отдельно у сторонних разработчиков! Модули можно купить у проверенного разработчика написав ему в Telegram - [@solvento](https://t.me/solvento).
+* Модули запущенные в режиме DEMO не требуют лицензии.
 
 ## FAQ
 Перед тем как задавать вопросы, прочитайте, пожалуйста, [FAQ](faq_ru.md). Большинство ответов вы найдете в нем.

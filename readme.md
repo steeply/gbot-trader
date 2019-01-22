@@ -24,7 +24,10 @@ This app is working with server maintenance.
 * Okex (Unofficial) 
 * Bleutrade (Unofficial)
 
-The module on the exchange Unofficial is purchased separately from third-party developers! Telegram - [@solvento](https://t.me/solvento).
+### Unofficial
+* The module on the exchange [Unofficial](https://github.com/unsv/gbotmod) is purchased separately from third-party developers! Telegram - [@solvento](https://t.me/solvento).
+* The modules are running in the DEMO mode does not require a license.
+
 
 ## Full version in Russian documentation
 

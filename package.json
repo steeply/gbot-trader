@@ -1,6 +1,6 @@
 {
   "name": "gbot-trader",
-  "version": "1.5.14",
+  "version": "1.6.0",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
@@ -38,6 +38,13 @@
     "node": ">=10.0.0",
     "npm": ">=6.0.0"
   },
+  "bin": {
+    "gbot-trader": "build/server.js"
+  },
+  "pkg": {
+    "scripts": "build/**/*.js",
+    "assets": "locales/*"
+  },
   "private": true,
   "dependencies": {
     "@you21979/bittrex.com": "0.0.4",
@@ -53,7 +60,7 @@
     "hashids": "^1.2.2",
     "i18n": "^0.8.3",
     "lodash": "^4.17.11",
-    "moment": "^2.23.0",
+    "moment": "^2.24.0",
     "moment-range": "^4.0.1",
     "moment-round": "^1.0.1",
     "moment-timezone": "^0.5.23",

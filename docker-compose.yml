@@ -1,7 +1,0 @@
-version: '3'
-
-services:
-  gbot_trader:
-    build: .
-    env_file:
-      - .env

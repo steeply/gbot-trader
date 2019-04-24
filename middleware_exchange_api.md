@@ -214,14 +214,15 @@ balance.nameTwo: Баланс второй валюты (Number)
 ```
 
 
-### tradeSetOrder(pair, type, rate, amount, callback)
+### tradeSetOrder(opt, callback)
 Основной метод используя который можно создавать ордера и торговать на бирже.
 
-##### Принимает параметры:
+##### Принимает объект (opt) с параметрами:
 * pair - Торговая пара. Например `btc_usd`.
 * type - Тип операции,  buy/sell.
 * rate - Курс по которому необходимо купить/продать (Number).
 * amount - Количество которое необходимо купить/продать (Number). 
+* variety - Тип ордера ('grid-limit', 'stop-loss', 'stop-buy', 'manual-limit', 'profit-limit', 'profit-spo-limit', 'profit-trailing')
 
 ##### Пример ответа:
 ```
@@ -452,7 +453,14 @@ API = (function(){
    
     API.prototype.ordersRequest = function(pair, callback){};
    
-    API.prototype.tradeSetOrder = function(pair, type, rate, amount, callback){};
+    API.prototype.tradeSetOrder = function(opt, callback){
+        var pair, type, rate, amount, variety;
+        pair = opt.pair;
+        type = opt.type; 
+        rate = opt.rate; 
+        amount = opt.amount; 
+        variety = opt.variety;
+    };
     
     API.prototype.tradeCancelOrder = function(opt, callback){};
     

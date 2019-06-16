@@ -25,7 +25,7 @@ Web Panel для GUI бота лежит тут: [GBot Web Panel](https://github
 * Huobi (Unofficial)
 * Kucoin (Unofficial) 
 * Hitbtc (Unofficial) 
-* Okex (Unofficial) 
+* Stex (Unofficial) 
 * Bleutrade (Unofficial)
 
 ### Про Unofficial
@@ -471,6 +471,7 @@ LANGUAGE                    | Язык интерфейса (`ru` или `en`) |
 NODE_ENV                    | Значение **production** включает:<br>  1. уведомления об ошибках на E-mail.<br> 2. запрещает использовать conf-dev.js.<br> 3. отключает колоризацию в логе. (+ флаг **--no-color**)<br> 4. отключает TITLE | string | dev
 BOT_TRADE                   | Разрешить установку ордеров и торговлю | boolean | true
 URL_STATISTICS              | URL адрес сервера куда будет отправлена статистика в формате post json <br>(FAQ п.46) | string | -
+REPEAT_COMMAND_ACTION       | Будет несколько раз дублировать команду для установки/переоткрытия ордеров чтобы максимально полно выполнить команды /sell_all, /buy_all, stop_loss и т.д  | boolean | false
 
 **Важно:**
 

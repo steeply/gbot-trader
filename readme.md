@@ -20,7 +20,7 @@ This app is working with server maintenance.
 * Huobi (Unofficial)
 * Kucoin (Unofficial) 
 * Hitbtc (Unofficial) 
-* Okex (Unofficial) 
+* Stex (Unofficial) 
 * Bleutrade (Unofficial)
 
 ### Unofficial
@@ -319,6 +319,7 @@ LANGUAGE                    | The language of the interface (`ru` or `en`) | str
 NODE_ENV                    | Value **production** activate:<br> 1. error notifications by E-mail.<br> 2. prohibits the use of conf-dev.js.<br> 3. disabling colors in logs.<br>4. disables TITLE | string | dev
 BOT_TRADE                   | Allow trading | boolean | true
 URL_STATISTICS              | URL of the server where the statistics will be sent in post json format | string | -
+REPEAT_COMMAND_ACTION       | Will duplicate command to install/re-opening to fully execute the commands /sell_all, /buy_all, stop_loss, etc  | boolean | false
 
 **Important:**
 

@@ -153,6 +153,8 @@ RANGE_OFFSET                        | Range offset | number | 0
 
 > To set the first order in the market, use `OFFSET_FIRST_ORDERS_PERCENT=-1`.
 
+> To limit the maximum indentation for **OFFSET_ORDERS_EXPONENTIAL** use setting **OFFSET_ORDERS_EXPONENTIAL_MAX**. Important! OFFSET_ORDERS_EXPONENTIAL_MAX should be more than OFFSET_ORDERS_EXPONENTIAL.
+
 
 #### Disable orders grid
 

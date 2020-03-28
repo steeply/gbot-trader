@@ -1,6 +1,6 @@
 {
   "name": "gbot-trader",
-  "version": "1.6.6",
+  "version": "1.6.8",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
@@ -17,7 +17,6 @@
     }
   ],
   "keywords": [
-    "wex",
     "poloniex",
     "bittrex",
     "exmo",

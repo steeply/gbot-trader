@@ -93,6 +93,7 @@ SOCKS5_HOST         | HOST SOCKS5 | string | -
 SOCKS5_PORT         | PORT SOCKS5  | number | 1080
 SOCKS5_USERNAME     | Username SOCKS5 | string | -
 SOCKS5_PASSWORD     | Password SOCKS5 | string | -
+TELEGRAM_BASEURL    | URL server and proxy | string | -
 TELEGRAM_OFF        | Disable Telegram | boolean | false
 
 > Option **TELEGRAM_OFF** disables the ability to use Telegram in the bot. All management and all notifications sent via Telegram are the same are disabled!
@@ -141,6 +142,7 @@ The possible indentation of the orders. Select one of the offered.
 
  Option | Description| Type | Default
 --------|------------|-----|----------
+FIX_PRICE_FIRST_ORDER               | Fixed price of the first order | number | 0
 OFFSET_FIRST_ORDERS_PERCENT         | Position difference of the first order in % | number | 0
 OFFSET_FIRST_ORDERS_POINTS          | Position difference of the first order in points | number | 0
 OFFSET_ORDERS_POINTS                | Position difference between orders in points | number | 10
@@ -237,7 +239,7 @@ ONE_ORDERS_SELL                     | Strategy: "One Sell a lot Buy" | boolean |
 ONE_ORDERS_BUY                      | Strategy: "One Buy a lot Sell" | boolean | false
 ONE_ORDERS_OFFSET                   | The difference between LastPrice and first order in the stack of orders in %. <br> Will pull the order, if this value is exceeded. | number | 2
 ONE_ORDERS_PROFIT_PERCENT           | Specifies the percentage desired profit <br>May take a fixed value, and range min/max | string or number | 1
-ONE_ORDERS_SPO_PERCENT              | Sets the percentage of the desired profit when the price jumps. | number | 0
+ONE_ORDERS_SPO_PERCENT              | Sets the percentage of the desired profit when the price jumps. (delay before launch) <br>(FAQ п.61) | string/number | 0
 INTEGRITY_CONTROL_ORDERS            | Integrity control orders (**soft** or **hard**) | string | soft
 TYPE_DATA_USED                      | Where to get information about the used orders: <br>  **active** - active orders <br> **history** - active orders + trading history | string | active
 FIRST_LOADING_HISTORY               | Download the history when you start the bot | boolean | false

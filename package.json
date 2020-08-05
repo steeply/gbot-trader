@@ -1,6 +1,6 @@
 {
   "name": "gbot-trader",
-  "version": "1.7.0",
+  "version": "1.7.1",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
@@ -44,31 +44,32 @@
   "private": true,
   "dependencies": {
     "@you21979/bittrex.com": "0.0.4",
-    "async": "2.6.2",
+    "async": "^3.2.0",
+    "big.js": "^5.2.2",
     "bitfinex-api-node": "1.2.1",
     "body-parser": "^1.18.3",
     "btce-deal": "0.2.3",
     "ccxt": "1.16.88",
     "colors": "^1.4.0",
-    "crypto-js": "^3.1.9-1",
+    "crypto-js": "^4.0.0",
     "express": "^4.16.4",
-    "fs-extra": "^8.1.0",
+    "fs-extra": "^9.0.1",
     "hashids": "^1.2.2",
-    "i18n": "^0.8.4",
-    "lodash": "^4.17.15",
-    "moment": "^2.24.0",
+    "i18n": "^0.11.1",
+    "lodash": "^4.17.19",
+    "moment": "^2.27.0",
     "moment-range": "^4.0.2",
     "moment-round": "^1.0.1",
-    "moment-timezone": "^0.5.27",
+    "moment-timezone": "^0.5.31",
     "ms": "^2.1.1",
     "node-telegram-bot-api": "0.28.0",
     "node.liqui.io": "^1.2.0",
-    "nodemailer": "^6.3.1",
+    "nodemailer": "^6.4.11",
     "poloniex-api-node": "^1.9.0",
-    "request": "^2.88.0",
+    "request": "^2.88.2",
     "socks5-https-client": "^1.2.1",
     "ta-lib": "^0.11.0",
-    "winston": "2.4.3",
-    "winston-daily-rotate-file": "1.7.2"
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.0"
   }
 }

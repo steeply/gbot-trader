@@ -280,16 +280,6 @@ NOTIFICATION_ORDER_IS_EXECUTED      | Notice of execution of one orders | boolea
 NOTIFICATION_END_GRID               | Notification of the end of the order grid. Notification will be sent if there are less than 3 orders left | boolean | false
 
 
-### Email Error Notification
-
- Option | Description| Type | Default
---------|------------|-----|----------
-EMAIL_REPORT_ADDRESS        | Email for notifications of network incidences and errors  | string | -
-HOST_SMTP                   | Mail server address   | string | smtp.yandex.ru
-EMAIL_AUTH_USER             | Authorization login of the mail server | string | -
-EMAIL_AUTH_PASS             | Mail server password | string | -
-
-
 ### Log
 
  Option | Description|Type | Default

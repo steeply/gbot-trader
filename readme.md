@@ -7,7 +7,6 @@ This app is working with server maintenance.
 ## Exchange
 
 * Poloniex
-* Bittrex
 * Exmo
 * Bitfinex
 * Liqui

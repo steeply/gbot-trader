@@ -228,6 +228,8 @@ PRICE_FILE_PATH                     | A custom path to the directory with the fi
 
 > The parameter `SAVE_PRICE_FILE` **will not work** on PaaS platforms (Heroku, Pivotal and any other platforms where container virtualization tools are used)!
 
+> If the default bbands is used without external indicators, then orders are placed not on the bid and ask of the market, but on the borders of the bbands lines, respectively, the offset of the first order are also calculated from these values
+
 #### Strategy "One Orders"
 **When you start the strategy of "Sell One, Buy a lot" the initial state of the balance of the base currency in the pair is ignored!**
 

@@ -1,6 +1,6 @@
 {
   "name": "gbot-trader",
-  "version": "1.7.6",
+  "version": "1.7.7",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
@@ -45,11 +45,11 @@
   "dependencies": {
     "@you21979/bittrex.com": "0.0.4",
     "async": "^3.2.0",
-    "big.js": "^5.2.2",
+    "big.js": "^6.0.2",
     "bitfinex-api-node": "1.2.1",
     "body-parser": "^1.18.3",
     "btce-deal": "0.2.3",
-    "ccxt": "1.35.69",
+    "ccxt": "^1.38.9",
     "colors": "^1.4.0",
     "crypto-js": "^4.0.0",
     "express": "^4.16.4",
@@ -60,7 +60,7 @@
     "moment": "^2.29.1",
     "moment-range": "^4.0.2",
     "moment-round": "^1.0.1",
-    "moment-timezone": "^0.5.31",
+    "moment-timezone": "^0.5.32",
     "ms": "^2.1.1",
     "node-telegram-bot-api": "0.28.0",
     "node.liqui.io": "^1.2.0",

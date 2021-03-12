@@ -385,8 +385,10 @@ SAVE_HISTORY                        | Сохранять копию истори
 CYCLES_AUTO_EXIT                    | Через сколько циклов совершить автовыход <br>(FAQ п.48) | number | 0
 AUTO_EXIT_PERCENT                   | Процент отдаления цены от последнего профитного ордера для выполнения автовыхода. <br>(FAQ п.62) | number | 0
 STOP_LOSS_PERCENT                   | Уровень Stop Loss в процентах <br>(FAQ п.53) | number | 0
+STOP_LOSS_DEPOSIT_LIMIT             | Процент остатка депозита для срабатывания Stop Loss | number | 0
 BUY_STOP_PERCENT                    | Уровень Buy Stop в процентах <br>(FAQ п.53) | number | 0
 TRAILING_STOP_PERCENT               | Уровень Trailing stop в процентах <br>(FAQ п.45) | number | 0
+TRAILING_STOP_PROTECTIVE_SPREAD     | Устанавливает процент дополнительного отклонения цены заявки от цены инициировавшей заявку <br>(FAQ п.45) | number | 0
 TRAILING_GRID_PERCENT               | Уровень Trailing grid в процентах <br>(FAQ п.56) | number | 0
 DISABLE_CAPITALIZATION              | Отключить капитализацию в profit ордере <br>(FAQ п.47) | boolean | false
 CAPITALIZATION_BUY_ORDER            | Включает частичную капитализацию Buy ордера при DISABLE_CAPITALIZATION <br>(FAQ п.47) | boolean | false
@@ -470,6 +472,7 @@ BOT_TRADE                   | Разрешить установку ордеро
 URL_STATISTICS              | URL адрес сервера куда будет отправлена статистика в формате post json <br>(FAQ п.46) | string | -
 REPEAT_COMMAND_ACTION       | Будет несколько раз дублировать команду для установки/переоткрытия ордеров чтобы максимально полно выполнить команды /sell_all, /buy_all, stop_loss и т.д  | boolean | false
 SAVE_STATE                  | Сохраняет внутреннее состояние в файл при завершении работы. При перезапуске восстанавливается из файла, игнорируя первую ступень инициализации и пропуская все стартовые расчеты | boolean | false
+TIME_SESSION                | Время сессии. Формат startTime/endTime (FAQ п.63) | string | -
 
 **Важно:**
 
@@ -573,6 +576,7 @@ node ./build/server
 /stoploss           - Отображает информацию о StopLoss
 /buystop            - Отображает информацию о BuyStop
 /trail              - Отображает информацию о Trailing Stop
+/trail_grid         - Отображает информацию о Trailing Grid
 /getbalance         - Отображает стартовый баланс
 /setbalance number  - Устанавливает стартовый баланс
 /addbalance number  - Добавляет монет к стартовому балансу

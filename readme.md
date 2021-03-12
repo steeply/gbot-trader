@@ -250,8 +250,10 @@ SAVE_HISTORY                        | Save a copy of history to your computer | 
 CYCLES_AUTO_EXIT                    | How many cycles to make the exit | number | 0
 AUTO_EXIT_PERCENT                   | How much percentage should the price move away from the last profit of the order to complete the current cycle. <br>(FAQ п.62) | number | 0
 STOP_LOSS_PERCENT                   | Stop Loss percentage | number | 0
+STOP_LOSS_DEPOSIT_LIMIT             | Percentage of the deposit balance to trigger Stop Loss | number | 0
 BUY_STOP_PERCENT                    | Buy Stop percentage | number | 0
 TRAILING_STOP_PERCENT               | Trailing stop percentage | number | 0
+TRAILING_STOP_PROTECTIVE_SPREAD     | Sets the percentage of additional deviation of the bid price from the price that initiated the bid | number | 0
 TRAILING_GRID_PERCENT               | Trailing grid percentage | number | 0
 DISABLE_CAPITALIZATION              | Disable capitalization in profit order | boolean | false
 CAPITALIZATION_BUY_ORDER            | Includes partial capitalization of Buy orders in DISABLE_CAPITALIZATION | boolean | false
@@ -406,6 +408,7 @@ To **launch the control panel** in a Telegram, send a message to:
 /stoploss           - Displays StopLoss information
 /buystop            - Displays BuyStop information
 /trail              - Displays Trailing Stop information
+/trail_grid         - Displays Trailing Grid information
 /getbalance         - Displays the start balance
 /setbalance number  - Sets the starting balance
 /addbalance number  - Add coins to the starting balance

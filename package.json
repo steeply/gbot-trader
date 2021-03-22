@@ -1,6 +1,6 @@
 {
   "name": "gbot-trader",
-  "version": "1.7.8",
+  "version": "1.7.9",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
@@ -49,7 +49,7 @@
     "bitfinex-api-node": "1.2.1",
     "body-parser": "^1.18.3",
     "btce-deal": "0.2.3",
-    "ccxt": "^1.42.76",
+    "ccxt": "^1.43.89",
     "colors": "^1.4.0",
     "crypto-js": "^4.0.0",
     "express": "^4.16.4",

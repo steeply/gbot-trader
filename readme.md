@@ -114,6 +114,7 @@ GREEDY_FIRST_ORDER_SIZE_INSECOND_CURRENCY | Size of the "zero" order in the base
 SIZE_FIRST_ORDERS                   | The size of the first order in the currency being traded or in percent<br>Example: 0.1 or 5% | string | 0
 SIZE_FIRST_ORDERS_INSECOND_CURRENCY | The size of the first order in the base currency | number | 0
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (for Exponential - %, Linear - absolute number)<br>Example: 0.1 or 5% | string or number | 0
+TYPE_ORDERS_MARTINGALE              | The type of increase in the Martingale. **add** - summation, **multiply** - multiplication, **pow** - exponentiation | string | add
 CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you restart the bot (**saves the order size**) | boolean | false
 TRADING_PRICE_RANGE                 | Price range allowed for bidding, absolute numbers or percentages. <br>Example: <br>`3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`<br>If not specified, no restrictions<br> | string | -
 TRADING_PRICE_RANGE_OTHER           | Range of prices, another currency pair allowed for trading, absolute numbers or percentages. <br>Example: <br>`3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`<br>If not specified, no restrictions<br> | string | -
@@ -228,6 +229,8 @@ PRICE_FILE_PATH                     | A custom path to the directory with the fi
 
 > The parameter `SAVE_PRICE_FILE` **will not work** on PaaS platforms (Heroku, Pivotal and any other platforms where container virtualization tools are used)!
 
+> If the default bbands is used without external indicators, then orders are placed not on the bid and ask of the market, but on the borders of the bbands lines, respectively, the offset of the first order are also calculated from these values
+
 #### Strategy "One Orders"
 **When you start the strategy of "Sell One, Buy a lot" the initial state of the balance of the base currency in the pair is ignored!**
 
@@ -248,8 +251,10 @@ SAVE_HISTORY                        | Save a copy of history to your computer | 
 CYCLES_AUTO_EXIT                    | How many cycles to make the exit | number | 0
 AUTO_EXIT_PERCENT                   | How much percentage should the price move away from the last profit of the order to complete the current cycle. <br>(FAQ п.62) | number | 0
 STOP_LOSS_PERCENT                   | Stop Loss percentage | number | 0
+STOP_LOSS_DEPOSIT_LIMIT             | Percentage of the deposit balance to trigger Stop Loss | number | 0
 BUY_STOP_PERCENT                    | Buy Stop percentage | number | 0
 TRAILING_STOP_PERCENT               | Trailing stop percentage | number | 0
+TRAILING_STOP_PROTECTIVE_SPREAD     | Sets the percentage of additional deviation of the bid price from the price that initiated the bid | number | 0
 TRAILING_GRID_PERCENT               | Trailing grid percentage | number | 0
 DISABLE_CAPITALIZATION              | Disable capitalization in profit order | boolean | false
 CAPITALIZATION_BUY_ORDER            | Includes partial capitalization of Buy orders in DISABLE_CAPITALIZATION | boolean | false
@@ -404,6 +409,7 @@ To **launch the control panel** in a Telegram, send a message to:
 /stoploss           - Displays StopLoss information
 /buystop            - Displays BuyStop information
 /trail              - Displays Trailing Stop information
+/trail_grid         - Displays Trailing Grid information
 /getbalance         - Displays the start balance
 /setbalance number  - Sets the starting balance
 /addbalance number  - Add coins to the starting balance

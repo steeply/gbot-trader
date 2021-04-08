@@ -148,6 +148,7 @@ OFFSET_FIRST_ORDERS_POINTS          | Position difference of the first order in 
 OFFSET_ORDERS_POINTS                | Position difference between orders in points | number | 10
 OFFSET_ORDERS_PERCENT               | Position difference between orders in % | number | 0
 OFFSET_ORDERS_EXPONENTIAL           | Position difference between orders is exponentially in % | number | 0
+OFFSET_ORDERS_MULTIPLY              | Offset for orders by multiplier | number | 0
 OFFSET_ORDERS_BLOCK                 | Position difference between orders is blocks in % <br>For example, in the first block orders will be indented 0.2, in the second block 0.4, etc. | number | 0
 RANGE_OFFSET                        | Range offset | number | 0
 

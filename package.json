@@ -1,6 +1,6 @@
 {
   "name": "gbot-trader",
-  "version": "1.7.10",
+  "version": "1.7.11",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
@@ -45,17 +45,17 @@
   "dependencies": {
     "@you21979/bittrex.com": "0.0.4",
     "async": "^3.2.0",
-    "big.js": "^6.0.3",
+    "big.js": "^6.1.1",
     "bitfinex-api-node": "1.2.1",
     "body-parser": "^1.18.3",
     "btce-deal": "0.2.3",
-    "ccxt": "^1.45.74",
+    "ccxt": "^1.52.2",
     "colors": "^1.4.0",
     "crypto-js": "^4.0.0",
     "express": "^4.16.4",
     "fs-extra": "^9.1.0",
     "hashids": "^1.2.2",
-    "i18n": "^0.13.2",
+    "i18n": "^0.13.3",
     "lodash": "^4.17.21",
     "moment": "^2.29.1",
     "moment-range": "^4.0.2",
@@ -69,6 +69,6 @@
     "socks5-https-client": "^1.2.1",
     "ta-lib": "^0.11.0",
     "winston": "^3.3.3",
-    "winston-daily-rotate-file": "^4.5.1"
+    "winston-daily-rotate-file": "^4.5.5"
   }
 }

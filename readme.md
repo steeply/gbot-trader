@@ -221,6 +221,7 @@ RSI_RANGE_SELL                      | RSI range for sell <br> Values are specifi
 RSI_RANGE_BUY                       | RSI range for buy | string | 1/30
 TIMEFRAME                           | Time-frame. Interval of interrogation of the prices (minutes) | number | 1
 CLOSE_GRID_OPPOSITE                 | Closes the opposite orders grid | boolean | false
+CLOSE_GRID_IS_TRADING_SIGNAL_CANCELED | Closes the grid of orders when the signal is canceled | boolean | false
 SAVE_PRICE_FILE                     | Save price cache to a file  | boolean | false
 PRICE_FILE_PATH                     | A custom path to the directory with the file | string | Folder with bot
 

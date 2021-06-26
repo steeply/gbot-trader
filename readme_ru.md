@@ -347,6 +347,7 @@ RSI_RANGE_SELL                      | Диапазон RSI для продажи
 RSI_RANGE_BUY                       | Диапазон RSI для покупки  | string | 1/30
 TIMEFRAME                           | Таймфрейм. Интервал запроса цен (в минутах). Используйте значения доступные на бирже | number | 1
 CLOSE_GRID_OPPOSITE                 | Закрывает противоположную сетку ордеров как только индикаторы изменят тип действия (покупать или продавать) | boolean | false
+CLOSE_GRID_IS_TRADING_SIGNAL_CANCELED | Закрывает сетку ордеров при отмене сигнала | boolean | false
 SAVE_PRICE_FILE                     | Сохранять кэш цен в файл  | boolean | false
 PRICE_FILE_PATH                     | Пользовательский путь до директории с файлом | string | Директория с ботом
 

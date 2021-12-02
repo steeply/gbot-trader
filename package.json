@@ -1,6 +1,6 @@
 {
   "name": "gbot-trader",
-  "version": "1.7.11",
+  "version": "1.7.13",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
@@ -44,14 +44,14 @@
   "private": true,
   "dependencies": {
     "@you21979/bittrex.com": "0.0.4",
-    "async": "^3.2.0",
+    "async": "^3.2.1",
     "big.js": "^6.1.1",
     "bitfinex-api-node": "1.2.1",
     "body-parser": "^1.18.3",
     "btce-deal": "0.2.3",
-    "ccxt": "^1.52.2",
+    "ccxt": "^1.54.62",
     "colors": "^1.4.0",
-    "crypto-js": "^4.0.0",
+    "crypto-js": "^4.1.1",
     "express": "^4.16.4",
     "fs-extra": "^9.1.0",
     "hashids": "^1.2.2",

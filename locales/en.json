@@ -112,6 +112,7 @@
 	"Количество ордеров (бот будет перезагружен)": "Number of orders (bot will be rebooted)",
 	"Количество ордеров в блоке": "Number of orders in the block",
 	"Размер ордера мартингейла (проценты или абсолютное число)": "Size of the Martingale order (percent or absolute number)",
+	"Размер ордера в процентах от депозита": "Order size as a percentage of the deposit",
 	"Использование депозита (бот будет перезагружен)": "Deposit using (bot will be rebooted)",
 	"Задает процент желаемой прибыли": "Set percentage of desired profit",
 	"Задает процент желаемой прибыли при сквизе": "Sets the percentage of the desired profit when the price jumps",

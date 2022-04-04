@@ -113,6 +113,7 @@ GREEDY_FIRST_ORDER_SIZE             | Size of the "zero" order in the traded cur
 GREEDY_FIRST_ORDER_SIZE_INSECOND_CURRENCY | Size of the "zero" order in the base currency | number | 0
 SIZE_FIRST_ORDERS                   | The size of the first order in the currency being traded or in percent<br>Example: 0.1 or 5% | string | 0
 SIZE_FIRST_ORDERS_INSECOND_CURRENCY | The size of the first order in the base currency | number | 0
+SIZE_ORDERS_FROM_DEPOSIT            | Order size as a percentage of the remaining deposit | number | 0
 SIZE_ORDERS_MARTINGALE              | The size of the orders for Martingale  (for Exponential - %, Linear - absolute number)<br>Example: 0.1 or 5% | string or number | 0
 TYPE_ORDERS_MARTINGALE              | The type of increase in the Martingale. **add** - summation, **multiply** - multiplication, **pow** - exponentiation | string | add
 CONTINUE_MARTINGALE_GRID            | To continue the grid Martingale when you restart the bot (**saves the order size**) | boolean | false
@@ -133,7 +134,11 @@ STOP_LOSS_FLOATING                  | Percentage of price drop from High price t
 
 > `GREEDY_FIRST_ORDER_SIZE` or `GREEDY_FIRST_ORDER_SIZE_INSECOND_CURRENCY` select **only 1 of the parameters**!
 
+> `SIZE_ORDERS_MARTINGALE` or `SIZE_ORDERS_FROM_DEPOSIT` select **only 1 of the parameters**!
+
 > With the manual size of the first order **RANGE_OFFSET** does not work, and **COUNT_ORDERS** will be calculated automatically.
+
+> If `SIZE_ORDER_MARTINGALE` is set as a percentage, then `TYPE_ORDER_MARTINGALE` is not applied.
 
 
 #### Offset orders
@@ -321,6 +326,8 @@ BOT_TRADE                   | Allow trading | boolean | true
 URL_STATISTICS              | URL of the server where the statistics will be sent in post json format | string | -
 REPEAT_COMMAND_ACTION       | Will duplicate command to install/re-opening to fully execute the commands /sell_all, /buy_all, stop_loss, etc  | boolean | false
 SAVE_STATE                  | Saves the internal state to a file at shutdown. When restarting, it is restored from the file, ignoring the first stage of initialization and skipping all the initial calculations | boolean | false
+TIME_SESSION                | Session time. Format startTime/endTime (FAQ 63) | string | -
+HIDE_SECRET_KEY             | Hides private keys when transferring to the web api | boolean | false
 
 **Important:**
 

@@ -1,6 +1,6 @@
 {
   "name": "gbot-trader",
-  "version": "1.7.13",
+  "version": "1.7.14",
   "author": {
     "name": "George",
     "email": "gbot-trader@mail.ru"
@@ -44,7 +44,7 @@
   "private": true,
   "dependencies": {
     "@you21979/bittrex.com": "0.0.4",
-    "async": "^3.2.1",
+    "async": "^3.2.3",
     "big.js": "^6.1.1",
     "bitfinex-api-node": "1.2.1",
     "body-parser": "^1.18.3",

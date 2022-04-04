@@ -326,6 +326,8 @@ BOT_TRADE                   | Allow trading | boolean | true
 URL_STATISTICS              | URL of the server where the statistics will be sent in post json format | string | -
 REPEAT_COMMAND_ACTION       | Will duplicate command to install/re-opening to fully execute the commands /sell_all, /buy_all, stop_loss, etc  | boolean | false
 SAVE_STATE                  | Saves the internal state to a file at shutdown. When restarting, it is restored from the file, ignoring the first stage of initialization and skipping all the initial calculations | boolean | false
+TIME_SESSION                | Session time. Format startTime/endTime (FAQ 63) | string | -
+HIDE_SECRET_KEY             | Hides private keys when transferring to the web api | boolean | false
 
 **Important:**
 

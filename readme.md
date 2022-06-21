@@ -106,6 +106,8 @@ By default, the bot will work at default settings. You can change them using the
 --------|------------|-----|----------
 TIME_UPDATE_AUTO_SETTINGS           | Interval update of auto settings (min) | number | 2
 DEPOSIT_LIMIT                       | Deposit consuming percent or the absolute number<br><br>If an absolute number is specified: the size of the used part of the Deposit in the currency **NAME_COIN_TWO**. <br>For exchanges with inverted currency in the currency of the parameter **NAME_COIN**  | number or string | 100%
+DEPOSIT_TYPE                        | The option of returning the deposit to the bot's balance for a profit order.<br> _reserve_ - settlement with reservation.<br> _straight_ - direct from the exchange <br>(FAQ п.19) | string | reserve
+PERMANENT_DEPOSIT                   | Use the total deposit calculation together with the trades history | boolean | false
 COUNT_ORDERS                        | Quantity all orders.<br> How many will be installed. | number | Calculated based on deposit amount
 QUANTITY_ORDERS_IN_BLOCKS           | Quantity orders in blocks<br>How many orders will be simultaneously on the market. | number | 0
 HOLD_QUANTITY_ORDERS                | To hold a given number of orders in QUANTITY_ORDERS_IN_BLOCKS <br>(FAQ п.22) | boolean | true
@@ -267,7 +269,6 @@ DISABLE_CAPITALIZATION              | Disable capitalization in profit order | b
 CAPITALIZATION_BUY_ORDER            | Includes partial capitalization of Buy orders in DISABLE_CAPITALIZATION | boolean | false
 STRATEGY_AUTO_REVERS                | Auto switching strategy to reverse | boolean | false
 OFFSET_LAST_ORDER_PERCENT           | The percentage of the price distance from the last order to enable auto-switching of strategy | number | 5
-PERMANENT_DEPOSIT                   | Use the total deposit calculation together with the trades history | boolean | false
 PRICE_TRADING_TYPE_CHANGE           | Price at which the trade type will change (Absolute value and percentage)<br>Format: `number` or `low/high`<br>Example: <br>`3000`<br>`3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`<br>(FAQ п.58)  | number or string | -
 
 > If the parameter **INTEGRITY_CONTROL_ORDERS** in `hard` mode, then a sell order will be installed only if the volume installed and executed buy orders will be the same.

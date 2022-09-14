@@ -267,6 +267,8 @@ TRAILING_STOP_PROTECTIVE_SPREAD     | Sets the percentage of additional deviatio
 TRAILING_GRID_PERCENT               | Trailing grid percentage | number | 0
 DISABLE_CAPITALIZATION              | Disable capitalization in profit order | boolean | false
 CAPITALIZATION_BUY_ORDER            | Includes partial capitalization of Buy orders in DISABLE_CAPITALIZATION | boolean | false
+PARTIALLY_EXECUTED_GRID             | Take into account partial execution of orders from the grid<br> Only for DISABLE_CAPITALIZATION=true | boolean | false
+SHIFT_GRID_PARTIAL_EXECUTION        | Allow shifting the grid of orders if there is partial execution of orders from the grid | boolean | false
 STRATEGY_AUTO_REVERS                | Auto switching strategy to reverse | boolean | false
 OFFSET_LAST_ORDER_PERCENT           | The percentage of the price distance from the last order to enable auto-switching of strategy | number | 5
 PRICE_TRADING_TYPE_CHANGE           | Price at which the trade type will change (Absolute value and percentage)<br>Format: `number` or `low/high`<br>Example: <br>`3000`<br>`3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`<br>(FAQ п.58)  | number or string | -

@@ -402,6 +402,7 @@ TRAILING_GRID_PERCENT               | Уровень Trailing grid в проце
 DISABLE_CAPITALIZATION              | Отключить капитализацию в profit ордере <br>(FAQ п.47) | boolean | false
 CAPITALIZATION_BUY_ORDER            | Включает частичную капитализацию Buy ордера при DISABLE_CAPITALIZATION <br>(FAQ п.47) | boolean | false
 PARTIALLY_EXECUTED_GRID             | Учитывать частичное исполнение ордеров из сетки<br> Только для DISABLE_CAPITALIZATION=true | boolean | false
+SHIFT_GRID_PARTIAL_EXECUTION        | Разрешить сдвигать сетку ордеров, если есть частичное исполнение ордеров из сетки | boolean | false
 STRATEGY_AUTO_REVERS                | Автопереключение стратегии на обратную <br>(FAQ п.52) | boolean | false
 OFFSET_LAST_ORDER_PERCENT           | Процент отдаления цены от последнего ордера чтобы сработало автопереключение стратегии <br>(FAQ п.52) | number | 5
 PRICE_TRADING_TYPE_CHANGE           | Цена при которой изменится тип торговли в абсолютном или процентном значении<br>Формат `number` или `low/high`<br>Например: <br>`3000`<br>`3000/5000`<br>`10%/20%`<br>`10%`<br>`1000/10%`<br>(FAQ п.58) | number or string | -

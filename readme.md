@@ -1,7 +1,5 @@
 # GBot Trader
 
-[![Dependency Status](https://david-dm.org/steeply/gbot-trader.svg)](https://david-dm.org/steeply/gbot-trader)
-
 This app is working with server maintenance.
 
 ## Exchange
@@ -428,3 +426,8 @@ To **launch the control panel** in a Telegram, send a message to:
 
 ```
 
+
+###Payment
+BTC: 1AMmeM2ERD6nd1K1y5Zta2BvfugHt5UjPo
+
+LTC: LTSkBKFN6i1oy8pnBdpAR71xJTt9UU51sH

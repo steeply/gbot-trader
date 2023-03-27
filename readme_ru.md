@@ -1,7 +1,5 @@
 # GBot Trader
 
-[![Dependency Status](https://david-dm.org/steeply/gbot-trader.svg)](https://david-dm.org/steeply/gbot-trader)
-
 Это приложение работает на стороне сервера и управляется через Telegram.
 
 ### GUI Web Panel
@@ -600,3 +598,9 @@ DEBUGGER_ONE_ORDERS=true   - включает вывод дебаг информ
 DEBUGGER_ORDERS=true       - включает вывод дебаг информации для ордеров из сетки (единоразово)
 DEBUGGER_SYSTEM=true       - включает вывод дебаг информации о расчете баланса и другое. Значение true или 1 - вывод неприрывный, 2 - только при изменении. Для выключения false
 ```
+
+
+###Payment
+BTC: 1AMmeM2ERD6nd1K1y5Zta2BvfugHt5UjPo
+
+LTC: LTSkBKFN6i1oy8pnBdpAR71xJTt9UU51sH

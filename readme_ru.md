@@ -600,7 +600,7 @@ DEBUGGER_SYSTEM=true       - включает вывод дебаг информ
 ```
 
 
-###Payment
+### Payment
 BTC: 1AMmeM2ERD6nd1K1y5Zta2BvfugHt5UjPo
 
 LTC: LTSkBKFN6i1oy8pnBdpAR71xJTt9UU51sH
